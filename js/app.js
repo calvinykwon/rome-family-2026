@@ -1,5 +1,19 @@
 const state = { trip: null, options: null, ops: null, map: null, layer: null, selectedDayId: 'all', optionFilter: 'all' };
-const CACHE_BUST = '20260917j';
+const CACHE_BUST = (window.RomeSite && window.RomeSite.CACHE_BUST) || '20260917k';
+
+function pageId() {
+  if (window.RomeSite && typeof window.RomeSite.pageId === 'function') {
+    return window.RomeSite.pageId();
+  }
+  return document.body.dataset.page || 'overview';
+}
+
+function hrefForAnchor(id) {
+  if (window.RomeSite && typeof window.RomeSite.hrefForAnchor === 'function') {
+    return window.RomeSite.hrefForAnchor(id);
+  }
+  return id ? `#${id}` : '#';
+}
 
 const OPTION_LABELS = {
   'easy-add-on': 'Easy add-on',
@@ -242,26 +256,50 @@ function resolveMapContainer() {
   return el;
 }
 
-async function load() {
+async function loadTrip(opts) {
   const res = await fetch(`data/trip.json?v=${CACHE_BUST}`);
   if (!res.ok) throw new Error(`Could not fetch trip.json (${res.status})`);
   state.trip = await res.json();
-  await loadPlacesOverlay();
+  if (!opts || opts.places !== false) await loadPlacesOverlay();
 
-  const heading = document.querySelector('header.top h1');
+  const heading = document.querySelector('[data-trip-title]');
   if (heading && state.trip.title) heading.textContent = state.trip.title;
-  if (state.trip.title) document.title = state.trip.title;
 
   const lede = document.getElementById('lede');
   if (lede) lede.textContent = `${state.trip.dates} · ${state.trip.party}`;
+}
 
+function selectedDayFromHash() {
+  const hash = String(location.hash || '').replace(/^#/, '');
+  if (!hash || !state.trip) return 'all';
+  if (state.trip.days.some((d) => d.id === hash)) return hash;
+  return 'all';
+}
+
+function bindItineraryHash() {
+  window.addEventListener('hashchange', () => {
+    const dayId = selectedDayFromHash();
+    if (dayId !== state.selectedDayId) selectDay(dayId);
+  });
+}
+
+async function bootOverview() {
+  await loadTrip({ places: false });
   renderConfirmed();
   renderOpen();
   renderEatLikeRomans();
+  await loadOptions();
+}
+
+async function bootOps() {
+  await loadOps();
+}
+
+async function bootItinerary() {
+  await loadTrip();
   renderTabs();
   renderDays();
-  await loadOps();
-  await loadOptions();
+  bindItineraryHash();
 
   if (typeof L === 'undefined') {
     const caption = document.getElementById('map-caption');
@@ -272,11 +310,19 @@ async function load() {
 
   try {
     initMap();
-    selectDay('all');
+    selectDay(selectedDayFromHash());
   } catch (err) {
     console.error(err);
     showFatal(`Map failed to start: ${err && err.message ? err.message : err}`);
   }
+}
+
+async function load() {
+  const page = pageId();
+  if (page === 'overview') return bootOverview();
+  if (page === 'ops') return bootOps();
+  if (page === 'itinerary') return bootItinerary();
+  return bootOverview();
 }
 
 async function loadOptions() {
@@ -331,7 +377,9 @@ function renderOpsItems(items) {
     let jump = '';
     if (item.href) {
       const external = /^(https?:|tel:|mailto:)/i.test(item.href);
-      const href = external || item.href.startsWith('#') ? item.href : `#${item.href}`;
+      const href = external || item.href.startsWith('#')
+        ? item.href
+        : hrefForAnchor(item.href);
       const extra = /^https?:/i.test(href) ? ' target="_blank" rel="noopener"' : '';
       jump = ` <a href="${escapeHtml(href)}"${extra}>${escapeHtml(item.hrefLabel || 'See details')}</a>`;
     }
@@ -420,7 +468,7 @@ function renderAnniversary() {
   const kids = a.kidsEvening || {};
   const framing = a.dayFraming || {};
   const dayJump = a.dayLink
-    ? `<a class="ops-jump" href="#${escapeHtml(a.dayLink.href)}">${escapeHtml(a.dayLink.label)}</a>`
+    ? `<a class="ops-jump" href="${escapeHtml(hrefForAnchor(a.dayLink.href))}">${escapeHtml(a.dayLink.label)}</a>`
     : '';
 
   const contextCard = `<article class="ops-card">
@@ -521,7 +569,7 @@ function renderOptions() {
       ? `<img class="option-photo" src="${src}" alt="${escapeHtml(alt)}" loading="lazy">`
       : `<div class="option-photo-fallback">No freely licensed photo on file yet — placeholder.</div>`;
     const jump = item.jumpTo
-      ? `<a href="#${escapeHtml(item.jumpTo)}">${escapeHtml(item.pairsWith || 'See that day')}</a>`
+      ? `<a href="${escapeHtml(hrefForAnchor(item.jumpTo))}">${escapeHtml(item.pairsWith || 'See that day')}</a>`
       : escapeHtml(item.pairsWith || '');
     const pair = item.pairsWith
       ? `<p class="option-pair"><strong>When</strong> · ${jump}</p>`
@@ -609,6 +657,7 @@ function renderTabs() {
 
 function initMap() {
   if (state.map) return;
+  if (pageId() !== 'itinerary') return;
 
   delete L.Icon.Default.prototype._getIconUrl;
   L.Icon.Default.mergeOptions({
@@ -821,7 +870,7 @@ function renderBlockRow(d, b, numbers) {
   );
   if (b.jumpTo) {
     actions.push(
-      `<a class="place-link" href="#${escapeHtml(b.jumpTo)}">${escapeHtml(b.jumpLabel || 'See details')}</a>`
+      `<a class="place-link" href="${escapeHtml(hrefForAnchor(b.jumpTo))}">${escapeHtml(b.jumpLabel || 'See details')}</a>`
     );
   }
   if (place) {
@@ -883,7 +932,7 @@ function renderDays() {
       const numbers = sequenceNumbers(d.id);
       const rows = d.blocks.map((b) => renderBlockRow(d, b, numbers)).join('');
       const related = d.related
-        ? ` <a href="#${escapeHtml(d.related.href)}">${escapeHtml(d.related.label)}</a>`
+        ? ` <a href="${escapeHtml(hrefForAnchor(d.related.href))}">${escapeHtml(d.related.label)}</a>`
         : '';
       const note = d.note || d.related
         ? `<p class="day-note">${d.note ? escapeHtml(d.note) : ''}${related}</p>`

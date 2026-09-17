@@ -85,7 +85,78 @@ a:hover { color: var(--primary); }
   margin-inline: auto;
 }
 
-/* —— Top nav / header —— */
+/* —— Shared site chrome —— */
+.site-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  min-height: 64px;
+  background: var(--canvas);
+  border-bottom: 1px solid var(--hairline-soft);
+}
+
+.site-bar-inner {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  min-height: 64px;
+}
+
+.site-wordmark {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-wordmark:hover {
+  color: var(--primary);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
+}
+
+.site-nav a {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 0 6px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+}
+
+.site-nav a.is-current {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.page-hero {
+  padding: var(--space-xl) 0 0;
+}
+
+.page-hero h1 {
+  margin: 0 0 6px;
+}
+
+.page-hero .hint {
+  margin-top: 8px;
+  max-width: 46rem;
+}
+
+/* —— Legacy single-page header (unused, kept for token parity) —— */
 .top {
   position: sticky;
   top: 0;
@@ -182,6 +253,47 @@ a:hover { color: var(--primary); }
   color: var(--ink);
 }
 
+/* —— Where to go next —— */
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-base);
+  margin: 0 0 var(--space-xl);
+}
+
+.next-card {
+  display: block;
+  background: var(--surface-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-decoration: none;
+  color: inherit;
+}
+
+.next-card:hover {
+  box-shadow: var(--shadow);
+  color: inherit;
+}
+
+.next-card h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.next-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--muted);
+}
+
+.next-card .eyebrow {
+  margin-bottom: 8px;
+}
+
 /* —— Hero cards —— */
 .hero-grid {
   display: grid;
@@ -260,8 +372,9 @@ a:hover { color: var(--primary); }
 #options,
 #map-section,
 #days,
-.day-panel {
-  scroll-margin-top: 12.5rem;
+.day-panel,
+.ops-card {
+  scroll-margin-top: 5.5rem;
 }
 
 .section-head h2 { margin: 0 0 6px; }
@@ -869,6 +982,10 @@ a:hover { color: var(--primary); }
   gap: var(--space-base);
 }
 
+#trip-ops .ops-grid {
+  margin-top: var(--space-lg);
+}
+
 .ops-grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1076,7 +1193,8 @@ a:hover { color: var(--primary); }
 }
 
 @media (max-width: 960px) {
-  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid,
+  .next-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 800px) {
@@ -1090,7 +1208,8 @@ a:hover { color: var(--primary); }
     aspect-ratio: 4 / 3;
     min-height: 0;
   }
-  .top-inner {
+  .top-inner,
+  .site-bar-inner {
     align-items: flex-start;
     flex-direction: column;
     min-height: auto;

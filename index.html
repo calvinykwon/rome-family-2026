@@ -5,31 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <title>2026 Family Trip: Rome</title>
-  <meta name="description" content="Shared family itinerary for Rome with maps, times, and visit notes." />
+  <meta name="description" content="Overview of the 2026 family trip to Rome: confirmed items, talk-through options, and links to the day-by-day plan and trip ops." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ff385c'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="vendor/leaflet/leaflet.css?v=20260917j" />
-  <link rel="stylesheet" href="css/styles.css?v=20260917j" />
+  <link rel="stylesheet" href="css/styles.css?v=20260917k" />
 </head>
-<body>
-  <header class="top">
-    <div class="wrap top-inner">
-      <div>
-        <p class="eyebrow">Family trip · draft for sharing</p>
-        <h1>2026 Family Trip: Rome</h1>
-        <p class="hero-line">November 2026</p>
-        <p class="lede" id="lede">November 15–24, 2026</p>
-      </div>
-      <div class="top-actions">
-        <a class="btn ghost" href="#trip-ops">Trip ops</a>
-        <a class="btn ghost" href="#anniversary">Anniversary</a>
-        <a class="btn ghost" href="#options">Talk-through</a>
-        <a class="btn ghost" href="#days">Day by day</a>
-        <a class="btn" href="#map-section">Map</a>
-      </div>
-    </div>
-  </header>
+<body data-page="overview">
+  <header class="site-bar" id="site-header"></header>
 
   <main>
+    <header class="wrap page-hero">
+      <p class="eyebrow">Family trip · draft for sharing</p>
+      <h1 data-trip-title>2026 Family Trip: Rome</h1>
+      <p class="hero-line">November 2026</p>
+      <p class="lede" id="lede">November 15–24, 2026</p>
+    </header>
+
     <section class="wrap hero-grid">
       <article class="card confirm">
         <h2>Confirmed</h2>
@@ -46,24 +36,6 @@
       </article>
     </section>
 
-    <section class="wrap" id="trip-ops">
-      <div class="section-head">
-        <p class="eyebrow" id="ops-kicker">Whole week · draft</p>
-        <h2 id="ops-title">Trip ops</h2>
-        <p class="hint" id="ops-intro">Practical family logistics. Draft only — nothing here books a van, a table, or an Airbnb.</p>
-      </div>
-      <div class="ops-grid" id="ops-grid"></div>
-    </section>
-
-    <section class="wrap" id="anniversary">
-      <div class="section-head">
-        <p class="eyebrow" id="anniv-kicker">Thu Nov 19, 2026</p>
-        <h2 id="anniv-title">Anniversary night ops</h2>
-        <p class="hint" id="anniv-intro">Parents go out. Sister and brother-in-law watch the kids at the Prati apartment. Draft — no table held.</p>
-      </div>
-      <div class="ops-stack" id="anniv-root"></div>
-    </section>
-
     <section class="wrap" id="options">
       <div class="section-head">
         <p class="eyebrow" id="options-kicker">Talk-through options</p>
@@ -74,30 +46,28 @@
       <div class="options-grid" id="options-grid"></div>
     </section>
 
-    <section class="wrap" id="map-section">
+    <section class="wrap" id="next">
       <div class="section-head">
-        <h2>Map</h2>
-        <p class="hint">Numbered pins follow visit order for the selected day. Tap a pin for times and notes.</p>
+        <h2>Where to go next</h2>
+        <p class="hint">The week’s plan and the practical notes live on their own pages so this one stays short.</p>
       </div>
-      <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Choose a day"></div>
-      <div id="map-canvas" data-map-root="1" aria-label="Rome trip map" style="min-height:420px;width:100%"></div>
-      <p class="map-caption" id="map-caption"></p>
-    </section>
-
-    <section class="wrap" id="days">
-      <div class="section-head">
-        <h2>Day by day</h2>
-        <p class="hint">Times are on 15-minute marks and already include walking, metro, and kid pace. Major stops have a photo; commutes and buffers stay compact. No midday return home for naps.</p>
+      <div class="next-grid">
+        <a class="next-card" href="itinerary.html">
+          <p class="eyebrow">Itinerary</p>
+          <h2>Day by day</h2>
+          <p>Times, map pins, and photo cards for each day. Commutes and buffers stay compact.</p>
+        </a>
+        <a class="next-card" href="ops.html">
+          <p class="eyebrow">Ops</p>
+          <h2>Trip ops &amp; anniversary</h2>
+          <p>Flights, documents, getting around, apartment, weather, health, money, and Thursday night.</p>
+        </a>
       </div>
-      <div id="day-panels"></div>
     </section>
   </main>
 
-  <footer class="wrap foot">
-    <p>Draft only · nothing booked except flights and the papal audience tickets · share with the travel group</p>
-  </footer>
-
-  <script src="vendor/leaflet/leaflet.js?v=20260917j"></script>
-  <script src="js/trip-app.20260917j.js"></script>
+  <footer class="wrap foot" id="site-footer"></footer>
+  <script src="js/site.20260917k.js"></script>
+  <script src="js/trip-app.20260917k.js"></script>
 </body>
 </html>
