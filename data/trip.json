@@ -20,7 +20,7 @@
     "Colosseum timed tickets for Fri Nov 20 (~30 days out)",
     "Pantheon timed tickets",
     "Anniversary table at Glass Hostaria or L’Arcangelo",
-    "Call ahead for tables of 9 (may need two tables) — trattoria meals are draft suggestions, not reserved",
+    "Call ahead for tables of 9 (may need two tables) — every sit-down lunch/dinner is a different place this week",
     "Optional Vatican Museums for older kids",
     "Airport vans both ends"
   ],
@@ -146,11 +146,8 @@
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Light landing-night meal at the apartment from groceries. Don’t overload with a big trattoria the night you land. If anyone still wants to sit down nearby, Osteria dei Gracchi (Via dei Gracchi 19) is a neighborhood osteria. Call ahead for 9 / may need two tables. Draft suggestion — not reserved.",
-          "links": [
-            "https://www.osteriadeigracchi.it/",
-            "https://www.google.com/maps/search/?api=1&query=Osteria%20dei%20Gracchi%20Via%20dei%20Gracchi%2019%20Roma"
-          ],
+          "what": "Light landing-night meal at the apartment from groceries. Don’t overload with a big trattoria the night you land. Draft — not a booking.",
+          "links": [],
           "placeId": null,
           "label": "Apartment dinner"
         },
@@ -174,11 +171,13 @@
         "pantheon",
         "minerva",
         "san-luigi",
+        "campana",
+        "giolitti",
         "trevi",
         "spagna",
         "bronze-door",
-        "campana",
-        "matriciano"
+        "matriciano",
+        "tazza-oro"
       ],
       "blocks": [
         {
@@ -221,10 +220,13 @@
         },
         {
           "time": "10:00–11:00",
-          "kind": "Sit",
-          "what": "Gelato / sit in Piazza della Minerva. Bernini’s elephant-obelisk outside. Minerva typically opens at 11:00 (diocese: 11:00–1:00 & 2:30–7:00—reconfirm nearer the trip).",
-          "links": [],
-          "placeId": "minerva"
+          "kind": "Coffee",
+          "what": "Via degli Orfani 84, next to the Pantheon (two minutes from Piazza della Minerva). Historic Roman espresso bar — stand at the counter with a cornetto while you wait for Minerva to open. Bernini’s elephant-obelisk is in the piazza. Draft — not a reservation.",
+          "links": [
+            "https://www.google.com/maps/search/?api=1&query=Tazza%20d%27Oro%20Via%20degli%20Orfani%2084%20Roma"
+          ],
+          "placeId": "tazza-oro",
+          "label": "Coffee — Tazza d’Oro"
         },
         {
           "time": "11:00–11:30",
@@ -254,7 +256,7 @@
         {
           "time": "12:15–1:45",
           "kind": "Lunch",
-          "what": "Vicolo della Campana 18/20, between the Pantheon and Piazza Navona. Historic Roman cooking (from 1518) on a side street, not a piazza tourist trap, and large enough for a family of 9. Closed Monday; Tuesday is open. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Armando al Pantheon is excellent but they do not take groups over 6, so it is not the pick for nine.",
+          "what": "Vicolo della Campana 18/20, between the Pantheon and Piazza Navona. Historic Roman pasta house (from 1518) on a side street, not a piazza tourist trap, and large enough for a family of 9. Closed Monday; Tuesday is open. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Armando al Pantheon is excellent but they do not take groups over 6, so it is not the pick for nine.",
           "links": [
             "https://www.ristorantelacampana.com/",
             "https://www.google.com/maps/search/?api=1&query=La%20Campana%20Vicolo%20della%20Campana%2018%20Roma"
@@ -280,29 +282,34 @@
         },
         {
           "time": "2:45–3:15",
+          "kind": "Gelato",
+          "what": "Via Uffici del Vicario 40 — a short walk from Trevi toward the Pantheon/Parliament side. Historic Roman gelateria, not a piazza souvenir stand. Pay at the cassa first, then take the ticket to the counter. Draft — not a reservation.",
+          "links": [
+            "https://www.giolitti.it/",
+            "https://www.google.com/maps/search/?api=1&query=Giolitti%20Via%20Uffici%20del%20Vicario%2040%20Roma"
+          ],
+          "placeId": "giolitti",
+          "label": "Gelato — Giolitti"
+        },
+        {
+          "time": "3:15–3:40",
           "kind": "Walk",
-          "what": "Walk to Spanish Steps / Piazza di Spagna · ~15–25 min.",
+          "what": "Walk to Spanish Steps / Piazza di Spagna · ~15–20 min.",
           "links": [],
           "placeId": "spagna"
         },
         {
-          "time": "3:15–4:00",
+          "time": "3:40–4:20",
           "kind": "Visit",
-          "what": "Spanish Steps & Trinità dei Monti · Climb if older kids want; otherwise enjoy the piazza from below. Church at the top optional.",
+          "what": "Spanish Steps & Trinità dei Monti · Climb if older kids want; otherwise enjoy the piazza from below. Church at the top optional. Bathroom break here before the ride to the Bronze Door.",
           "links": [
             "https://www.turismoroma.it/en/places/piazza-di-spagna-and-trinita-dei-monti"
           ],
-          "placeId": "spagna"
+          "placeId": "spagna",
+          "label": "Spanish Steps"
         },
         {
-          "time": "4:00–4:30",
-          "kind": "Sit",
-          "what": "Café / gelato sit near Spagna. Bathroom break.",
-          "links": [],
-          "placeId": "spagna"
-        },
-        {
-          "time": "4:30–5:00",
+          "time": "4:20–5:00",
           "kind": "Commute",
           "what": "Taxi or Metro toward St Peter’s / Prati side · ~25–40 min. Aim to reach the Bronze Door during the afternoon pickup window.",
           "links": [],
@@ -325,7 +332,7 @@
         {
           "time": "6:15–7:30",
           "kind": "Dinner",
-          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Use tonight — they are closed Wednesday. Early bedtime; audience morning starts early.",
+          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman pasta trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Use tonight only — they are closed Wednesday. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Early bedtime; audience morning starts early.",
           "links": [
             "https://www.ilmatriciano.it/en/",
             "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
@@ -355,6 +362,7 @@
         "st-peters",
         "castel",
         "micci",
+        "gracchi-gelato",
         "gracchi"
       ],
       "blocks": [
@@ -415,7 +423,7 @@
         {
           "time": "1:15–2:30",
           "kind": "Lunch",
-          "what": "Via Andrea Doria 55 a/b, Prati. Neighborhood trattoria-pizzeria since 1936, walkable after the audience (closer than crossing the city). Closed Monday; Wednesday is open. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Osteria dei Gracchi, Via dei Gracchi 19. Not Il Matriciano — closed Wednesday.",
+          "what": "Via Andrea Doria 55 a/b, Prati. Neighborhood trattoria-pizzeria since 1936, walkable after the audience (closer than crossing the city). Closed Monday; Wednesday is open. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Not Il Matriciano — closed Wednesday.",
           "links": [
             "https://www.trattoriamicci.it/en/",
             "https://www.google.com/maps/search/?api=1&query=Trattoria%20Micci%20Via%20Andrea%20Doria%2055%20Roma"
@@ -442,16 +450,27 @@
           "placeId": "castel"
         },
         {
-          "time": "4:30–5:00",
+          "time": "4:30–4:50",
           "kind": "Walk",
-          "what": "Walk back to Prati along the river or Via Cola di Rienzo · 20–30 min.",
+          "what": "Walk back toward Prati along the river or Via dei Gracchi · ~15–20 min to the gelateria.",
           "links": [],
-          "placeId": null
+          "placeId": "gracchi-gelato"
+        },
+        {
+          "time": "4:50–5:20",
+          "kind": "Gelato",
+          "what": "Via dei Gracchi 272, Prati — on the walk home from Castel Sant’Angelo. Artisanal gelato (pistachio and classic flavors), not a tourist-strip shop. Official listing: daily 11:30–midnight. Draft — not a reservation.",
+          "links": [
+            "https://gelateriadeigracchi.it/contatti/",
+            "https://www.google.com/maps/search/?api=1&query=Gelateria%20dei%20Gracchi%20Via%20dei%20Gracchi%20272%20Roma"
+          ],
+          "placeId": "gracchi-gelato",
+          "label": "Gelato — dei Gracchi"
         },
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Via dei Gracchi 19, Prati. Neighborhood osteria with Roman cooking near Ottaviano. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Trattoria Micci (Via Andrea Doria 55 a/b). Il Matriciano is closed Wednesday.",
+          "what": "Via dei Gracchi 19, Prati. Neighborhood osteria with Roman pasta near Ottaviano. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Il Matriciano is closed Wednesday.",
           "links": [
             "https://www.osteriadeigracchi.it/",
             "https://www.google.com/maps/search/?api=1&query=Osteria%20dei%20Gracchi%20Via%20dei%20Gracchi%2019%20Roma"
@@ -474,11 +493,13 @@
       "short": "Thu 19",
       "label": "Anniversary",
       "title": "Thursday Nov 19 — Light day · 10th anniversary",
-      "note": "Easy morning nearby. Afternoon free in Prati / river. Sister and brother-in-law have the kids for the evening. No table held yet.",
+      "note": "Easy morning nearby. Afternoon free in Prati / river. Kids pizza with aunt and uncle; parents’ anniversary dinner. No table held yet.",
       "mapPlaceIds": [
-        "glass",
-        "matriciano",
-        "micci"
+        "sciascia",
+        "cantarini",
+        "pizzarium",
+        "pratolina",
+        "glass"
       ],
       "blocks": [
         {
@@ -497,47 +518,67 @@
           "placeId": null
         },
         {
-          "time": "9:00–10:30",
+          "time": "9:00–9:45",
+          "kind": "Coffee",
+          "what": "Via Fabio Massimo 1/A, Prati. Historic neighborhood caffè from 1919 — cornetto and espresso at the bar, then a short playground or church walk. Not a piazza tourist table. Confirm morning hours nearer the trip. Draft — not a reservation.",
+          "links": [
+            "https://www.google.com/maps/search/?api=1&query=Sciascia%20Caff%C3%A8%201919%20Via%20Fabio%20Massimo%20Roma"
+          ],
+          "placeId": "sciascia",
+          "label": "Coffee — Sciascia 1919"
+        },
+        {
+          "time": "9:45–10:30",
           "kind": "Visit",
-          "what": "Neighborhood church / park time. Keep it local—no long metro.",
+          "what": "Neighborhood church / park time after coffee. Keep it local — no long metro.",
           "links": [],
           "placeId": null
         },
         {
           "time": "10:30–12:00",
           "kind": "Home",
-          "what": "Apartment free play, laundry, grocery top-up. Adults prep date-night clothes and babysitting plan.",
+          "what": "Apartment free play, laundry, grocery top-up. Adults prep date-night clothes. Taxi to Piazza Sallustio around 11:40 for lunch.",
           "links": [],
           "placeId": null
         },
         {
           "time": "12:00–1:30",
           "kind": "Lunch",
-          "what": "Family lunch. Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Thursday. Stay close to home so the evening handoff is simple.",
+          "what": "Piazza Sallustio 12, Sallustiano (short taxi from Prati, behind Via Veneto — not a tourist piazza). Family-run osteria of Roman and Marchigiana cooking. Official site: closed Sunday; Thursday is open. Call ahead for 9 / may need two tables. Draft suggestion — not reserved.",
           "links": [
-            "https://www.ilmatriciano.it/en/",
-            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+            "https://www.ristorantecantinacantarini.it/",
+            "https://www.google.com/maps/search/?api=1&query=Cantina%20Cantarini%20Piazza%20Sallustio%2012%20Roma"
           ],
-          "placeId": "matriciano",
-          "label": "Il Matriciano"
+          "placeId": "cantarini",
+          "label": "Cantina Cantarini"
         },
         {
-          "time": "1:30–4:00",
+          "time": "1:30–3:00",
           "kind": "Afternoon",
-          "what": "Easy Prati afternoon: Via Cola di Rienzo shopping, playground, or river walk toward Ponte Sant’Angelo. Stay close to home so the evening handoff is simple.",
+          "what": "Taxi back to Prati. Easy afternoon: Via Cola di Rienzo, playground, or river walk. Stay close so the evening handoff is simple.",
           "links": [],
           "placeId": null
         },
         {
+          "time": "3:00–3:45",
+          "kind": "Snack",
+          "what": "Via della Meloria 43, Prati (Cipro). Gabriele Bonci’s pizza al taglio — long-leavened slices sold by weight, plus supplì. Standing counter and a queue; the group of 9 may need to split and eat outside. A few slices to share, not a second lunch (kids have sit-down pizza later). Official Bonci page: Mon–Sat 11:00–22:00. Draft — not a reservation.",
+          "links": [
+            "https://bonci.it/pages/dove-siamo",
+            "https://www.google.com/maps/search/?api=1&query=Pizzarium%20Bonci%20Via%20della%20Meloria%2043%20Roma"
+          ],
+          "placeId": "pizzarium",
+          "label": "Pizza al taglio — Pizzarium"
+        },
+        {
           "time": "4:00–5:30",
           "kind": "Kids dinner",
-          "what": "Kids eat early with aunt and uncle. Via Andrea Doria 55 a/b, Prati — trattoria-pizzeria since 1936. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Osteria dei Gracchi. Parents get ready for the anniversary dinner.",
+          "what": "Kids eat early with aunt and uncle. Via degli Scipioni 248/250, Prati — neighborhood Roman pizzeria (tonda), not a piazza tourist trap. Hour listings disagree (some say from 12:30 weekdays, others from 17:30); call to confirm an early family table. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Parents get ready for the anniversary dinner.",
           "links": [
-            "https://www.trattoriamicci.it/en/",
-            "https://www.google.com/maps/search/?api=1&query=Trattoria%20Micci%20Via%20Andrea%20Doria%2055%20Roma"
+            "https://www.google.com/maps/search/?api=1&query=La%20Pratolina%20Via%20degli%20Scipioni%20248%20Roma"
           ],
-          "placeId": "micci",
-          "label": "Trattoria Micci"
+          "placeId": "pratolina",
+          "label": "La Pratolina"
         },
         {
           "time": "5:30–6:30",
@@ -586,13 +627,15 @@
       "short": "Fri 20",
       "label": "Colosseum",
       "title": "Friday Nov 20 — Colosseum & Forum",
-      "note": "Winter hours: Colosseum 8:30am; Forum–Palatine 9:00am; last entry 3:30pm; closes 4:30pm (25 Oct 2026–28 Feb 2027). Book all nine ~30 days ahead. Skip arena and underground. Afternoon continues nearby—no midday home break.",
+      "note": "Winter hours: Colosseum 8:30am; Forum–Palatine 9:00am; last entry 3:30pm; closes 4:30pm (25 Oct 2026–28 Feb 2027). Book all nine ~30 days ahead. Skip arena and underground. Afternoon gelato in Monti, then Testaccio for street food and a pasta dinner — no midday home break.",
       "mapPlaceIds": [
         "colosseum",
         "arch",
         "forum",
         "bruttone",
-        "matriciano"
+        "fatamorgana-monti",
+        "trapizzino-testaccio",
+        "flavio"
       ],
       "blocks": [
         {
@@ -659,10 +702,13 @@
         },
         {
           "time": "1:45–2:15",
-          "kind": "Sit",
-          "what": "Café sit or gelato. Bathroom reset.",
-          "links": [],
-          "placeId": null
+          "kind": "Gelato",
+          "what": "Piazza degli Zingari 5, Monti — a few minutes from Via dei Serpenti. Artisanal gelato (fruit sorbets and unusual flavors), not a Colosseum-front souvenir shop. Listings: Fri 13:30–21:30. Bathroom reset. Draft — not a reservation.",
+          "links": [
+            "https://www.google.com/maps/search/?api=1&query=Fatamorgana%20Piazza%20degli%20Zingari%205%20Roma"
+          ],
+          "placeId": "fatamorgana-monti",
+          "label": "Gelato — Fatamorgana"
         },
         {
           "time": "2:15–3:30",
@@ -676,27 +722,45 @@
         {
           "time": "3:30–4:15",
           "kind": "Commute",
-          "what": "Metro back to Prati · 35–50 min.",
+          "what": "Walk or short taxi toward Testaccio (Circus Maximus side) · ~20–30 min. Do not metro back to Prati yet.",
           "links": [],
-          "placeId": null
+          "placeId": "trapizzino-testaccio"
         },
         {
-          "time": "5:30–7:00",
-          "kind": "Dinner",
-          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Friday.",
+          "time": "4:15–5:00",
+          "kind": "Snack",
+          "what": "Via Giovanni Branca 88, Testaccio — the original Trapizzino. Stuffed pizza triangles and supplì; casual seats in the next room. A savory nibble after the Forum, before the pasta dinner. Official hours: Fri 12:00–1:00am. Draft — not a reservation. Skip if everyone is saving room for Flavio.",
           "links": [
-            "https://www.ilmatriciano.it/en/",
-            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+            "https://www.trapizzino.it/trapizzino/trapizzino-roma-testaccio/",
+            "https://www.google.com/maps/search/?api=1&query=Trapizzino%20Via%20Giovanni%20Branca%2088%20Roma"
           ],
-          "placeId": "matriciano",
-          "label": "Il Matriciano"
+          "placeId": "trapizzino-testaccio",
+          "label": "Trapizzino"
         },
         {
-          "time": "7:00+",
-          "kind": "Home",
-          "what": "Early bedtime after a stone-heavy day.",
+          "time": "5:00–7:20",
+          "kind": "Sit",
+          "what": "Easy Testaccio wait: playground at the ex-Mattatoio / Monte Testaccio edge, or a café sit. Flavio’s kitchen is listed from 19:30 — later than the usual 5:30 family dinner.",
           "links": [],
           "placeId": null
+        },
+        {
+          "time": "7:30–9:30",
+          "kind": "Dinner",
+          "what": "Via di Monte Testaccio 97, Testaccio — under Monte dei Cocci. Classic Roman pasta (cacio e pepe, amatriciana) in a large osteria that can seat a family of 9. Official site: dinner 19:30–23:00 daily, so this sitting is later than other family nights. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Taxi back to Prati after. Seasonal note from other listings: Sunday dinner closed Oct–May — Friday is open.",
+          "links": [
+            "https://www.ristorantevelavevodetto.it/ristoranti/roma-testaccio/",
+            "https://www.google.com/maps/search/?api=1&query=Flavio%20al%20Velavevodetto%20Via%20di%20Monte%20Testaccio%2097%20Roma"
+          ],
+          "placeId": "flavio",
+          "label": "Flavio al Velavevodetto"
+        },
+        {
+          "time": "9:30+",
+          "kind": "Home",
+          "what": "Taxi back to Prati (~15–25 min). Early-ish bedtime after a stone-heavy day.",
+          "links": [],
+          "placeId": "prati"
         }
       ]
     },
@@ -706,14 +770,15 @@
       "short": "Sat 21",
       "label": "Basilicas",
       "title": "Saturday Nov 21 — Major basilicas",
-      "note": "Santa Maria Maggiore → San Giovanni → Scala Santa → Santa Croce if energy remains · afternoon continues on that side of town, then home for dinner.",
+      "note": "Santa Maria Maggiore → maritozzo at Regoli → San Giovanni → Scala Santa → Santa Croce if energy remains. Afternoon back to Prati for a unique pasta dinner — not Il Matriciano.",
       "mapPlaceIds": [
         "maggiore",
+        "regoli",
         "lateran",
         "scala",
         "croce",
         "faleria",
-        "matriciano"
+        "cacio-pepe"
       ],
       "blocks": [
         {
@@ -742,13 +807,23 @@
         },
         {
           "time": "9:45–10:15",
+          "kind": "Snack",
+          "what": "Via dello Statuto 60, Esquilino — two minutes from Santa Maria Maggiore. Historic pasticceria (1916) known for maritozzo con la panna; locals queue at the bar. Closed Tuesday; Saturday is open (often 7:00–19:00). Maritozzi can sell out late morning — go right after the basilica. Draft — not a reservation.",
+          "links": [
+            "https://www.google.com/maps/search/?api=1&query=Pasticceria%20Regoli%20Via%20dello%20Statuto%2060%20Roma"
+          ],
+          "placeId": "regoli",
+          "label": "Maritozzo — Regoli"
+        },
+        {
+          "time": "10:15–10:45",
           "kind": "Commute",
           "what": "Walk Via Merulana or short Metro · ~25–35 min toward San Giovanni.",
           "links": [],
           "placeId": "lateran"
         },
         {
-          "time": "10:15–11:15",
+          "time": "10:45–11:30",
           "kind": "Visit",
           "what": "San Giovanni in Laterano · Cathedral of Rome · 7:00am–6:30pm. Huge nave, Apostle statues. Free.",
           "links": [
@@ -757,14 +832,14 @@
           "placeId": "lateran"
         },
         {
-          "time": "11:15–11:30",
+          "time": "11:30–11:40",
           "kind": "Walk",
           "what": "Cross to Scala Santa · a few minutes.",
           "links": [],
           "placeId": "scala"
         },
         {
-          "time": "11:30–12:15",
+          "time": "11:40–12:15",
           "kind": "Visit",
           "what": "Scala Santa · Holy Stairs (kneeling) / side stairs for walking. Nov–Mar sanctuary closes 6:30pm; afternoon climb to 6:00pm. With toddlers: brief look / side stairs.",
           "links": [
@@ -808,25 +883,24 @@
           "placeId": null
         },
         {
-          "time": "4:00–5:30",
+          "time": "4:00–7:20",
           "kind": "Home",
-          "what": "Apartment downtime, laundry, easy play.",
+          "what": "Apartment downtime, laundry, easy play. Cacio e Pepe’s kitchen is listed from 19:30 — later than the usual 5:30 family dinner.",
           "links": [],
           "placeId": null
         },
         {
-          "time": "5:30–7:00",
+          "time": "7:30–9:30",
           "kind": "Dinner",
-          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Saturday.",
+          "what": "Via Giuseppe Avezzana 11, Prati (Piazza Mazzini side — walkable from the apartment). Neighborhood trattoria famous for cacio e pepe and other Roman pastas. Compact rooms — call ahead for 9 / may need two tables. Draft suggestion — not reserved. Closed Sunday; Saturday dinner listings 19:30–23:30, so this sitting is later than a 5:30 family dinner. Alternate if you still have energy on the Celio side after the basilicas: Li Rioni, Via dei Santi Quattro 24 (Roman pizza, dinner only, closed Tuesday). Not Il Matriciano.",
           "links": [
-            "https://www.ilmatriciano.it/en/",
-            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+            "https://www.google.com/maps/search/?api=1&query=Cacio%20e%20Pepe%20Via%20Giuseppe%20Avezzana%2011%20Roma"
           ],
-          "placeId": "matriciano",
-          "label": "Il Matriciano"
+          "placeId": "cacio-pepe",
+          "label": "Cacio e Pepe"
         },
         {
-          "time": "7:00+",
+          "time": "9:30+",
           "kind": "Home",
           "what": "Bedtime.",
           "links": [],
@@ -840,12 +914,14 @@
       "short": "Sun 22",
       "label": "Mass",
       "title": "Sunday Nov 22 — Mass & Tiber Island",
-      "note": "Worship first, then a longer riverside / Trastevere edge afternoon. Vatican Museums closed today under the standing Sunday rule.",
+      "note": "Worship first, then Ghetto lunch (Jewish-Roman), a pizza-ebraica bakery stop, Tiber Island, and gelato on the Trastevere edge. Vatican Museums closed today under the standing Sunday rule.",
       "mapPlaceIds": [
         "st-peters-square",
-        "tiber",
+        "boccione",
         "pompiere",
-        "micci"
+        "tiber",
+        "fiordiluna",
+        "toscano"
       ],
       "blocks": [
         {
@@ -880,16 +956,26 @@
           "placeId": null
         },
         {
-          "time": "11:15–12:00",
+          "time": "11:15–11:45",
           "kind": "Taxi",
-          "what": "Taxi to Tiber Island / Trastevere edge · ~15–25 min. Prefer taxi over long cobbles.",
+          "what": "Taxi to the Jewish Ghetto / Tiber Island edge · ~15–25 min. Prefer taxi over long cobbles.",
           "links": [],
-          "placeId": "tiber"
+          "placeId": "boccione"
         },
         {
-          "time": "12:00–1:30",
+          "time": "11:45–12:10",
+          "kind": "Snack",
+          "what": "Via del Portico d’Ottavia 1, Jewish Ghetto — no sign; look for the line. Historic kosher bakery (pizza ebraica, ricotta crostate). Closed Saturday; Sunday listed 7:30–17:30. Often sells out by late morning — if the line is long or the trays are empty, skip and go to lunch. Cash is commonly needed. Draft — not a reservation.",
+          "links": [
+            "https://www.google.com/maps/search/?api=1&query=Pasticceria%20Boccione%20Via%20del%20Portico%20d%27Ottavia%201%20Roma"
+          ],
+          "placeId": "boccione",
+          "label": "Pizza ebraica — Boccione"
+        },
+        {
+          "time": "12:15–1:45",
           "kind": "Lunch",
-          "what": "Piazza delle Cinque Scole 28, Jewish Ghetto — a short walk from Tiber Island. Historic Roman trattoria (family-run since 1928), not a piazza tourist trap. Closed Tuesday; Sunday lunch is the service. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Da Enzo al 29 is too small for 9; Sora Lella on the island takes groups over 6 on tasting menus only. Alternate: taxi back to Prati for Osteria dei Gracchi.",
+          "what": "Piazza delle Cinque Scole 28, Jewish Ghetto — a short walk from Boccione and Tiber Island. Historic Roman trattoria (family-run since 1928); this is the Jewish-Roman table (carciofi alla giudia when in season). Official site: Sunday lunch 12:30–15:30 (no Sunday dinner); closed Tuesday. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Da Enzo al 29 is too small for 9.",
           "links": [
             "https://www.alpompiereroma.com/",
             "https://www.google.com/maps/search/?api=1&query=Al%20Pompiere%20Piazza%20delle%20Cinque%20Scole%2028%20Roma"
@@ -898,7 +984,7 @@
           "label": "Al Pompiere"
         },
         {
-          "time": "1:30–3:00",
+          "time": "1:45–3:00",
           "kind": "Visit",
           "what": "Isola Tiberina & San Bartolomeo · Island stroll + brief church peek (usually morning and late-afternoon windows). Short edge of Trastevere only—cobbles are hard with a stroller.",
           "links": [
@@ -908,10 +994,14 @@
         },
         {
           "time": "3:00–3:30",
-          "kind": "Sit",
-          "what": "Gelato sit before heading back.",
-          "links": [],
-          "placeId": null
+          "kind": "Gelato",
+          "what": "Via della Lungaretta 96, Trastevere — a short walk from the island’s Trastevere edge. Artisanal gelato and chocolate; not a piazza tourist window. Official site: daily 8:00–midnight. Draft — not a reservation.",
+          "links": [
+            "https://fiordiluna.com/",
+            "https://www.google.com/maps/search/?api=1&query=Fior%20di%20Luna%20Via%20della%20Lungaretta%2096%20Roma"
+          ],
+          "placeId": "fiordiluna",
+          "label": "Gelato — Fior di Luna"
         },
         {
           "time": "3:30–4:15",
@@ -928,20 +1018,20 @@
           "placeId": null
         },
         {
-          "time": "5:30–7:00",
+          "time": "8:00–9:45",
           "kind": "Dinner",
-          "what": "Via Andrea Doria 55 a/b, Prati. Il Matriciano is closed Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Osteria dei Gracchi (open daily).",
+          "what": "Via Germanico 58/60, Prati — walkable from the apartment. Tuscan trattoria (bistecca, pappardelle) that locals use near the Vatican; not a laminated piazza menu. Official site: open Tuesday–Sunday, closed Monday; dinner kitchen 20:00–23:15, so this is later than other family nights — bottles/leftovers at the apartment for the baby if 20:00 is too late. Call ahead for 9 / may need two tables. Draft suggestion — not reserved.",
           "links": [
-            "https://www.trattoriamicci.it/en/",
-            "https://www.google.com/maps/search/?api=1&query=Trattoria%20Micci%20Via%20Andrea%20Doria%2055%20Roma"
+            "https://www.ristorantedaltoscano.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Dal%20Toscano%20Via%20Germanico%2058%20Roma"
           ],
-          "placeId": "micci",
-          "label": "Trattoria Micci"
+          "placeId": "toscano",
+          "label": "Dal Toscano"
         },
         {
-          "time": "7:00+",
+          "time": "9:45+",
           "kind": "Home",
-          "what": "Quiet Sunday night.",
+          "what": "Quiet Sunday night. Lights toward bed — airport morning is Tuesday.",
           "links": [],
           "placeId": null
         }
@@ -953,9 +1043,9 @@
       "short": "Mon 23",
       "label": "Spare",
       "title": "Monday Nov 23 — Spare day & pack",
-      "note": "Default: pack, one last outing if wanted. San Paolo or Appian catacombs only if older kids insist—and only half the group.",
+      "note": "Default: pack, one last outing if wanted. San Paolo or Appian catacombs only if older kids insist—and only half the group. Last sit-down is a casual Prati osteria — not Il Matriciano. Pizza al taglio was Thursday at Pizzarium.",
       "mapPlaceIds": [
-        "matriciano"
+        "angelo"
       ],
       "blocks": [
         {
@@ -983,11 +1073,8 @@
         {
           "time": "12:30–2:00",
           "kind": "Lunch",
-          "what": "At or near the apartment from leftover groceries. If you want a neighborhood table: Osteria dei Gracchi or Il Matriciano (open Monday). Call ahead for 9 / may need two tables. Draft suggestion — not reserved.",
-          "links": [
-            "https://www.ilmatriciano.it/en/",
-            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
-          ],
+          "what": "At or near the apartment from leftover groceries. Skip a restaurant lunch today. Draft — not a booking.",
+          "links": [],
           "placeId": null,
           "label": "Apartment lunch"
         },
@@ -1006,18 +1093,17 @@
           "placeId": null
         },
         {
-          "time": "5:30–7:00",
+          "time": "7:30–9:00",
           "kind": "Dinner",
-          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Monday. Early dinner; lights out early for the airport morning.",
+          "what": "Via Giovanni Bettolo 24–32, Prati — walkable from the apartment. Casual Roman osteria (pasta, football memorabilia, locals). Closed Sunday; Monday dinner listings 19:30–23:00, so this sitting is later than a 5:30 family dinner — ask for the earliest table. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Not Il Matriciano. Lights-out after for the airport morning.",
           "links": [
-            "https://www.ilmatriciano.it/en/",
-            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+            "https://www.google.com/maps/search/?api=1&query=Osteria%20dell%27Angelo%20Via%20Giovanni%20Bettolo%2024%20Roma"
           ],
-          "placeId": "matriciano",
-          "label": "Il Matriciano"
+          "placeId": "angelo",
+          "label": "Osteria dell’Angelo"
         },
         {
-          "time": "7:00–8:30",
+          "time": "9:00+",
           "kind": "Home",
           "what": "Kids asleep. Adults finish bags.",
           "links": [],
@@ -1330,7 +1416,146 @@
         "lng": 12.4764,
         "url": "https://www.alpompiereroma.com/",
         "summary": "Historic Roman trattoria in the Ghetto, Piazza delle Cinque Scole 28. Closed Tuesday; Sunday lunch."
+      },
+      {
+        "id": "cantarini",
+        "name": "Cantina Cantarini",
+        "lat": 41.9079,
+        "lng": 12.4963,
+        "url": "https://www.ristorantecantinacantarini.it/",
+        "summary": "Roman and Marchigiana osteria at Piazza Sallustio 12 (Sallustiano, short taxi from Prati). Closed Sunday."
+      },
+      {
+        "id": "pratolina",
+        "name": "La Pratolina",
+        "lat": 41.9089,
+        "lng": 12.4638,
+        "url": "https://www.google.com/maps/search/?api=1&query=La%20Pratolina%20Via%20degli%20Scipioni%20248%20Roma",
+        "summary": "Neighborhood pizzeria in Prati, Via degli Scipioni 248/250. Roman-style pizza for a family table."
+      },
+      {
+        "id": "flavio",
+        "name": "Flavio al Velavevodetto",
+        "lat": 41.8756,
+        "lng": 12.4735,
+        "url": "https://www.ristorantevelavevodetto.it/ristoranti/roma-testaccio/",
+        "summary": "Classic Testaccio pasta osteria under Monte Testaccio, Via di Monte Testaccio 97. Large enough for a family."
+      },
+      {
+        "id": "cacio-pepe",
+        "name": "Cacio e Pepe",
+        "lat": 41.9133,
+        "lng": 12.4675,
+        "url": "https://www.google.com/maps/search/?api=1&query=Cacio%20e%20Pepe%20Via%20Giuseppe%20Avezzana%2011%20Roma",
+        "summary": "Roman pasta trattoria at Via Giuseppe Avezzana 11, Prati. Compact rooms — two tables likely. Closed Sunday."
+      },
+      {
+        "id": "toscano",
+        "name": "Dal Toscano",
+        "lat": 41.9078,
+        "lng": 12.458,
+        "url": "https://www.ristorantedaltoscano.it/en/",
+        "summary": "Tuscan trattoria in Prati, Via Germanico 58/60. Closed Monday. Dinner kitchen from 20:00."
+      },
+      {
+        "id": "pizzarium",
+        "name": "Pizzarium Bonci",
+        "lat": 41.9066,
+        "lng": 12.4465,
+        "url": "https://bonci.it/pages/dove-siamo",
+        "summary": "Gabriele Bonci’s pizza al taglio counter, Via della Meloria 43, Prati. Standing / queue; may split the group."
+      },
+      {
+        "id": "angelo",
+        "name": "Osteria dell’Angelo",
+        "lat": 41.9112,
+        "lng": 12.4538,
+        "url": "https://www.google.com/maps/search/?api=1&query=Osteria%20dell%27Angelo%20Via%20Giovanni%20Bettolo%2024%20Roma",
+        "summary": "Casual Roman osteria in Prati, Via Giovanni Bettolo 24–32. Closed Sunday. Dinner listings from 19:30."
+      },
+      {
+        "id": "tazza-oro",
+        "name": "Tazza d’Oro",
+        "lat": 41.8996,
+        "lng": 12.4768,
+        "url": "https://www.google.com/maps/search/?api=1&query=Tazza%20d%27Oro%20Via%20degli%20Orfani%2084%20Roma",
+        "summary": "Historic Roman coffee bar at Via degli Orfani 84, next to the Pantheon. Stand at the counter like locals."
+      },
+      {
+        "id": "giolitti",
+        "name": "Giolitti",
+        "lat": 41.9003,
+        "lng": 12.4794,
+        "url": "https://www.giolitti.it/",
+        "summary": "Historic gelateria at Via Uffici del Vicario 40, between the Pantheon and Trevi."
+      },
+      {
+        "id": "sciascia",
+        "name": "Sciascia Caffè 1919",
+        "lat": 41.9094,
+        "lng": 12.4628,
+        "url": "https://www.google.com/maps/search/?api=1&query=Sciascia%20Caff%C3%A8%201919%20Via%20Fabio%20Massimo%20Roma",
+        "summary": "Old-school Prati coffee at Via Fabio Massimo 1/A. Cornetto at the bar, not a tourist piazza."
+      },
+      {
+        "id": "gracchi-gelato",
+        "name": "Gelateria dei Gracchi",
+        "lat": 41.9068,
+        "lng": 12.4658,
+        "url": "https://gelateriadeigracchi.it/contatti/",
+        "summary": "Artisanal gelato at Via dei Gracchi 272, Prati. On the walk home from Castel Sant’Angelo."
+      },
+      {
+        "id": "fatamorgana-monti",
+        "name": "Fatamorgana Monti",
+        "lat": 41.8954,
+        "lng": 12.4905,
+        "url": "https://www.google.com/maps/search/?api=1&query=Fatamorgana%20Piazza%20degli%20Zingari%205%20Roma",
+        "summary": "Creative artisanal gelato at Piazza degli Zingari 5, Monti, near Via dei Serpenti."
+      },
+      {
+        "id": "trapizzino-testaccio",
+        "name": "Trapizzino Testaccio",
+        "lat": 41.8768,
+        "lng": 12.474,
+        "url": "https://www.trapizzino.it/trapizzino/trapizzino-roma-testaccio/",
+        "summary": "Original Trapizzino at Via Giovanni Branca 88, Testaccio. Supplì and stuffed pizza triangles."
+      },
+      {
+        "id": "regoli",
+        "name": "Pasticceria Regoli",
+        "lat": 41.896,
+        "lng": 12.5015,
+        "url": "https://www.google.com/maps/search/?api=1&query=Pasticceria%20Regoli%20Via%20dello%20Statuto%2060%20Roma",
+        "summary": "Esquilino pastry shop since 1916, Via dello Statuto 60. Famous for maritozzo con la panna. Closed Tuesday."
+      },
+      {
+        "id": "boccione",
+        "name": "Pasticceria Boccione",
+        "lat": 41.8925,
+        "lng": 12.4785,
+        "url": "https://www.google.com/maps/search/?api=1&query=Pasticceria%20Boccione%20Via%20del%20Portico%20d%27Ottavia%201%20Roma",
+        "summary": "No-sign kosher bakery at Via del Portico d’Ottavia 1. Pizza ebraica. Closed Saturday; Sunday until 17:30."
+      },
+      {
+        "id": "fiordiluna",
+        "name": "Fior di Luna",
+        "lat": 41.8894,
+        "lng": 12.4703,
+        "url": "https://fiordiluna.com/",
+        "summary": "Artisanal gelato and chocolate at Via della Lungaretta 96, Trastevere, near the Tiber Island path."
       }
+    ]
+  },
+  "eatLikeRomans": {
+    "title": "Eat like Romans",
+    "intro": "Draft ideas — not bookings. The week already covers Roman pasta, a sit-down pizza, pizza al taglio, gelato, and a Jewish-Roman lunch. If you have a spare hour, these other formats are worth tasting:",
+    "items": [
+      "Jewish-Roman — carciofi alla giudia and other Ghetto classics (Sunday lunch at Al Pompiere already does this; pizza ebraica at Boccione is the sweet-side snack).",
+      "Pizza al taglio / pizza bianca — Bonci’s Pizzarium in Prati is on the plan; Forno Campo de’ Fiori (Piazza Campo de’ Fiori 22, closed Sunday) is the Centro bakers’ version if you pass the campo.",
+      "Trapizzino and supplì — Roman street snacks; Trapizzino Testaccio is on Friday before the Testaccio pasta dinner.",
+      "Regional Italian beyond Lazio — Thursday lunch at Cantina Cantarini is Marchigiana as well as Roman; Dal Toscano (Sunday) is a Tuscan table in Prati.",
+      "Esquilino international — around Piazza Vittorio / Via dell’Agricoltura, Ethiopian and other kitchens sit beside the basilicas. Optional, not a forced booking."
     ]
   }
 }

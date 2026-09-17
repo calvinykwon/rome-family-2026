@@ -1,10 +1,11 @@
 const state = { trip: null, map: null, layer: null, selectedDayId: 'all' };
-const CACHE_BUST = '20260917e';
+const CACHE_BUST = '20260917f';
 
 // Kinds that count as a real sequenced stop (sightseeing, pickup, meals at a named place).
 // Transit, apartment breakfast, sits, and home-base chores do not get a number of their own.
 const STOP_KIND_KEYS = [
-  'visit', 'pickup', 'audience', 'mass', 'dinner', 'date', 'meal', 'lunch', 'arrive'
+  'visit', 'pickup', 'audience', 'mass', 'dinner', 'date', 'meal', 'lunch', 'arrive',
+  'gelato', 'coffee', 'snack'
 ];
 
 function kindClass(kind) {
@@ -12,7 +13,7 @@ function kindClass(kind) {
   const keys = [
     'visit', 'pickup', 'audience', 'mass', 'meal', 'dinner', 'date', 'move',
     'commute', 'walk', 'flight', 'travel', 'taxi', 'rest', 'sit', 'settle',
-    'home', 'pack', 'handoff', 'afternoon', 'optional', 'snack', 'seat', 'breakfast'
+    'home', 'pack', 'handoff', 'afternoon', 'optional', 'gelato', 'coffee', 'snack', 'seat', 'breakfast'
   ];
   return keys.find((x) => k.includes(x)) || 'other';
 }
@@ -71,7 +72,7 @@ function maybeShortenToPlaceName(label, description, place) {
 
 function placeNameAsLabelKind(kind) {
   const k = (kind || '').toLowerCase();
-  if (/lunch|meal|arrive|breakfast|snack/.test(k)) return false;
+  if (/lunch|meal|arrive|breakfast|snack|gelato|coffee/.test(k)) return false;
   return /visit|pickup|audience|mass|date|dinner/.test(k);
 }
 
@@ -206,6 +207,7 @@ async function load() {
 
   renderConfirmed();
   renderOpen();
+  renderEatLikeRomans();
   renderTabs();
   renderDays();
 
@@ -243,6 +245,15 @@ function renderOpen() {
   const root = document.getElementById('open-list');
   if (!root) return;
   root.innerHTML = state.trip.open.map((x) => `<li>${x}</li>`).join('');
+}
+
+function renderEatLikeRomans() {
+  const eat = state.trip.eatLikeRomans;
+  const intro = document.getElementById('eat-intro');
+  const root = document.getElementById('eat-list');
+  if (!eat) return;
+  if (intro) intro.textContent = eat.intro || '';
+  if (root) root.innerHTML = (eat.items || []).map((x) => `<li>${escapeHtml(x)}</li>`).join('');
 }
 
 function renderTabs() {
