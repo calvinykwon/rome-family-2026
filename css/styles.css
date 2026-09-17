@@ -383,10 +383,12 @@ a:hover { color: var(--primary); }
 
 .block {
   display: grid;
-  grid-template-columns: 7.2rem 6.2rem 1fr;
-  gap: var(--space-md);
+  grid-template-columns: 7.2rem 6.4rem minmax(9.5rem, 0.78fr) minmax(12rem, 1.5fr);
+  column-gap: var(--space-base);
+  row-gap: 6px;
   padding: 14px 0;
   border-top: 1px solid var(--hairline-soft);
+  align-items: start;
 }
 
 .block:first-child { border-top: none; }
@@ -396,6 +398,10 @@ a:hover { color: var(--primary); }
   font-weight: 600;
   font-size: 14px;
   color: var(--ink);
+}
+
+.kind-cell {
+  min-width: 0;
 }
 
 .kind {
@@ -463,26 +469,53 @@ a:hover { color: var(--primary); }
   color: var(--body);
 }
 
-.what {
-  color: var(--body);
-  font-size: 14px;
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+  min-width: 0;
+}
+
+.detail {
+  min-width: 0;
+}
+
+.detail-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1.43;
 }
 
-.what a {
-  color: var(--ink);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.block-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  margin-top: 8px;
 }
 
-.what a:hover { color: var(--primary); }
+.place-link {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.29;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.place-link:hover {
+  color: var(--primary-active);
+  text-decoration: underline;
+}
 
 .pin-link {
   display: inline-block;
-  margin-top: 6px;
-  font-size: 14px;
+  margin-top: 0;
+  font-size: 13px;
   font-weight: 500;
+  line-height: 1.29;
   color: var(--primary);
   cursor: pointer;
   background: none;
@@ -559,8 +592,20 @@ a:hover { color: var(--primary); }
     flex-direction: column;
     min-height: auto;
   }
-  .block { grid-template-columns: 5.5rem 1fr; }
-  .kind { grid-column: 2; width: max-content; }
-  .what { grid-column: 1 / -1; }
+  .block {
+    grid-template-columns: 5.8rem 6rem 1fr;
+  }
+  .kind-cell { grid-column: 2; width: max-content; }
+  .label { grid-column: 3; }
+  .detail { grid-column: 1 / -1; }
   .section-head { margin-top: var(--space-xxl); }
+}
+
+@media (max-width: 560px) {
+  .block {
+    grid-template-columns: 5.5rem 1fr;
+  }
+  .kind-cell { grid-column: 2; }
+  .label,
+  .detail { grid-column: 1 / -1; }
 }

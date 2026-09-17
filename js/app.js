@@ -1,5 +1,5 @@
 const state = { trip: null, map: null, layer: null, selectedDayId: 'all' };
-const CACHE_BUST = '20260917d';
+const CACHE_BUST = '20260917e';
 
 // Kinds that count as a real sequenced stop (sightseeing, pickup, meals at a named place).
 // Transit, apartment breakfast, sits, and home-base chores do not get a number of their own.
@@ -20,6 +20,129 @@ function kindClass(kind) {
 function isStopKind(kind) {
   const k = (kind || '').toLowerCase();
   return STOP_KIND_KEYS.some((x) => k.includes(x));
+}
+
+const LABEL_MAX = 56;
+const LABEL_SOFT_MAX = 80;
+
+function cleanLabel(text) {
+  return String(text || '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/[.]+$/, '');
+}
+
+function stripLeadingLabel(text, label) {
+  const t = String(text || '').trim();
+  const l = String(label || '').trim();
+  if (!t || !l) return t;
+  if (t.toLowerCase().startsWith(l.toLowerCase())) {
+    return t.slice(l.length).replace(/^[\s·,;:.—–-]+/, '').trim();
+  }
+  const escaped = l.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const paren = new RegExp(`^${escaped}\\s*\\([^)]+\\)\\s*(?:·\\s*)?`, 'i');
+  const m = t.match(paren);
+  if (m) return t.slice(m[0].length).trim();
+  return t;
+}
+
+function firstClauseSplit(text) {
+  const m = String(text || '').match(/^(.{8,48}?),(\s+)([\s\S]+)$/);
+  if (!m) return null;
+  return { label: m[1].trim(), description: m[3].trim() };
+}
+
+function maybeShortenToPlaceName(label, description, place) {
+  if (!place || !place.name) return { label, description };
+  const name = place.name;
+  if (!label.toLowerCase().startsWith(name.toLowerCase())) {
+    return { label, description };
+  }
+  const rest = label.slice(name.length).trim();
+  // Collapse "Pantheon (Santa Maria ad Martyres)", not "Spanish Steps & Trinità".
+  if (!rest || /^\(.*\)$/.test(rest)) {
+    const extra = rest.replace(/^\(|\)$/g, '').trim();
+    let desc = description;
+    if (extra) desc = desc ? `(${extra}) · ${desc}` : extra;
+    return { label: name, description: desc };
+  }
+  return { label, description };
+}
+
+function placeNameAsLabelKind(kind) {
+  const k = (kind || '').toLowerCase();
+  if (/lunch|meal|arrive|breakfast|snack/.test(k)) return false;
+  return /visit|pickup|audience|mass|date|dinner/.test(k);
+}
+
+/**
+ * Derive a short column-3 label and a longer column-4 description from
+ * existing block fields. Prefers structured title/notes when present;
+ * otherwise splits `what` on a middot, sentence, or colon. Does not
+ * invent times, prices, or bookings.
+ */
+function splitBlockCopy(block, place) {
+  const structuredLabel = (block.label || block.title || block.short || '').trim();
+  const structuredNotes = (block.notes || block.detail || block.description || '').trim();
+  const what = (block.what || '').trim();
+
+  function finish(label, description) {
+    let lab = cleanLabel(label);
+    let desc = (description || '').trim();
+    const shortened = maybeShortenToPlaceName(lab, desc, place);
+    lab = shortened.label;
+    desc = shortened.description;
+    if (structuredNotes) {
+      if (!desc) desc = structuredNotes;
+      else if (!desc.includes(structuredNotes)) desc = `${desc} ${structuredNotes}`.trim();
+    }
+    if (desc && cleanLabel(desc) === lab) desc = '';
+    return { label: lab || what, description: desc };
+  }
+
+  if (structuredLabel) {
+    let desc = structuredNotes;
+    if (!desc && what && cleanLabel(what) !== cleanLabel(structuredLabel)) {
+      const stripped = stripLeadingLabel(what, structuredLabel);
+      desc = stripped && stripped !== what ? stripped : what;
+    }
+    return finish(structuredLabel, desc);
+  }
+
+  const parts = what.split(/\s*·\s*/).map((p) => p.trim()).filter(Boolean);
+  if (parts.length >= 2) {
+    const head = parts[0];
+    const tail = parts.slice(1).join(' · ');
+    if (head.length <= LABEL_MAX) return finish(head, tail);
+    const clause = firstClauseSplit(head);
+    if (clause) return finish(clause.label, [clause.description, tail].filter(Boolean).join(' · '));
+    if (head.length <= LABEL_SOFT_MAX) return finish(head, tail);
+  }
+
+  const sentence = what.match(/^(.+?[.!?])(?:\s+|$)([\s\S]*)$/);
+  if (sentence && sentence[2].trim()) {
+    const head = sentence[1].trim();
+    const tail = sentence[2].trim();
+    if (head.length <= LABEL_MAX) return finish(head, tail);
+    const clause = firstClauseSplit(head);
+    if (clause) return finish(clause.label, [clause.description, tail].filter(Boolean).join(' '));
+    if (head.length <= LABEL_SOFT_MAX) return finish(head, tail);
+  }
+
+  const colon = what.match(/^([^:]{3,56}):\s+([\s\S]+)$/);
+  if (colon) return finish(colon[1], colon[2]);
+
+  if (place && placeNameAsLabelKind(block.kind)) {
+    const rest = stripLeadingLabel(what, place.name);
+    return finish(place.name, rest || what);
+  }
+
+  if (what.length > LABEL_SOFT_MAX) {
+    const clause = firstClauseSplit(what);
+    if (clause) return finish(clause.label, clause.description);
+  }
+
+  return finish(what, '');
 }
 
 function placeById(id) {
@@ -351,16 +474,32 @@ function renderDays() {
       const rows = d.blocks
         .map((b) => {
           const place = placeById(b.placeId);
-          const link = (b.links && b.links[0]) || place?.url;
-          let what = escapeHtml(b.what);
-          if (link) what = `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${what}</a>`;
-          const pin = place
-            ? `<button class="pin-link" data-focus="${escapeHtml(place.id)}" type="button">Show on map</button>`
+          const { label, description } = splitBlockCopy(b, place);
+          const urls = [];
+          (b.links || []).forEach((u) => {
+            if (u && !urls.includes(u)) urls.push(u);
+          });
+          if (place?.url && !urls.includes(place.url)) urls.push(place.url);
+          const actions = urls.map(
+            (url) =>
+              `<a class="place-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(linkLabel(url))}</a>`
+          );
+          if (place) {
+            actions.push(
+              `<button class="pin-link" data-focus="${escapeHtml(place.id)}" type="button">Show on map</button>`
+            );
+          }
+          const actionHtml = actions.length
+            ? `<div class="block-actions">${actions.join('')}</div>`
+            : '';
+          const detailHtml = description
+            ? `<p class="detail-text">${escapeHtml(description)}</p>`
             : '';
           return `<li class="block">
         <div class="time">${escapeHtml(b.time)}</div>
-        <div><span class="kind ${kindClass(b.kind)}">${escapeHtml(b.kind)}</span></div>
-        <div class="what">${what}${pin}</div>
+        <div class="kind-cell"><span class="kind ${kindClass(b.kind)}">${escapeHtml(b.kind)}</span></div>
+        <div class="label">${escapeHtml(label)}</div>
+        <div class="detail">${detailHtml}${actionHtml}</div>
       </li>`;
         })
         .join('');
@@ -389,6 +528,18 @@ function renderDays() {
       }, 250);
     });
   });
+}
+
+function linkLabel(url) {
+  const u = String(url || '').toLowerCase();
+  if (u.includes('despar') || u.includes('giulio+cesare+193') || u.includes('giulio%20cesare%20193')) {
+    return 'Despar map';
+  }
+  if (u.includes('mercato') || u.includes('dell%27unit') || u.includes("dell'unit")) {
+    return 'Market map';
+  }
+  if (/google\.[^/]*\/maps|maps\.app\.goo\.gl|maps\.google/i.test(u)) return 'Maps';
+  return 'Official site';
 }
 
 function escapeHtml(s) {

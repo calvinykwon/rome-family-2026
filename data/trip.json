@@ -20,6 +20,7 @@
     "Colosseum timed tickets for Fri Nov 20 (~30 days out)",
     "Pantheon timed tickets",
     "Anniversary table at Glass Hostaria or L’Arcangelo",
+    "Call ahead for tables of 9 (may need two tables) — trattoria meals are draft suggestions, not reserved",
     "Optional Vatican Museums for older kids",
     "Airport vans both ends"
   ],
@@ -58,7 +59,9 @@
       "note": "Goal: get the apartment, eat, then stay out for an easy Vatican-side evening. Arrival quiet time is only for check-in and jet lag—not a sightseeing nap cycle.",
       "mapPlaceIds": [
         "st-peters-square",
-        "castel"
+        "castel",
+        "despar",
+        "mercato-prati"
       ],
       "blocks": [
         {
@@ -78,9 +81,13 @@
         {
           "time": "9:15–10:30",
           "kind": "Home",
-          "what": "Prati apartment · Check in, unpack cribs, find bathrooms, start laundry, grocery/pharmacy run on Via Cola di Rienzo.",
-          "links": [],
-          "placeId": "prati"
+          "what": "Check in, unpack cribs, find bathrooms, start laundry. First grocery shop: Despar at Viale Giulio Cesare 193 (near Ottaviano) and/or Mercato Rionale Prati in Piazza dell’Unità. Pharmacy on Via Cola di Rienzo if needed.",
+          "links": [
+            "https://www.google.com/maps/search/?api=1&query=Despar%20Viale%20Giulio%20Cesare%20193%20Roma",
+            "https://www.google.com/maps/search/?api=1&query=Mercato%20Rionale%20Prati%20Piazza%20dell%27Unit%C3%A0%20Roma"
+          ],
+          "placeId": "prati",
+          "label": "Prati apartment"
         },
         {
           "time": "10:30–11:30",
@@ -92,9 +99,10 @@
         {
           "time": "11:30–12:45",
           "kind": "Lunch",
-          "what": "Lunch in Prati (apartment or nearby café).",
+          "what": "Light first meal at the Prati Airbnb from the grocery run — keep it simple after the overnight flight. Skip a restaurant lunch today. Draft — not a booking.",
           "links": [],
-          "placeId": null
+          "placeId": null,
+          "label": "Apartment lunch"
         },
         {
           "time": "12:45–1:15",
@@ -138,9 +146,13 @@
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Early dinner in Prati.",
-          "links": [],
-          "placeId": null
+          "what": "Light landing-night meal at the apartment from groceries. Don’t overload with a big trattoria the night you land. If anyone still wants to sit down nearby, Osteria dei Gracchi (Via dei Gracchi 19) is a neighborhood osteria. Call ahead for 9 / may need two tables. Draft suggestion — not reserved.",
+          "links": [
+            "https://www.osteriadeigracchi.it/",
+            "https://www.google.com/maps/search/?api=1&query=Osteria%20dei%20Gracchi%20Via%20dei%20Gracchi%2019%20Roma"
+          ],
+          "placeId": null,
+          "label": "Apartment dinner"
         },
         {
           "time": "7:00+",
@@ -164,15 +176,18 @@
         "san-luigi",
         "trevi",
         "spagna",
-        "bronze-door"
+        "bronze-door",
+        "campana",
+        "matriciano"
       ],
       "blocks": [
         {
           "time": "7:00–8:15",
           "kind": "Breakfast",
-          "what": "Apartment breakfast. Pack snacks, water, diapers.",
+          "what": "At the Prati Airbnb after the grocery shop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in. Draft routine — not a café reservation. Pack snacks, water, diapers.",
           "links": [],
-          "placeId": null
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "8:15–8:45",
@@ -239,9 +254,13 @@
         {
           "time": "12:15–1:45",
           "kind": "Lunch",
-          "what": "Sit-down lunch near Piazza Navona / Pantheon. Aim to be seated by 12:15.",
-          "links": [],
-          "placeId": "pantheon"
+          "what": "Vicolo della Campana 18/20, between the Pantheon and Piazza Navona. Historic Roman cooking (from 1518) on a side street, not a piazza tourist trap, and large enough for a family of 9. Closed Monday; Tuesday is open. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Armando al Pantheon is excellent but they do not take groups over 6, so it is not the pick for nine.",
+          "links": [
+            "https://www.ristorantelacampana.com/",
+            "https://www.google.com/maps/search/?api=1&query=La%20Campana%20Vicolo%20della%20Campana%2018%20Roma"
+          ],
+          "placeId": "campana",
+          "label": "La Campana"
         },
         {
           "time": "1:45–2:15",
@@ -306,9 +325,13 @@
         {
           "time": "6:15–7:30",
           "kind": "Dinner",
-          "what": "Early dinner in Prati. Early bedtime—audience morning starts early.",
-          "links": [],
-          "placeId": null
+          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Use tonight — they are closed Wednesday. Early bedtime; audience morning starts early.",
+          "links": [
+            "https://www.ilmatriciano.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+          ],
+          "placeId": "matriciano",
+          "label": "Il Matriciano"
         },
         {
           "time": "7:30+",
@@ -330,15 +353,18 @@
         "bronze-door",
         "st-peters-square",
         "st-peters",
-        "castel"
+        "castel",
+        "micci",
+        "gracchi"
       ],
       "blocks": [
         {
           "time": "6:30–7:15",
           "kind": "Breakfast",
-          "what": "Early apartment breakfast. Modest dress for the audience. Bring reservation 1113_UG_18.11/2026 and all 9 tickets (or collect at the Bronze Door from 7:30am if not picked up Tuesday).",
+          "what": "At the Prati Airbnb after the grocery shop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in. Draft routine — not a café reservation. Modest dress for the audience. Bring reservation 1113_UG_18.11/2026 and all 9 tickets (or collect at the Bronze Door from 7:30am if not picked up Tuesday).",
           "links": [],
-          "placeId": "bronze-door"
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "7:15–7:45",
@@ -389,9 +415,13 @@
         {
           "time": "1:15–2:30",
           "kind": "Lunch",
-          "what": "Lunch in Prati or Borgo (closer than crossing the city).",
-          "links": [],
-          "placeId": null
+          "what": "Via Andrea Doria 55 a/b, Prati. Neighborhood trattoria-pizzeria since 1936, walkable after the audience (closer than crossing the city). Closed Monday; Wednesday is open. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Osteria dei Gracchi, Via dei Gracchi 19. Not Il Matriciano — closed Wednesday.",
+          "links": [
+            "https://www.trattoriamicci.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Trattoria%20Micci%20Via%20Andrea%20Doria%2055%20Roma"
+          ],
+          "placeId": "micci",
+          "label": "Trattoria Micci"
         },
         {
           "time": "2:30–3:00",
@@ -421,9 +451,13 @@
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Early dinner in Prati.",
-          "links": [],
-          "placeId": null
+          "what": "Via dei Gracchi 19, Prati. Neighborhood osteria with Roman cooking near Ottaviano. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Trattoria Micci (Via Andrea Doria 55 a/b). Il Matriciano is closed Wednesday.",
+          "links": [
+            "https://www.osteriadeigracchi.it/",
+            "https://www.google.com/maps/search/?api=1&query=Osteria%20dei%20Gracchi%20Via%20dei%20Gracchi%2019%20Roma"
+          ],
+          "placeId": "gracchi",
+          "label": "Osteria dei Gracchi"
         },
         {
           "time": "7:00+",
@@ -442,15 +476,18 @@
       "title": "Thursday Nov 19 — Light day · 10th anniversary",
       "note": "Easy morning nearby. Afternoon free in Prati / river. Sister and brother-in-law have the kids for the evening. No table held yet.",
       "mapPlaceIds": [
-        "glass"
+        "glass",
+        "matriciano",
+        "micci"
       ],
       "blocks": [
         {
           "time": "7:30–8:30",
           "kind": "Breakfast",
-          "what": "Apartment breakfast. Unhurried.",
+          "what": "At the Prati Airbnb after the grocery shop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in. Draft routine — not a café reservation. Unhurried.",
           "links": [],
-          "placeId": null
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "8:30–9:00",
@@ -476,9 +513,13 @@
         {
           "time": "12:00–1:30",
           "kind": "Lunch",
-          "what": "Lunch at the apartment or nearby.",
-          "links": [],
-          "placeId": null
+          "what": "Family lunch. Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Thursday. Stay close to home so the evening handoff is simple.",
+          "links": [
+            "https://www.ilmatriciano.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+          ],
+          "placeId": "matriciano",
+          "label": "Il Matriciano"
         },
         {
           "time": "1:30–4:00",
@@ -490,9 +531,13 @@
         {
           "time": "4:00–5:30",
           "kind": "Kids dinner",
-          "what": "Kids eat early with aunt and uncle. Parents get ready.",
-          "links": [],
-          "placeId": null
+          "what": "Kids eat early with aunt and uncle. Via Andrea Doria 55 a/b, Prati — trattoria-pizzeria since 1936. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Osteria dei Gracchi. Parents get ready for the anniversary dinner.",
+          "links": [
+            "https://www.trattoriamicci.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Trattoria%20Micci%20Via%20Andrea%20Doria%2055%20Roma"
+          ],
+          "placeId": "micci",
+          "label": "Trattoria Micci"
         },
         {
           "time": "5:30–6:30",
@@ -511,12 +556,13 @@
         {
           "time": "7:00–9:30",
           "kind": "Date night",
-          "what": "Glass Hostaria · Vicolo del Cinque 58, Trastevere. Dinner Wed–Sun 7:00–10:30pm. Modern Italian; tasting menu listed at €135/person before drinks. Quiet designed room—not a piazza tourist table. No reservation held.Alternate: L’Arcangelo · Via G. G. Belli 59, Prati · walkable. Confirm November hours by phone (+39 06 3210992).",
+          "what": "Vicolo del Cinque 58, Trastevere. Anniversary dinner for Calvin and his wife. Modern Italian in a quiet designed room — not a piazza tourist table. Dinner Wednesday–Sunday 7:00–10:30pm (from the restaurant site). Draft suggestion — not reserved. Alternate: L’Arcangelo, Via G. G. Belli 59, Prati (walkable; closed Sunday). Confirm November hours by phone (+39 06 3210992).",
           "links": [
             "https://www.glasshostaria.it/en/",
             "https://www.larcangelo.com/en/"
           ],
-          "placeId": "glass"
+          "placeId": "glass",
+          "label": "Glass Hostaria"
         },
         {
           "time": "9:30–10:00",
@@ -544,15 +590,18 @@
       "mapPlaceIds": [
         "colosseum",
         "arch",
-        "forum"
+        "forum",
+        "bruttone",
+        "matriciano"
       ],
       "blocks": [
         {
           "time": "7:00–7:45",
           "kind": "Breakfast",
-          "what": "Apartment breakfast. Water and snacks for the Forum.",
+          "what": "At the Prati Airbnb after the grocery shop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in. Draft routine — not a café reservation. Water and snacks for the Forum.",
           "links": [],
-          "placeId": "forum"
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "7:45–8:30",
@@ -599,9 +648,14 @@
         {
           "time": "12:15–1:45",
           "kind": "Lunch",
-          "what": "Lunch near Colosseo / Via dei Fori. Long sit—rest feet.",
-          "links": [],
-          "placeId": "colosseum"
+          "what": "Via dei Serpenti 113, Monti — Roman osteria cooking a short walk from the Colosseum, not a Via dei Fori laminated-menu strip. Long sit; rest feet. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Osteria Al Vicolo 9, Vicolo dei Serpenti 9 (closed Sunday; Friday is open).",
+          "links": [
+            "https://darbruttonerionemonti.com/",
+            "https://www.google.com/maps/search/?api=1&query=Dar%20Bruttone%20Rione%20Monti%20Via%20dei%20Serpenti%20113%20Roma",
+            "http://osteriavicolo9.it/"
+          ],
+          "placeId": "bruttone",
+          "label": "Dar Bruttone Rione Monti"
         },
         {
           "time": "1:45–2:15",
@@ -629,9 +683,13 @@
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Early dinner in Prati.",
-          "links": [],
-          "placeId": null
+          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Friday.",
+          "links": [
+            "https://www.ilmatriciano.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+          ],
+          "placeId": "matriciano",
+          "label": "Il Matriciano"
         },
         {
           "time": "7:00+",
@@ -653,15 +711,18 @@
         "maggiore",
         "lateran",
         "scala",
-        "croce"
+        "croce",
+        "faleria",
+        "matriciano"
       ],
       "blocks": [
         {
           "time": "7:00–8:00",
           "kind": "Breakfast",
-          "what": "Apartment breakfast.",
+          "what": "At the Prati Airbnb after the grocery shop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in. Draft routine — not a café reservation.",
           "links": [],
-          "placeId": null
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "8:00–8:40",
@@ -714,9 +775,14 @@
         {
           "time": "12:15–1:45",
           "kind": "Lunch",
-          "what": "Lunch near San Giovanni.",
-          "links": [],
-          "placeId": "lateran"
+          "what": "Via Faleria 47, San Giovanni / Appio Latino, near the Lateran. Modern osteria of Roman and Lazio cooking — family-friendlier than a tiny tasting room (skip SantoPalato for 9). Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Pepe San Giovanni, Via Gallia 103 (restaurant-pizzeria near the basilica).",
+          "links": [
+            "https://www.osteriafaleria.it/",
+            "https://www.google.com/maps/search/?api=1&query=Osteria%20Faleria%20Via%20Faleria%2047%20Roma",
+            "https://pepesangiovanni.it/"
+          ],
+          "placeId": "faleria",
+          "label": "Osteria Faleria"
         },
         {
           "time": "1:45–2:45",
@@ -751,9 +817,13 @@
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Early dinner.",
-          "links": [],
-          "placeId": null
+          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Saturday.",
+          "links": [
+            "https://www.ilmatriciano.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+          ],
+          "placeId": "matriciano",
+          "label": "Il Matriciano"
         },
         {
           "time": "7:00+",
@@ -773,15 +843,18 @@
       "note": "Worship first, then a longer riverside / Trastevere edge afternoon. Vatican Museums closed today under the standing Sunday rule.",
       "mapPlaceIds": [
         "st-peters-square",
-        "tiber"
+        "tiber",
+        "pompiere",
+        "micci"
       ],
       "blocks": [
         {
           "time": "7:30–8:15",
           "kind": "Breakfast",
-          "what": "Apartment breakfast.",
+          "what": "At the Prati Airbnb after the grocery shop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in. Draft routine — not a café reservation.",
           "links": [],
-          "placeId": null
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "8:15–8:45",
@@ -816,9 +889,13 @@
         {
           "time": "12:00–1:30",
           "kind": "Lunch",
-          "what": "Lunch on Tiber Island or Trastevere edge.",
-          "links": [],
-          "placeId": "tiber"
+          "what": "Piazza delle Cinque Scole 28, Jewish Ghetto — a short walk from Tiber Island. Historic Roman trattoria (family-run since 1928), not a piazza tourist trap. Closed Tuesday; Sunday lunch is the service. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Da Enzo al 29 is too small for 9; Sora Lella on the island takes groups over 6 on tasting menus only. Alternate: taxi back to Prati for Osteria dei Gracchi.",
+          "links": [
+            "https://www.alpompiereroma.com/",
+            "https://www.google.com/maps/search/?api=1&query=Al%20Pompiere%20Piazza%20delle%20Cinque%20Scole%2028%20Roma"
+          ],
+          "placeId": "pompiere",
+          "label": "Al Pompiere"
         },
         {
           "time": "1:30–3:00",
@@ -853,9 +930,13 @@
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Early dinner.",
-          "links": [],
-          "placeId": null
+          "what": "Via Andrea Doria 55 a/b, Prati. Il Matriciano is closed Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternate: Osteria dei Gracchi (open daily).",
+          "links": [
+            "https://www.trattoriamicci.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Trattoria%20Micci%20Via%20Andrea%20Doria%2055%20Roma"
+          ],
+          "placeId": "micci",
+          "label": "Trattoria Micci"
         },
         {
           "time": "7:00+",
@@ -873,14 +954,17 @@
       "label": "Spare",
       "title": "Monday Nov 23 — Spare day & pack",
       "note": "Default: pack, one last outing if wanted. San Paolo or Appian catacombs only if older kids insist—and only half the group.",
-      "mapPlaceIds": [],
+      "mapPlaceIds": [
+        "matriciano"
+      ],
       "blocks": [
         {
           "time": "7:30–8:30",
           "kind": "Breakfast",
-          "what": "Apartment breakfast.",
+          "what": "At the Prati Airbnb after the grocery shop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in. Draft routine — not a café reservation.",
           "links": [],
-          "placeId": null
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "8:30–10:30",
@@ -899,9 +983,13 @@
         {
           "time": "12:30–2:00",
           "kind": "Lunch",
-          "what": "Lunch at or near the apartment.",
-          "links": [],
-          "placeId": null
+          "what": "At or near the apartment from leftover groceries. If you want a neighborhood table: Osteria dei Gracchi or Il Matriciano (open Monday). Call ahead for 9 / may need two tables. Draft suggestion — not reserved.",
+          "links": [
+            "https://www.ilmatriciano.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+          ],
+          "placeId": null,
+          "label": "Apartment lunch"
         },
         {
           "time": "2:00–4:30",
@@ -920,9 +1008,13 @@
         {
           "time": "5:30–7:00",
           "kind": "Dinner",
-          "what": "Early dinner. Lights out early.",
-          "links": [],
-          "placeId": null
+          "what": "Via dei Gracchi 55, Prati. Neighborhood Roman trattoria — not a laminated piazza menu. Official winter schedule: closed Wednesday (lunch and dinner) and Sunday dinner. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Alternates: Osteria dei Gracchi (Via dei Gracchi 19) or Trattoria Micci (Via Andrea Doria 55 a/b; closed Monday). Open Monday. Early dinner; lights out early for the airport morning.",
+          "links": [
+            "https://www.ilmatriciano.it/en/",
+            "https://www.google.com/maps/search/?api=1&query=Il%20Matriciano%20Via%20dei%20Gracchi%2055%20Roma"
+          ],
+          "placeId": "matriciano",
+          "label": "Il Matriciano"
         },
         {
           "time": "7:00–8:30",
@@ -945,9 +1037,10 @@
         {
           "time": "5:00–5:30",
           "kind": "Wake",
-          "what": "Wake household. Quick breakfast / bottles.",
+          "what": "Wake the household. Quick breakfast / bottles at the apartment from leftover groceries. No café stop. Groceries for apartment breakfasts: Despar (Viale Giulio Cesare 193, near Ottaviano) and/or Mercato Rionale Prati (Piazza dell’Unità). First shop on arrival Mon Nov 16 after check-in.",
           "links": [],
-          "placeId": null
+          "placeId": null,
+          "label": "Apartment breakfast"
         },
         {
           "time": "5:30–6:00",
@@ -1149,6 +1242,94 @@
         "lng": 12.4645,
         "url": "https://www.larcangelo.com/en/",
         "summary": "Walkable Prati alternate for anniversary dinner. Confirm November hours by phone."
+      },
+      {
+        "id": "despar",
+        "name": "Despar Prati",
+        "lat": 41.9089,
+        "lng": 12.4569,
+        "url": "https://www.google.com/maps/search/?api=1&query=Despar%20Viale%20Giulio%20Cesare%20193%20Roma",
+        "summary": "Supermarket at Viale Giulio Cesare 193, near Ottaviano. Grocery stop for apartment breakfasts."
+      },
+      {
+        "id": "mercato-prati",
+        "name": "Mercato Rionale Prati",
+        "lat": 41.9074,
+        "lng": 12.4616,
+        "url": "https://www.google.com/maps/search/?api=1&query=Mercato%20Rionale%20Prati%20Piazza%20dell%27Unit%C3%A0%20Roma",
+        "summary": "Neighborhood market in Piazza dell’Unità, Prati. Fruit, veg, and deli counters for the apartment."
+      },
+      {
+        "id": "matriciano",
+        "name": "Il Matriciano",
+        "lat": 41.9074,
+        "lng": 12.4603,
+        "url": "https://www.ilmatriciano.it/en/",
+        "summary": "Classic Roman trattoria in Prati, Via dei Gracchi 55. Closed Wednesday; Sunday dinner closed."
+      },
+      {
+        "id": "gracchi",
+        "name": "Osteria dei Gracchi",
+        "lat": 41.9082,
+        "lng": 12.4575,
+        "url": "https://www.osteriadeigracchi.it/",
+        "summary": "Neighborhood osteria at Via dei Gracchi 19, Prati. Roman cooking near Ottaviano."
+      },
+      {
+        "id": "micci",
+        "name": "Trattoria Micci",
+        "lat": 41.9094,
+        "lng": 12.4514,
+        "url": "https://www.trattoriamicci.it/en/",
+        "summary": "Prati trattoria-pizzeria since 1936, Via Andrea Doria 55 a/b. Closed Monday."
+      },
+      {
+        "id": "campana",
+        "name": "La Campana",
+        "lat": 41.9027,
+        "lng": 12.4746,
+        "url": "https://www.ristorantelacampana.com/",
+        "summary": "Historic Roman restaurant (from 1518) on Vicolo della Campana, near the Pantheon. Closed Monday."
+      },
+      {
+        "id": "bruttone",
+        "name": "Dar Bruttone Rione Monti",
+        "lat": 41.8965,
+        "lng": 12.4902,
+        "url": "https://darbruttonerionemonti.com/",
+        "summary": "Roman cooking on Via dei Serpenti 113, Monti, near the Colosseum."
+      },
+      {
+        "id": "vicolo9",
+        "name": "Osteria Al Vicolo 9",
+        "lat": 41.8981,
+        "lng": 12.4898,
+        "url": "http://osteriavicolo9.it/",
+        "summary": "Monti osteria at Vicolo dei Serpenti 9. Closed Sunday."
+      },
+      {
+        "id": "faleria",
+        "name": "Osteria Faleria",
+        "lat": 41.8825,
+        "lng": 12.5094,
+        "url": "https://www.osteriafaleria.it/",
+        "summary": "Roman/Lazio osteria near San Giovanni, Via Faleria 47. Family-friendlier than a tiny tasting room for 9."
+      },
+      {
+        "id": "pepe-sg",
+        "name": "Pepe San Giovanni",
+        "lat": 41.8805,
+        "lng": 12.5077,
+        "url": "https://pepesangiovanni.it/",
+        "summary": "Family-scale restaurant/pizzeria at Via Gallia 103, near the Lateran."
+      },
+      {
+        "id": "pompiere",
+        "name": "Al Pompiere",
+        "lat": 41.893,
+        "lng": 12.4764,
+        "url": "https://www.alpompiereroma.com/",
+        "summary": "Historic Roman trattoria in the Ghetto, Piazza delle Cinque Scole 28. Closed Tuesday; Sunday lunch."
       }
     ]
   }

@@ -27,6 +27,17 @@
     {"id":"croce","name":"Santa Croce in Gerusalemme","lat":41.8880,"lng":12.5166,"url":"https://www.santacroceroma.it/en/opening-hours.html","summary":"Optional short stop. Relic chapel may be closed for renovation — check first."},
     {"id":"tiber","name":"Isola Tiberina / San Bartolomeo","lat":41.8908,"lng":12.4779,"url":"https://sanbartolomeo.org/visita-orari-celebrazioni/","summary":"Island stroll and brief church peek. Prefer taxi over long cobbles with a stroller."},
     {"id":"glass","name":"Glass Hostaria","lat":41.8895,"lng":12.4686,"url":"https://www.glasshostaria.it/en/","summary":"Anniversary dinner pick. Vicolo del Cinque 58, Trastevere. Wed–Sun dinner. No table held yet."},
-    {"id":"arcangelo","name":"L’Arcangelo","lat":41.9090,"lng":12.4645,"url":"https://www.larcangelo.com/en/","summary":"Walkable Prati alternate for anniversary dinner. Confirm November hours by phone."}
+    {"id":"arcangelo","name":"L’Arcangelo","lat":41.9090,"lng":12.4645,"url":"https://www.larcangelo.com/en/","summary":"Walkable Prati alternate for anniversary dinner. Confirm November hours by phone."},
+    {"id":"despar","name":"Despar Prati","lat":41.9089,"lng":12.4569,"url":"https://www.google.com/maps/search/?api=1&query=Despar%20Viale%20Giulio%20Cesare%20193%20Roma","summary":"Supermarket at Viale Giulio Cesare 193, near Ottaviano. Grocery stop for apartment breakfasts."},
+    {"id":"mercato-prati","name":"Mercato Rionale Prati","lat":41.9074,"lng":12.4616,"url":"https://www.google.com/maps/search/?api=1&query=Mercato%20Rionale%20Prati%20Piazza%20dell%27Unit%C3%A0%20Roma","summary":"Neighborhood market in Piazza dell’Unità, Prati. Fruit, veg, and deli counters for the apartment."},
+    {"id":"matriciano","name":"Il Matriciano","lat":41.9074,"lng":12.4603,"url":"https://www.ilmatriciano.it/en/","summary":"Classic Roman trattoria in Prati, Via dei Gracchi 55. Closed Wednesday; Sunday dinner closed."},
+    {"id":"gracchi","name":"Osteria dei Gracchi","lat":41.9082,"lng":12.4575,"url":"https://www.osteriadeigracchi.it/","summary":"Neighborhood osteria at Via dei Gracchi 19, Prati. Roman cooking near Ottaviano."},
+    {"id":"micci","name":"Trattoria Micci","lat":41.9094,"lng":12.4514,"url":"https://www.trattoriamicci.it/en/","summary":"Prati trattoria-pizzeria since 1936, Via Andrea Doria 55 a/b. Closed Monday."},
+    {"id":"campana","name":"La Campana","lat":41.9027,"lng":12.4746,"url":"https://www.ristorantelacampana.com/","summary":"Historic Roman restaurant (from 1518) on Vicolo della Campana, near the Pantheon. Closed Monday."},
+    {"id":"bruttone","name":"Dar Bruttone Rione Monti","lat":41.8965,"lng":12.4902,"url":"https://darbruttonerionemonti.com/","summary":"Roman cooking on Via dei Serpenti 113, Monti, near the Colosseum."},
+    {"id":"vicolo9","name":"Osteria Al Vicolo 9","lat":41.8981,"lng":12.4898,"url":"http://osteriavicolo9.it/","summary":"Monti osteria at Vicolo dei Serpenti 9. Closed Sunday."},
+    {"id":"faleria","name":"Osteria Faleria","lat":41.8825,"lng":12.5094,"url":"https://www.osteriafaleria.it/","summary":"Roman/Lazio osteria near San Giovanni, Via Faleria 47. Family-friendlier than a tiny tasting room for 9."},
+    {"id":"pepe-sg","name":"Pepe San Giovanni","lat":41.8805,"lng":12.5077,"url":"https://pepesangiovanni.it/","summary":"Family-scale restaurant/pizzeria at Via Gallia 103, near the Lateran."},
+    {"id":"pompiere","name":"Al Pompiere","lat":41.8930,"lng":12.4764,"url":"https://www.alpompiereroma.com/","summary":"Historic Roman trattoria in the Ghetto, Piazza delle Cinque Scole 28. Closed Tuesday; Sunday lunch."}
   ]
 }
