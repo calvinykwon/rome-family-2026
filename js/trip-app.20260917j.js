@@ -1,5 +1,5 @@
-const state = { trip: null, options: null, map: null, layer: null, selectedDayId: 'all', optionFilter: 'all' };
-const CACHE_BUST = '20260917i';
+const state = { trip: null, options: null, ops: null, map: null, layer: null, selectedDayId: 'all', optionFilter: 'all' };
+const CACHE_BUST = '20260917j';
 
 const OPTION_LABELS = {
   'easy-add-on': 'Easy add-on',
@@ -260,6 +260,7 @@ async function load() {
   renderEatLikeRomans();
   renderTabs();
   renderDays();
+  await loadOps();
   await loadOptions();
 
   if (typeof L === 'undefined') {
@@ -301,6 +302,157 @@ async function loadOptions() {
 
   renderOptionFilters();
   renderOptions();
+}
+
+async function loadOps() {
+  const opsRoot = document.getElementById('ops-grid');
+  const annivRoot = document.getElementById('anniv-root');
+  try {
+    const res = await fetch(`data/ops.json?v=${CACHE_BUST}`);
+    if (!res.ok) throw new Error(`Could not fetch ops.json (${res.status})`);
+    state.ops = await res.json();
+  } catch (err) {
+    console.error(err);
+    const fail = '<p class="option-empty">Trip ops could not load. Hard-refresh the page (Cmd-Shift-R).</p>';
+    if (opsRoot) opsRoot.innerHTML = fail;
+    if (annivRoot) annivRoot.innerHTML = fail;
+    return;
+  }
+  renderTripOps();
+  renderAnniversary();
+}
+
+function renderOpsItems(items) {
+  return `<ul class="ops-list">${(items || []).map((item) => {
+    if (typeof item === 'string') {
+      return `<li>${escapeHtml(item)}</li>`;
+    }
+    const label = item.label ? `<strong>${escapeHtml(item.label)}</strong> · ` : '';
+    let jump = '';
+    if (item.href) {
+      const external = /^(https?:|tel:|mailto:)/i.test(item.href);
+      const href = external || item.href.startsWith('#') ? item.href : `#${item.href}`;
+      const extra = /^https?:/i.test(href) ? ' target="_blank" rel="noopener"' : '';
+      jump = ` <a href="${escapeHtml(href)}"${extra}>${escapeHtml(item.hrefLabel || 'See details')}</a>`;
+    }
+    return `<li>${label}${escapeHtml(item.text || '')}${jump}</li>`;
+  }).join('')}</ul>`;
+}
+
+function renderTripOps() {
+  const ops = state.ops && state.ops.tripOps;
+  const root = document.getElementById('ops-grid');
+  if (!ops || !root) return;
+
+  const kicker = document.getElementById('ops-kicker');
+  const title = document.getElementById('ops-title');
+  const intro = document.getElementById('ops-intro');
+  if (kicker && ops.kicker) kicker.textContent = ops.kicker;
+  if (title && ops.title) title.textContent = ops.title;
+  if (intro && ops.intro) intro.textContent = ops.intro;
+
+  root.innerHTML = (ops.cards || []).map((card) => `
+    <article class="ops-card" id="ops-${escapeHtml(card.id)}">
+      <h3>${escapeHtml(card.title)}</h3>
+      ${renderOpsItems(card.items)}
+    </article>
+  `).join('');
+}
+
+function restaurantLinks(rest) {
+  const links = [...(rest.links || [])];
+  if (rest.phone) {
+    links.push({ href: `tel:${rest.phone.replace(/\s+/g, '')}`, label: rest.phone });
+  }
+  if (rest.email) {
+    links.push({ href: `mailto:${rest.email}`, label: rest.email });
+  }
+  if (!links.length) return '';
+  return `<div class="ops-actions">${links.map((l) => {
+    const external = /^https?:/i.test(l.href);
+    const extra = external ? ' target="_blank" rel="noopener"' : '';
+    return `<a class="place-link" href="${escapeHtml(l.href)}"${extra}>${escapeHtml(l.label)}</a>`;
+  }).join('')}</div>`;
+}
+
+function renderRestaurantCard(rest) {
+  const tierClass = rest.tier === 'Primary' ? 'primary' : '';
+  const rows = [
+    rest.address,
+    rest.blurb,
+    rest.hours,
+    rest.thursday,
+    rest.price,
+    rest.booking,
+    rest.prefer,
+    rest.taxi
+  ].filter(Boolean);
+  const cancel = rest.cancel
+    ? `<p class="ops-callout alert">${escapeHtml(rest.cancel)}</p>`
+    : '';
+  return `<article class="ops-card" id="ops-${escapeHtml(rest.id)}">
+    <div class="ops-badge-row">
+      <span class="ops-badge ${tierClass}">${escapeHtml(rest.tier)}</span>
+      <span class="ops-badge draft">Draft · nothing reserved</span>
+    </div>
+    <h3>${escapeHtml(rest.name)}</h3>
+    <p class="ops-lead">${escapeHtml(rest.area || '')}</p>
+    ${rows.map((line) => `<p class="ops-meta">${escapeHtml(line)}</p>`).join('')}
+    ${cancel}
+    ${restaurantLinks(rest)}
+  </article>`;
+}
+
+function renderAnniversary() {
+  const a = state.ops && state.ops.anniversary;
+  const root = document.getElementById('anniv-root');
+  if (!a || !root) return;
+
+  const kicker = document.getElementById('anniv-kicker');
+  const title = document.getElementById('anniv-title');
+  const intro = document.getElementById('anniv-intro');
+  if (kicker && a.kicker) kicker.textContent = a.kicker;
+  if (title && a.title) title.textContent = a.title;
+  if (intro && a.intro) intro.textContent = a.intro;
+
+  const ctx = a.context || {};
+  const dinner = a.dinner || {};
+  const kids = a.kidsEvening || {};
+  const framing = a.dayFraming || {};
+  const dayJump = a.dayLink
+    ? `<a class="ops-jump" href="#${escapeHtml(a.dayLink.href)}">${escapeHtml(a.dayLink.label)}</a>`
+    : '';
+
+  const contextCard = `<article class="ops-card">
+    <div class="ops-badge-row">
+      <span class="ops-badge draft">${escapeHtml(ctx.badge || 'Draft')}</span>
+    </div>
+    <h3>${escapeHtml(ctx.title || 'Context')}</h3>
+    ${[ctx.party, ctx.plan, ctx.stay, ctx.status].filter(Boolean).map((line) =>
+      `<p class="ops-meta">${escapeHtml(line)}</p>`
+    ).join('')}
+  </article>`;
+
+  const dinnerHead = `<article class="ops-card">
+    <h3>${escapeHtml(dinner.title || 'Dinner shortlist')}</h3>
+    <p class="ops-lead">${escapeHtml(dinner.subtitle || '')}</p>
+    ${dinner.bookingNote ? `<p class="ops-callout">${escapeHtml(dinner.bookingNote)}</p>` : ''}
+  </article>`;
+
+  const restaurants = `<div class="ops-grid-2">${(dinner.restaurants || []).map(renderRestaurantCard).join('')}</div>`;
+
+  const kidsCard = `<article class="ops-card">
+    <h3>${escapeHtml(kids.title || "Kids’ evening plan")}</h3>
+    <p class="ops-lead">${escapeHtml(kids.subtitle || '')}</p>
+    ${renderOpsItems(kids.items)}
+  </article>`;
+
+  const framingCard = `<article class="ops-card">
+    <h3>${escapeHtml(framing.title || 'Day framing')}</h3>
+    <p class="ops-meta">${escapeHtml(framing.text || '')}${dayJump ? ` · ${dayJump}` : ''}</p>
+  </article>`;
+
+  root.innerHTML = [contextCard, dinnerHead, restaurants, kidsCard, framingCard].join('');
 }
 
 function renderOptionFilters() {
@@ -667,6 +819,11 @@ function renderBlockRow(d, b, numbers) {
     (url) =>
       `<a class="place-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(linkLabel(url))}</a>`
   );
+  if (b.jumpTo) {
+    actions.push(
+      `<a class="place-link" href="#${escapeHtml(b.jumpTo)}">${escapeHtml(b.jumpLabel || 'See details')}</a>`
+    );
+  }
   if (place) {
     actions.push(
       `<button class="pin-link" data-focus="${escapeHtml(place.id)}" type="button">Show on map</button>`
@@ -725,9 +882,15 @@ function renderDays() {
     .map((d) => {
       const numbers = sequenceNumbers(d.id);
       const rows = d.blocks.map((b) => renderBlockRow(d, b, numbers)).join('');
+      const related = d.related
+        ? ` <a href="#${escapeHtml(d.related.href)}">${escapeHtml(d.related.label)}</a>`
+        : '';
+      const note = d.note || d.related
+        ? `<p class="day-note">${d.note ? escapeHtml(d.note) : ''}${related}</p>`
+        : '';
       return `<article class="day-panel" id="${escapeHtml(d.id)}" data-day="${escapeHtml(d.id)}">
       <h3>${escapeHtml(d.title)}</h3>
-      ${d.note ? `<p class="day-note">${escapeHtml(d.note)}</p>` : ''}
+      ${note}
       <ul class="timeline">${rows}</ul>
     </article>`;
     })
