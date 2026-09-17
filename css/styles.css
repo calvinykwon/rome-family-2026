@@ -36,7 +36,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 12.5rem; }
 
 body {
   margin: 0;
@@ -129,9 +129,20 @@ a:hover { color: var(--primary); }
 
 .top-actions {
   display: flex;
-  gap: var(--space-sm);
+  gap: 6px;
   flex-wrap: wrap;
+  justify-content: flex-end;
   padding-bottom: 2px;
+}
+
+.top-actions .btn {
+  height: 40px;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.top-actions .btn.ghost {
+  padding: 7px 13px;
 }
 
 /* —— Buttons (pill / soft) —— */
@@ -242,6 +253,15 @@ a:hover { color: var(--primary); }
 /* —— Sections —— */
 .section-head {
   margin: var(--space-section) 0 var(--space-lg);
+}
+
+#trip-ops,
+#anniversary,
+#options,
+#map-section,
+#days,
+.day-panel {
+  scroll-margin-top: 12.5rem;
 }
 
 .section-head h2 { margin: 0 0 6px; }
