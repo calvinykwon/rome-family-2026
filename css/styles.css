@@ -316,6 +316,43 @@ a:hover { color: var(--primary); }
   margin: var(--space-md) 0 0;
 }
 
+/* Numbered map pins — coral circle badges, readable on OSM tiles */
+.leaflet-div-icon.map-pin-wrap {
+  background: transparent;
+  border: none;
+}
+
+.map-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: var(--on-primary);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px var(--canvas), var(--shadow);
+  letter-spacing: 0;
+}
+
+.map-pin-wide {
+  width: 36px;
+  font-size: 13px;
+}
+
+.map-pin-home {
+  background: var(--ink);
+  color: var(--on-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 /* —— Day panels —— */
 .day-panel {
   background: var(--surface-card);
@@ -504,7 +541,15 @@ a:hover { color: var(--primary); }
   border-radius: var(--radius-full);
   padding: 4px 10px;
   margin-bottom: 8px;
+  margin-right: 6px;
   box-shadow: var(--shadow);
+}
+
+.badge.stop-badge {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+  box-shadow: none;
 }
 
 @media (max-width: 800px) {
