@@ -36,7 +36,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 12.5rem; }
 
 body {
   margin: 0;
@@ -129,9 +129,20 @@ a:hover { color: var(--primary); }
 
 .top-actions {
   display: flex;
-  gap: var(--space-sm);
+  gap: 6px;
   flex-wrap: wrap;
+  justify-content: flex-end;
   padding-bottom: 2px;
+}
+
+.top-actions .btn {
+  height: 40px;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.top-actions .btn.ghost {
+  padding: 7px 13px;
 }
 
 /* —— Buttons (pill / soft) —— */
@@ -242,6 +253,15 @@ a:hover { color: var(--primary); }
 /* —— Sections —— */
 .section-head {
   margin: var(--space-section) 0 var(--space-lg);
+}
+
+#trip-ops,
+#anniversary,
+#options,
+#map-section,
+#days,
+.day-panel {
+  scroll-margin-top: 12.5rem;
 }
 
 .section-head h2 { margin: 0 0 6px; }
@@ -842,6 +862,155 @@ a:hover { color: var(--primary); }
   color: var(--muted);
 }
 
+/* —— Trip ops + Anniversary night —— */
+.ops-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-base);
+}
+
+.ops-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-base);
+}
+
+.ops-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-base);
+}
+
+.ops-card {
+  background: var(--surface-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  min-width: 0;
+}
+
+.ops-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.ops-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.ops-card .ops-lead {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--muted);
+}
+
+.ops-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 10px;
+}
+
+.ops-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.18;
+  background: var(--surface-strong);
+  color: var(--ink);
+}
+
+.ops-badge.primary {
+  background: #fff0f3;
+  color: var(--primary-active);
+}
+
+.ops-badge.draft {
+  background: var(--canvas);
+  color: var(--muted);
+  border: 1px solid var(--hairline);
+}
+
+.ops-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--body);
+  font-size: 14px;
+  line-height: 1.43;
+}
+
+.ops-list li {
+  margin: 0.4rem 0;
+}
+
+.ops-list li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.ops-meta {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--body);
+}
+
+.ops-meta + .ops-meta {
+  margin-top: 8px;
+}
+
+.ops-meta a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ops-meta a:hover {
+  color: var(--primary-active);
+  text-decoration: underline;
+}
+
+.ops-callout {
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  background: var(--surface-soft);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--body);
+}
+
+.ops-callout.alert {
+  background: #fff0f3;
+  color: var(--error);
+}
+
+.ops-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 14px;
+}
+
+.day-note a,
+.ops-card a.ops-jump {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.day-note a:hover,
+.ops-card a.ops-jump:hover {
+  color: var(--primary-active);
+  text-decoration: underline;
+}
+
 /* —— Footer —— */
 .foot {
   padding: var(--space-xxl) 0 var(--space-section);
@@ -902,7 +1071,8 @@ a:hover { color: var(--primary); }
 }
 
 @media (max-width: 1128px) {
-  .options-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .options-grid,
+  .ops-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 960px) {
@@ -910,7 +1080,9 @@ a:hover { color: var(--primary); }
 }
 
 @media (max-width: 800px) {
-  .options-grid { grid-template-columns: 1fr; }
+  .options-grid,
+  .ops-grid,
+  .ops-grid-2 { grid-template-columns: 1fr; }
   .option-card.featured {
     grid-template-columns: 1fr;
   }

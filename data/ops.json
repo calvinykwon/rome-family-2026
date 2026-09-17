@@ -1,0 +1,187 @@
+{
+  "tripOps": {
+    "id": "trip-ops",
+    "kicker": "Whole week · draft",
+    "title": "Trip ops",
+    "intro": "Practical family logistics for nine people and a baby. Draft only — do not treat this as a booking, a fare table, or a pinned address. Recheck rules nearer the trip.",
+    "cards": [
+      {
+        "id": "flights",
+        "title": "Flights & airport",
+        "items": [
+          {
+            "label": "Out",
+            "text": "Sun Nov 15 · ITA AZ 619 · IAD 4:30pm → FCO 7:00am Mon Nov 16 · ref C3L60D (non-refundable)."
+          },
+          {
+            "label": "Return",
+            "text": "Tue Nov 24 · AZ 618 · FCO 10:10am → IAD 2:30pm."
+          },
+          {
+            "label": "Arrival",
+            "text": "9 people + stroller + bags — prefer a prebooked van/transfer over hunting 2–3 taxis at 7am; allow slow passport control. First morning in Rome is Mon Nov 16 (rest day)."
+          },
+          {
+            "label": "Departure",
+            "text": "Leave Prati ~6:30–7:00am for the 10:10am flight; baby gear packed the night before."
+          }
+        ]
+      },
+      {
+        "id": "documents",
+        "title": "Documents checklist",
+        "items": [
+          "Passports for all 9",
+          "Flight ref C3L60D / boarding passes",
+          "Papal General Audience: Wed Nov 18 10:00am, reservation 1113_UG_18.11/2026, 9 tickets. Collect at Bronze Door (Portone di Bronzo), Apostolic Palace, Piazza S. Pietro right colonnade — day before 8:30am–1:00pm and 3:00pm–7:00pm, or day of from 7:30am.",
+          "Colosseum timed tickets: book on ticketing.colosseo.it when the window opens (~30 days before visit); book all 9 in one session (4 adults + 5 under-18).",
+          "EHIC/GHIC or travel insurance cards if they carry them (optional — no policy numbers on this site)."
+        ]
+      },
+      {
+        "id": "getting-around",
+        "title": "Getting around",
+        "items": [
+          "Base assumption: one Prati Airbnb near Ottaviano or Lepanto (not chosen yet — no street address).",
+          "Metro for Vatican/centro with a stroller; taxis/Uber-class for late returns, rain, or the full group of 9.",
+          "Skip midday returns home for naps — short on-site rests instead.",
+          "Day tickets / contactless: confirm current ATAC / tap-to-pay rules nearer the trip. Do not treat any 2026 fare as settled here."
+        ]
+      },
+      {
+        "id": "apartment",
+        "title": "Apartment rhythm",
+        "items": [
+          "Grocery breakfasts at the apartment (the day’s meal pattern).",
+          "Washer/laundry mid-week if the stay has a machine (desired filter — not confirmed until a listing is chosen).",
+          "First grocery run Mon Nov 16 after check-in: Despar at Viale Giulio Cesare 193 (near Ottaviano) and/or Mercato Rionale Prati in Piazza dell’Unità — draft shops, not reservations."
+        ]
+      },
+      {
+        "id": "weather",
+        "title": "November weather",
+        "items": [
+          "Cool, possible rain: pack layers, compact rain jackets, a waterproof stroller cover, and one nice outfit for the anniversary.",
+          "Indoor church time is the rain backup; gelato still happens."
+        ]
+      },
+      {
+        "id": "health",
+        "title": "Health & baby",
+        "items": [
+          "EU emergency 112.",
+          "Pack: infant fever meds they already use, thermometer, outlet adapter, white-noise if they use it.",
+          "Nearest pharmacy / pediatric ER = placeholder until an Airbnb address exists."
+        ]
+      },
+      {
+        "id": "money",
+        "title": "Money",
+        "items": [
+          "Cards widely accepted; keep some cash for small churches, offerings, and markets.",
+          "Budget reminder: ~$7,000 excl. flights (stay + food + tickets + local transport). Optional one-liner tracker only — not a full spreadsheet."
+        ]
+      }
+    ]
+  },
+  "anniversary": {
+    "id": "anniversary",
+    "kicker": "Thu Nov 19, 2026 · 10th wedding anniversary",
+    "title": "Anniversary night ops",
+    "intro": "Calvin and his wife go out. Sister and brother-in-law watch the kids at the Prati apartment after an early kids’ dinner. Draft only — no table is held.",
+    "dayLink": {
+      "href": "d19",
+      "label": "Thursday’s light day plan"
+    },
+    "context": {
+      "title": "Context",
+      "badge": "Draft · nothing reserved",
+      "party": "Party of 9: Calvin, wife, kids ages 9 / 7 / 5 / 2 / 8 months, sister + brother-in-law.",
+      "plan": "Parents go out; sister & BIL watch the kids at the Prati apartment after the kids’ early dinner.",
+      "stay": "Stay still open — Prati near Ottaviano / Lepanto only. No Airbnb street address on this site.",
+      "status": "No table held yet. Book Glass (or L’Arcangelo) several weeks ahead once they choose. Do not assume open tables."
+    },
+    "dinner": {
+      "title": "Dinner shortlist",
+      "subtitle": "Parents only — party of 2. Nothing reserved.",
+      "bookingNote": "Recommend booking Glass (or Arcangelo) several weeks ahead once they choose. Do not claim or assume open tables.",
+      "restaurants": [
+        {
+          "id": "glass",
+          "tier": "Primary",
+          "name": "Glass Hostaria",
+          "area": "Trastevere",
+          "address": "Vicolo del Cinque 58, 00153 Rome",
+          "blurb": "Modern tasting-menu room, not a piazza tourist table.",
+          "hours": "Site hours: closed Mon/Tue; Wed–Sun dinner ~19:00–22:30.",
+          "thursday": "Nov 19 2026 is a Thursday → within their Wed–Sun dinner window per site hours.",
+          "price": "Tasting menu listed on their site at €135/person drinks excluded (from their menu page — recheck before booking).",
+          "booking": "Book only via their official OpenTable / TheFork links on glasshostaria.it (reservations page).",
+          "phone": "+39 06 58335903",
+          "email": "infoglasshostaria@gmail.com",
+          "cancel": "Free cancel up to 48h before for Wed/Thu visits (72h for Fri–Sun); late cancel/no-show penalty €90/person — from their site.",
+          "taxi": "Taxi Prati → Trastevere ~15–25 min; plan leave ~18:30–18:45 for a ~19:00–19:30 seating.",
+          "links": [
+            {
+              "href": "https://www.glasshostaria.it/en/",
+              "label": "glasshostaria.it"
+            }
+          ]
+        },
+        {
+          "id": "arcangelo",
+          "tier": "Alternate",
+          "name": "L’Arcangelo",
+          "area": "Prati",
+          "address": "Via Giuseppe Gioachino Belli 59, 00193 Rome",
+          "blurb": "Traditional Roman, walkable from a Prati base (no Trastevere taxi).",
+          "hours": "Site hours: lunch 13:00–14:30; dinner 20:00–23:00; Saturday dinner only; closed Sunday.",
+          "thursday": "Thursday dinner fits.",
+          "prefer": "Prefer when they want Roman food + easy walk home.",
+          "phone": "+39 06 3210992",
+          "email": "info@larcangelo.com",
+          "links": [
+            {
+              "href": "https://www.larcangelo.com/en/",
+              "label": "larcangelo.com"
+            }
+          ]
+        }
+      ]
+    },
+    "kidsEvening": {
+      "title": "Kids’ evening plan",
+      "subtitle": "Sister + BIL. Quiet apartment night — no ambitious outing after parents leave.",
+      "items": [
+        {
+          "label": "Early kids dinner",
+          "text": "In Prati. Existing draft: La Pratolina, Via degli Scipioni 248/250 — still draft / call ahead for a larger table. Parents may not join sit-down if getting ready."
+        },
+        {
+          "label": "Handoff",
+          "text": "At the apartment ~17:30–18:30: written bedtime order for 9y / 7y / 5y / 2y / 8mo, bottles/diapers location, Wi‑Fi + door code once known, WhatsApp live location, parents’ return window (~21:30–22:30 if Glass)."
+        },
+        {
+          "label": "Quiet evening",
+          "text": "Apartment play, books, early lights-out — no ambitious outing after parents leave."
+        },
+        {
+          "label": "Backup",
+          "text": "If kids melt down, sister/BIL order simple delivery or leftover pizza al taglio. Pharmacy notes live in Trip ops.",
+          "href": "ops-health",
+          "hrefLabel": "Health & baby"
+        },
+        {
+          "label": "Emergency",
+          "text": "Parents’ phones + EU emergency 112. Nearest 24h pharmacy TBD once Airbnb is pinned.",
+          "href": "ops-health",
+          "hrefLabel": "Health & baby"
+        }
+      ]
+    },
+    "dayFraming": {
+      "title": "Day framing",
+      "text": "Keep Thursday as a light day (already on the plan): easy morning nearby, afternoon free in Prati / along the river, then the kids’ early pizza and this evening handoff."
+    }
+  }
+}

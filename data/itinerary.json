@@ -372,7 +372,7 @@
     },
     {
       "title": "Thursday Nov 19 — Light day · 10th anniversary",
-      "note": "Easy morning nearby. Afternoon free in Prati / river. Kids pizza with aunt and uncle; parents’ anniversary dinner. No table held yet.",
+      "note": "Easy morning nearby. Afternoon free in Prati / river. Kids pizza with aunt and uncle; parents’ anniversary dinner. No table held yet. Evening details: Anniversary night ops (on the site).",
       "blocks": [
         {
           "time": "7:30–8:30",
@@ -437,7 +437,7 @@
         {
           "time": "4:00–5:30",
           "kind": "Kids dinner",
-          "what": "Kids eat early with aunt and uncle. Via degli Scipioni 248/250, Prati — neighborhood Roman pizzeria (tonda), not a piazza tourist trap. Hour listings disagree (some say from 12:30 weekdays, others from 17:30); call to confirm an early family table. Call ahead for 9 / may need two tables. Draft suggestion — not reserved. Parents get ready for the anniversary dinner.",
+          "what": "Kids eat early with aunt and uncle. Via degli Scipioni 248/250, Prati — neighborhood Roman pizzeria (tonda), not a piazza tourist trap. Hour listings disagree (some say from 12:30 weekdays, others from 17:30); call to confirm an early family table. Call ahead for a larger table / may need two tables. Draft suggestion — not reserved. Parents may not join sit-down if getting ready for anniversary dinner.",
           "links": [
             "https://www.google.com/maps/search/?api=1&query=La%20Pratolina%20Via%20degli%20Scipioni%20248%20Roma"
           ],
@@ -446,19 +446,19 @@
         {
           "time": "5:30–6:30",
           "kind": "Handoff",
-          "what": "Babysitting handoff. Kids’ evening under aunt/uncle.",
+          "what": "Babysitting handoff at the apartment ~17:30–18:30. Written bedtime order for 9y/7y/5y/2y/8mo, bottles/diapers location, Wi‑Fi + door code once known, WhatsApp live location. Quiet evening at the apartment — no outing after parents leave. Parents’ return window ~21:30–22:30 if Glass.",
           "links": []
         },
         {
-          "time": "6:30–6:55",
+          "time": "6:30–6:45",
           "kind": "Taxi",
-          "what": "Taxi Prati → Trastevere · ~15–25 min.",
+          "what": "Taxi Prati → Trastevere · ~15–25 min. Leave ~18:30–18:45 for a ~19:00–19:30 seating at Glass. Skip this taxi if they choose L’Arcangelo (walkable in Prati).",
           "links": []
         },
         {
           "time": "7:00–9:30",
           "kind": "Date night",
-          "what": "Vicolo del Cinque 58, Trastevere. Anniversary dinner for Calvin and his wife. Modern Italian in a quiet designed room — not a piazza tourist table. Dinner Wednesday–Sunday 7:00–10:30pm (from the restaurant site). Draft suggestion — not reserved. Alternate: L’Arcangelo, Via G. G. Belli 59, Prati (walkable; closed Sunday). Confirm November hours by phone (+39 06 3210992).",
+          "what": "Vicolo del Cinque 58, Trastevere. Anniversary dinner for Calvin and his wife (party of 2). Modern tasting-menu room, not a piazza tourist table. Site hours: closed Mon/Tue; Wed–Sun dinner ~19:00–22:30. Tasting menu listed on their site at €135/person drinks excluded (from their menu page — recheck before booking). Nov 19 2026 is Thursday → within the Wed–Sun dinner window. Draft suggestion — nothing reserved. Book only via official OpenTable / TheFork links on glasshostaria.it. Alternate: L’Arcangelo, Via Giuseppe Gioachino Belli 59, Prati (walkable; lunch 13:00–14:30, dinner 20:00–23:00, Saturday dinner only, closed Sunday).",
           "links": [
             "https://www.glasshostaria.it/en/",
             "https://www.larcangelo.com/en/"
@@ -468,13 +468,13 @@
         {
           "time": "9:30–10:00",
           "kind": "Taxi",
-          "what": "Taxi back to Prati · 15–25 min.",
+          "what": "Taxi back to Prati · 15–25 min. Parents’ return window ~21:30–22:30 if Glass.",
           "links": []
         },
         {
           "time": "10:00+",
           "kind": "Home",
-          "what": "Relieve babysitters.",
+          "what": "Relieve babysitters. Quiet apartment night for the kids — no outing after handoff.",
           "links": []
         }
       ]

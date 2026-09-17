@@ -25,4 +25,5 @@ Visual language guided by Airbnb `DESIGN.md` from [VoltAgent/awesome-design-md](
 
 - Papal audience is confirmed (reservation `1113_UG_18.11/2026`).
 - Lodging, Colosseum tickets, and anniversary dinner are not booked yet.
+- Trip ops (flights, documents, getting around, apartment, weather, health, money) and Anniversary night ops (Thu Nov 19) are on the site.
 - Map coordinates are approximate landmark locations.
