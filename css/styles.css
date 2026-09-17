@@ -299,7 +299,9 @@ a:hover { color: var(--primary); }
 }
 
 /* —— Map —— */
-#map-canvas {
+#map-canvas,
+#leaflet-map {
+  min-height: 420px;
   height: min(58vh, 520px);
   border-radius: var(--radius-md);
   border: 1px solid var(--hairline);
