@@ -14,14 +14,19 @@ function placeById(id) {
 
 async function load() {
   const res = await fetch('data/trip.json');
+  if (!res.ok) throw new Error(`Could not fetch trip.json (${res.status})`);
   state.trip = await res.json();
   document.getElementById('lede').textContent = `${state.trip.dates} · ${state.trip.party}`;
   renderConfirmed();
   renderOpen();
   renderTabs();
-  initMap();
   renderDays();
-  selectDay('all');
+  if (typeof L === 'undefined') {
+    document.getElementById('map-caption').textContent = 'Map library failed to load. Refresh the page.';
+  } else {
+    initMap();
+    selectDay('all');
+  }
 }
 
 function renderConfirmed() {
@@ -61,8 +66,17 @@ function renderTabs() {
   });
 }
 
+
 function initMap() {
-  state.map = L.map('leaflet-map', { scrollWheelZoom: false });
+  // Point default markers at vendored Leaflet images (GitHub Pages-safe)
+  delete L.Icon.Default.prototype._getIconUrl;
+  L.Icon.Default.mergeOptions({
+    iconRetinaUrl: 'vendor/leaflet/images/marker-icon-2x.png',
+    iconUrl: 'vendor/leaflet/images/marker-icon.png',
+    shadowUrl: 'vendor/leaflet/images/marker-shadow.png'
+  });
+
+  state.map = L.map('map-canvas', { scrollWheelZoom: false });
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; OpenStreetMap'
