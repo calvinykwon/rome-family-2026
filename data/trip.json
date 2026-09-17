@@ -1175,7 +1175,11 @@
         "lat": 41.8003,
         "lng": 12.2389,
         "url": "https://www.adr.it/fiumicino",
-        "summary": "Arrival Mon Nov 16 ~7:00am · Departure Tue Nov 24 AZ 618 10:10am."
+        "summary": "Arrival Mon Nov 16 ~7:00am · Departure Tue Nov 24 AZ 618 10:10am.",
+        "image": "images/itinerary/fco.jpg",
+        "imageAlt": "The Terminal 1 exterior at Rome Fiumicino Airport (FCO).",
+        "imageCredit": "Photo: Ra Boe · CC BY-SA 3.0 DE · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "st-peters-square",
@@ -1183,7 +1187,11 @@
         "lat": 41.9022,
         "lng": 12.4572,
         "url": "https://www.vatican.va/",
-        "summary": "Colonnade, obelisk, security queues. Meeting point for the audience."
+        "summary": "Colonnade, obelisk, security queues. Meeting point for the audience.",
+        "image": "images/itinerary/st-peters-square.jpg",
+        "imageAlt": "St Peter’s Square in Vatican City, with the basilica façade and Bernini’s colonnade.",
+        "imageCredit": "Photo: Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "st-peters",
@@ -1191,7 +1199,11 @@
         "lat": 41.9022,
         "lng": 12.4539,
         "url": "https://www.basilicasanpietro.va/en/",
-        "summary": "Free entry. Pietà, baldachin, nave. Skip the dome with baby/toddler."
+        "summary": "Free entry. Pietà, baldachin, nave. Skip the dome with baby/toddler.",
+        "image": "images/itinerary/st-peters.jpg",
+        "imageAlt": "The nave of St Peter’s Basilica looking toward the papal altar and baldachin.",
+        "imageCredit": "Photo: Radosław Botev · CC BY 3.0 PL · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "bronze-door",
@@ -1199,7 +1211,11 @@
         "lat": 41.9033,
         "lng": 12.4569,
         "url": "https://www.vatican.va/content/vatican/en/prenotazioni-udienze.html",
-        "summary": "Ticket pickup for the General Audience. Apostolic Palace, right colonnade of St Peter’s Square."
+        "summary": "Ticket pickup for the General Audience. Apostolic Palace, right colonnade of St Peter’s Square.",
+        "image": "images/itinerary/bronze-door.jpg",
+        "imageAlt": "Swiss Guard at the Bronze Door (Portone di Bronzo) on St Peter’s Square.",
+        "imageCredit": "Photo: Fred Romero · CC BY 2.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "pantheon",
@@ -1207,7 +1223,11 @@
         "lat": 41.8986,
         "lng": 12.4769,
         "url": "https://direzionemuseiroma.cultura.gov.it/en/pantheon/",
-        "summary": "Vast round hall with an open oculus. Timed tickets; under-18 free but still need a ticket."
+        "summary": "Vast round hall with an open oculus. Timed tickets; under-18 free but still need a ticket.",
+        "image": "images/itinerary/pantheon.jpg",
+        "imageAlt": "Interior of the Pantheon in Rome, with light falling from the open oculus.",
+        "imageCredit": "Photo: John Samuel · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "minerva",
@@ -1215,7 +1235,11 @@
         "lat": 41.8979,
         "lng": 12.478,
         "url": "https://www.santamariasopraminerva.it/",
-        "summary": "Gothic basilica; Michelangelo’s Christ; St Catherine’s tomb. Usually opens mid-morning."
+        "summary": "Gothic basilica; Michelangelo’s Christ; St Catherine’s tomb. Usually opens mid-morning.",
+        "image": "images/itinerary/minerva.jpg",
+        "imageAlt": "The façade of Santa Maria sopra Minerva and Bernini’s elephant obelisk in the piazza.",
+        "imageCredit": "Photo: Merulana · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "san-luigi",
@@ -1223,7 +1247,11 @@
         "lat": 41.8997,
         "lng": 12.4746,
         "url": "https://saintlouis-rome.net/horaires-visite-opening-hours/",
-        "summary": "Caravaggio’s St Matthew cycle in the Contarelli Chapel. Free; midday closure."
+        "summary": "Caravaggio’s St Matthew cycle in the Contarelli Chapel. Free; midday closure.",
+        "image": "images/itinerary/san-luigi.jpg",
+        "imageAlt": "The façade of San Luigi dei Francesi, the French national church in Rome.",
+        "imageCredit": "Photo: Sailko · CC BY 2.5 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "trevi",
@@ -1231,7 +1259,11 @@
         "lat": 41.9009,
         "lng": 12.4833,
         "url": "https://fontanaditrevi.roma.it/en/",
-        "summary": "Street view free. Inner basin has controlled entry. Quick photos — don’t linger."
+        "summary": "Street view free. Inner basin has controlled entry. Quick photos — don’t linger.",
+        "image": "images/itinerary/trevi.jpg",
+        "imageAlt": "The Trevi Fountain in Rome, with Oceanus in the central niche.",
+        "imageCredit": "Photo: Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "spagna",
@@ -1239,7 +1271,11 @@
         "lat": 41.90599,
         "lng": 12.48277,
         "url": "https://www.turismoroma.it/en/places/piazza-di-spagna-and-trinita-dei-monti",
-        "summary": "Piazza di Spagna and the steps to Trinità dei Monti."
+        "summary": "Piazza di Spagna and the steps to Trinità dei Monti.",
+        "image": "images/itinerary/spagna.jpg",
+        "imageAlt": "The Spanish Steps rising from Piazza di Spagna toward Trinità dei Monti.",
+        "imageCredit": "Photo: Steven Lek · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "castel",
@@ -1247,7 +1283,11 @@
         "lat": 41.9031,
         "lng": 12.4663,
         "url": "https://castelsantangelo.cultura.gov.it/en/",
-        "summary": "Hadrian’s tomb turned fortress. Stairs; exterior + bridge is enough if the museum is too much."
+        "summary": "Hadrian’s tomb turned fortress. Stairs; exterior + bridge is enough if the museum is too much.",
+        "image": "images/itinerary/castel.jpg",
+        "imageAlt": "Castel Sant’Angelo and Ponte Sant’Angelo across the Tiber in Rome.",
+        "imageCredit": "Photo: Jean-Pol GRANDMONT · CC BY-SA 3.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "colosseum",
@@ -1255,7 +1295,11 @@
         "lat": 41.8902,
         "lng": 12.4922,
         "url": "https://colosseo.it/en/opening-times-and-tickets/",
-        "summary": "Timed entry. Standard tiers — not arena/underground. Book all nine ~30 days out."
+        "summary": "Timed entry. Standard tiers — not arena/underground. Book all nine ~30 days out.",
+        "image": "images/itinerary/colosseum.jpg",
+        "imageAlt": "The exterior of the Colosseum in Rome.",
+        "imageCredit": "Photo: Jebulon · CC0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "arch",
@@ -1263,7 +1307,11 @@
         "lat": 41.8897,
         "lng": 12.4906,
         "url": "https://colosseo.it/en/area/arch-of-constantine-and-meta-sudans/",
-        "summary": "Free exterior stop next to the Colosseum."
+        "summary": "Free exterior stop next to the Colosseum.",
+        "image": "images/itinerary/arch.jpg",
+        "imageAlt": "The Arch of Constantine beside the Colosseum in Rome.",
+        "imageCredit": "Photo: Alessandroferri · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "forum",
@@ -1271,7 +1319,11 @@
         "lat": 41.8925,
         "lng": 12.4853,
         "url": "https://colosseo.it/en/opening-times-and-tickets/",
-        "summary": "Combined ticket with Colosseum area. Uneven stones — carrier often better than stroller."
+        "summary": "Combined ticket with Colosseum area. Uneven stones — carrier often better than stroller.",
+        "image": "images/itinerary/forum.jpg",
+        "imageAlt": "The Temple of Saturn and the Roman Forum in Rome.",
+        "imageCredit": "Photo: Jon Gudorf Photography · CC BY-SA 2.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "maggiore",
@@ -1279,7 +1331,11 @@
         "lat": 41.8976,
         "lng": 12.4984,
         "url": "https://www.basilicasantamariamaggiore.va/en/",
-        "summary": "Papal basilica with golden mosaics. Free entry."
+        "summary": "Papal basilica with golden mosaics. Free entry.",
+        "image": "images/itinerary/maggiore.jpg",
+        "imageAlt": "The façade and bell tower of the basilica of Santa Maria Maggiore in Rome.",
+        "imageCredit": "Photo: Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "lateran",
@@ -1287,7 +1343,11 @@
         "lat": 41.8859,
         "lng": 12.5057,
         "url": "https://www.basilicasangiovanni.va/en/info-e-orari.html",
-        "summary": "Cathedral of Rome. Huge nave and Apostle statues."
+        "summary": "Cathedral of Rome. Huge nave and Apostle statues.",
+        "image": "images/itinerary/lateran.jpg",
+        "imageAlt": "The façade of San Giovanni in Laterano, the cathedral of Rome.",
+        "imageCredit": "Photo: MrPanyGoff · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "scala",
@@ -1295,7 +1355,11 @@
         "lat": 41.8869,
         "lng": 12.5069,
         "url": "https://www.scala-santa.com/informazioni/",
-        "summary": "Holy Stairs (kneeling) / side stairs for walking. Brief look with toddlers."
+        "summary": "Holy Stairs (kneeling) / side stairs for walking. Brief look with toddlers.",
+        "image": "images/itinerary/scala.jpg",
+        "imageAlt": "The Scala Santa building next to the Lateran in Rome.",
+        "imageCredit": "Photo: antmoose · CC BY 2.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "croce",
@@ -1303,7 +1367,11 @@
         "lat": 41.888,
         "lng": 12.5166,
         "url": "https://www.santacroceroma.it/en/opening-hours.html",
-        "summary": "Optional short stop. Relic chapel may be closed for renovation — check first."
+        "summary": "Optional short stop. Relic chapel may be closed for renovation — check first.",
+        "image": "images/itinerary/croce.jpg",
+        "imageAlt": "The baroque façade of Santa Croce in Gerusalemme in Rome.",
+        "imageCredit": "Photo: Fallaner · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "tiber",
@@ -1311,7 +1379,11 @@
         "lat": 41.8908,
         "lng": 12.4779,
         "url": "https://sanbartolomeo.org/visita-orari-celebrazioni/",
-        "summary": "Island stroll and brief church peek. Prefer taxi over long cobbles with a stroller."
+        "summary": "Island stroll and brief church peek. Prefer taxi over long cobbles with a stroller.",
+        "image": "images/itinerary/tiber.jpg",
+        "imageAlt": "Isola Tiberina, the island in the Tiber in Rome.",
+        "imageCredit": "Photo: Alexkom000 · CC BY 4.0 · Wikimedia Commons",
+        "imageRole": "landmark"
       },
       {
         "id": "glass",
@@ -1479,7 +1551,11 @@
         "lat": 41.8996,
         "lng": 12.4768,
         "url": "https://www.google.com/maps/search/?api=1&query=Tazza%20d%27Oro%20Via%20degli%20Orfani%2084%20Roma",
-        "summary": "Historic Roman coffee bar at Via degli Orfani 84, next to the Pantheon. Stand at the counter like locals."
+        "summary": "Historic Roman coffee bar at Via degli Orfani 84, next to the Pantheon. Stand at the counter like locals.",
+        "image": "images/itinerary/tazza-oro.jpg",
+        "imageAlt": "The storefront of Tazza d’Oro coffee bar near the Pantheon.",
+        "imageCredit": "Photo: lienyuan lee · CC BY 3.0 · Wikimedia Commons",
+        "imageRole": "food"
       },
       {
         "id": "giolitti",
@@ -1487,7 +1563,11 @@
         "lat": 41.9003,
         "lng": 12.4794,
         "url": "https://www.giolitti.it/",
-        "summary": "Historic gelateria at Via Uffici del Vicario 40, between the Pantheon and Trevi."
+        "summary": "Historic gelateria at Via Uffici del Vicario 40, between the Pantheon and Trevi.",
+        "image": "images/itinerary/giolitti.jpg",
+        "imageAlt": "Cups of gelato at Giolitti in Rome.",
+        "imageCredit": "Photo: Sv32000 · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "food"
       },
       {
         "id": "sciascia",
@@ -1519,7 +1599,11 @@
         "lat": 41.8768,
         "lng": 12.474,
         "url": "https://www.trapizzino.it/trapizzino/trapizzino-roma-testaccio/",
-        "summary": "Original Trapizzino at Via Giovanni Branca 88, Testaccio. Supplì and stuffed pizza triangles."
+        "summary": "Original Trapizzino at Via Giovanni Branca 88, Testaccio. Supplì and stuffed pizza triangles.",
+        "image": "images/itinerary/trapizzino-testaccio.jpg",
+        "imageAlt": "A trapizzino stuffed with pollo alla cacciatora.",
+        "imageCredit": "Photo: Diego Zitelli · CC BY 3.0 · Wikimedia Commons",
+        "imageRole": "food"
       },
       {
         "id": "regoli",
@@ -1535,7 +1619,11 @@
         "lat": 41.8925,
         "lng": 12.4785,
         "url": "https://www.google.com/maps/search/?api=1&query=Pasticceria%20Boccione%20Via%20del%20Portico%20d%27Ottavia%201%20Roma",
-        "summary": "No-sign kosher bakery at Via del Portico d’Ottavia 1. Pizza ebraica. Closed Saturday; Sunday until 17:30."
+        "summary": "No-sign kosher bakery at Via del Portico d’Ottavia 1. Pizza ebraica. Closed Saturday; Sunday until 17:30.",
+        "image": "images/itinerary/boccione.jpg",
+        "imageAlt": "The no-sign storefront of Pasticceria Boccione in Rome’s Jewish Ghetto.",
+        "imageCredit": "Photo: JSFarman · CC BY-SA 4.0 · Wikimedia Commons",
+        "imageRole": "food"
       },
       {
         "id": "fiordiluna",
