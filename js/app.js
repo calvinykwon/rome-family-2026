@@ -1,5 +1,5 @@
 const state = { trip: null, options: null, map: null, layer: null, selectedDayId: 'all', optionFilter: 'all' };
-const CACHE_BUST = '20260917h';
+const CACHE_BUST = '20260917i';
 
 const OPTION_LABELS = {
   'easy-add-on': 'Easy add-on',
@@ -247,6 +247,10 @@ async function load() {
   if (!res.ok) throw new Error(`Could not fetch trip.json (${res.status})`);
   state.trip = await res.json();
   await loadPlacesOverlay();
+
+  const heading = document.querySelector('header.top h1');
+  if (heading && state.trip.title) heading.textContent = state.trip.title;
+  if (state.trip.title) document.title = state.trip.title;
 
   const lede = document.getElementById('lede');
   if (lede) lede.textContent = `${state.trip.dates} · ${state.trip.party}`;

@@ -1,4 +1,4 @@
-# Kwon Family Rome · Nov 15–24, 2026
+# 2026 Family Trip: Rome · Nov 15–24, 2026
 
 Shareable family itinerary site with day-by-day times and interactive Leaflet maps.
 
