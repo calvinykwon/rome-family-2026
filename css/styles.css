@@ -405,7 +405,7 @@ a:hover { color: var(--primary); }
 /* Photo-complemented major stops — same language as Talk-through cards */
 .stop-card {
   display: grid;
-  grid-template-columns: minmax(168px, 240px) minmax(0, 1fr);
+  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
   column-gap: 0;
   row-gap: 0;
   padding: 0;
@@ -430,8 +430,8 @@ a:hover { color: var(--primary); }
 }
 
 .stop-card .option-photo-wrap {
-  aspect-ratio: 4 / 3;
-  min-height: 0;
+  aspect-ratio: auto;
+  min-height: 180px;
   height: 100%;
 }
 
@@ -934,6 +934,7 @@ a:hover { color: var(--primary); }
   }
   .stop-card .option-photo-wrap {
     aspect-ratio: 16 / 10;
+    min-height: 0;
     height: auto;
   }
   .stop-body {
