@@ -1,5 +1,23 @@
-const state = { trip: null, map: null, layer: null, selectedDayId: 'all' };
-const CACHE_BUST = '20260917f';
+const state = { trip: null, options: null, map: null, layer: null, selectedDayId: 'all', optionFilter: 'all' };
+const CACHE_BUST = '20260917g';
+
+const OPTION_LABELS = {
+  'easy-add-on': 'Easy add-on',
+  'spare-day': 'Spare day',
+  'split-group': 'Split group',
+  'skip-with-baby': 'Probably skip with baby'
+};
+
+const OPTION_GROUPS = {
+  cultural: {
+    title: 'Cultural / civic',
+    note: 'Non-pilgrimage stops to talk through. None of these replace Friday’s Forum or Sunday Mass.'
+  },
+  vatican: {
+    title: 'Vatican extras',
+    note: 'Not fully on the itinerary. The audience and basilica stay the core of Vatican day.'
+  }
+};
 
 // Kinds that count as a real sequenced stop (sightseeing, pickup, meals at a named place).
 // Transit, apartment breakfast, sits, and home-base chores do not get a number of their own.
@@ -210,6 +228,7 @@ async function load() {
   renderEatLikeRomans();
   renderTabs();
   renderDays();
+  await loadOptions();
 
   if (typeof L === 'undefined') {
     const caption = document.getElementById('map-caption');
@@ -225,6 +244,132 @@ async function load() {
     console.error(err);
     showFatal(`Map failed to start: ${err && err.message ? err.message : err}`);
   }
+}
+
+async function loadOptions() {
+  const root = document.getElementById('options-grid');
+  try {
+    const res = await fetch(`data/options.json?v=${CACHE_BUST}`);
+    if (!res.ok) throw new Error(`Could not fetch options.json (${res.status})`);
+    state.options = await res.json();
+  } catch (err) {
+    console.error(err);
+    if (root) {
+      root.innerHTML = '<p class="option-empty">Talk-through options could not load. Hard-refresh the page (Cmd-Shift-R).</p>';
+    }
+    return;
+  }
+
+  const kicker = document.getElementById('options-kicker');
+  const title = document.getElementById('options-title');
+  const intro = document.getElementById('options-intro');
+  if (kicker && state.options.kicker) kicker.textContent = state.options.kicker;
+  if (title && state.options.title) title.textContent = state.options.title;
+  if (intro && state.options.intro) intro.textContent = state.options.intro;
+
+  renderOptionFilters();
+  renderOptions();
+}
+
+function renderOptionFilters() {
+  const tabs = document.getElementById('options-filters');
+  if (!tabs || !state.options) return;
+  const filters = state.options.filters || [{ id: 'all', label: 'All' }];
+  tabs.innerHTML = '';
+  filters.forEach((f) => {
+    const b = document.createElement('button');
+    b.className = 'day-tab' + (state.optionFilter === f.id ? ' active' : '');
+    b.type = 'button';
+    b.dataset.filter = f.id;
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', state.optionFilter === f.id ? 'true' : 'false');
+    b.innerHTML = `<strong>${escapeHtml(f.label)}</strong>`;
+    b.addEventListener('click', () => {
+      state.optionFilter = f.id;
+      renderOptionFilters();
+      renderOptions();
+    });
+    tabs.appendChild(b);
+  });
+}
+
+function optionMatchesFilter(item) {
+  if (state.optionFilter === 'all') return true;
+  return (item.labels || []).includes(state.optionFilter);
+}
+
+function renderOptions() {
+  const root = document.getElementById('options-grid');
+  if (!root || !state.options) return;
+  const items = (state.options.items || []).filter(optionMatchesFilter);
+  if (!items.length) {
+    root.innerHTML = '<p class="option-empty">Nothing in this filter — try All.</p>';
+    return;
+  }
+
+  const showGroups = state.optionFilter === 'all';
+  let lastGroup = null;
+  const chunks = [];
+  items.forEach((item) => {
+    if (showGroups && item.group && item.group !== lastGroup) {
+      lastGroup = item.group;
+      const g = OPTION_GROUPS[item.group];
+      if (g) {
+        chunks.push(`<div class="options-group">
+          <h3>${escapeHtml(g.title)}</h3>
+          <p>${escapeHtml(g.note)}</p>
+        </div>`);
+      }
+    }
+    const featured = item.featured && state.optionFilter === 'all';
+    const badges = (item.labels || []).map((id) => {
+      const label = OPTION_LABELS[id] || id;
+      return `<span class="option-badge ${escapeHtml(id)}">${escapeHtml(label)}</span>`;
+    }).join('');
+    const callout = item.callout
+      ? `<div class="option-callout">${escapeHtml(item.callout)}</div>`
+      : '';
+    const alt = item.imageAlt || item.name;
+    const src = item.image
+      ? `${escapeHtml(item.image)}?v=${CACHE_BUST}`
+      : '';
+    const photo = src
+      ? `<img class="option-photo" src="${src}" alt="${escapeHtml(alt)}" loading="lazy">`
+      : `<div class="option-photo-fallback">No freely licensed photo on file yet — placeholder.</div>`;
+    const jump = item.jumpTo
+      ? `<a href="#${escapeHtml(item.jumpTo)}">${escapeHtml(item.pairsWith || 'See that day')}</a>`
+      : escapeHtml(item.pairsWith || '');
+    const pair = item.pairsWith
+      ? `<p class="option-pair"><strong>When</strong> · ${jump}</p>`
+      : '';
+    const credit = item.imageCredit
+      ? `<p class="option-credit">${escapeHtml(item.imageCredit)}</p>`
+      : '';
+    chunks.push(`<article class="option-card${featured ? ' featured' : ''}" id="option-${escapeHtml(item.id)}" data-labels="${escapeHtml((item.labels || []).join(' '))}">
+      <div class="option-photo-wrap">
+        ${photo}
+        <div class="option-badges">${badges}</div>
+        ${callout}
+      </div>
+      <div class="option-body">
+        <h3>${escapeHtml(item.name)}</h3>
+        <p class="option-blurb">${escapeHtml(item.blurb)}</p>
+        <p class="option-why"><strong>Why it’s optional</strong> · ${escapeHtml(item.whyOptional)}</p>
+        ${pair}
+        ${credit}
+      </div>
+    </article>`);
+  });
+  root.innerHTML = chunks.join('');
+
+  root.querySelectorAll('img.option-photo').forEach((img) => {
+    img.addEventListener('error', () => {
+      const fallback = document.createElement('div');
+      fallback.className = 'option-photo-fallback';
+      fallback.textContent = 'No freely licensed photo on file yet — placeholder.';
+      img.replaceWith(fallback);
+    });
+  });
 }
 
 function renderConfirmed() {
