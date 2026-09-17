@@ -8,36 +8,381 @@
     "summary": "One Airbnb for the week — lift or ground floor, washer, kitchen, crib. Address TBD."
   },
   "places": [
-    {"id":"fco","name":"Rome Fiumicino Airport (FCO)","lat":41.8003,"lng":12.2389,"url":"https://www.adr.it/fiumicino","summary":"Arrival Mon Nov 16 ~7:00am · Departure Tue Nov 24 AZ 618 10:10am."},
-    {"id":"st-peters-square","name":"St Peter’s Square","lat":41.9022,"lng":12.4572,"url":"https://www.vatican.va/","summary":"Colonnade, obelisk, security queues. Meeting point for the audience."},
-    {"id":"st-peters","name":"St Peter’s Basilica","lat":41.9022,"lng":12.4539,"url":"https://www.basilicasanpietro.va/en/","summary":"Free entry. Pietà, baldachin, nave. Skip the dome with baby/toddler."},
-    {"id":"bronze-door","name":"Bronze Door (Portone di Bronzo)","lat":41.9033,"lng":12.4569,"url":"https://www.vatican.va/content/vatican/en/prenotazioni-udienze.html","summary":"Ticket pickup for the General Audience. Apostolic Palace, right colonnade of St Peter’s Square."},
-    {"id":"pantheon","name":"Pantheon","lat":41.8986,"lng":12.4769,"url":"https://direzionemuseiroma.cultura.gov.it/en/pantheon/","summary":"Vast round hall with an open oculus. Timed tickets; under-18 free but still need a ticket."},
-    {"id":"minerva","name":"Santa Maria sopra Minerva","lat":41.8979,"lng":12.4780,"url":"https://www.santamariasopraminerva.it/","summary":"Gothic basilica; Michelangelo’s Christ; St Catherine’s tomb. Usually opens mid-morning."},
-    {"id":"san-luigi","name":"San Luigi dei Francesi","lat":41.8997,"lng":12.4746,"url":"https://saintlouis-rome.net/horaires-visite-opening-hours/","summary":"Caravaggio’s St Matthew cycle in the Contarelli Chapel. Free; midday closure."},
-    {"id":"trevi","name":"Trevi Fountain","lat":41.9009,"lng":12.4833,"url":"https://fontanaditrevi.roma.it/en/","summary":"Street view free. Inner basin has controlled entry. Quick photos — don’t linger."},
-    {"id":"spagna","name":"Spanish Steps","lat":41.90599,"lng":12.48277,"url":"https://www.turismoroma.it/en/places/piazza-di-spagna-and-trinita-dei-monti","summary":"Piazza di Spagna and the steps to Trinità dei Monti."},
-    {"id":"castel","name":"Castel Sant’Angelo","lat":41.9031,"lng":12.4663,"url":"https://castelsantangelo.cultura.gov.it/en/","summary":"Hadrian’s tomb turned fortress. Stairs; exterior + bridge is enough if the museum is too much."},
-    {"id":"colosseum","name":"Colosseum","lat":41.8902,"lng":12.4922,"url":"https://colosseo.it/en/opening-times-and-tickets/","summary":"Timed entry. Standard tiers — not arena/underground. Book all nine ~30 days out."},
-    {"id":"arch","name":"Arch of Constantine","lat":41.8897,"lng":12.4906,"url":"https://colosseo.it/en/area/arch-of-constantine-and-meta-sudans/","summary":"Free exterior stop next to the Colosseum."},
-    {"id":"forum","name":"Roman Forum","lat":41.8925,"lng":12.4853,"url":"https://colosseo.it/en/opening-times-and-tickets/","summary":"Combined ticket with Colosseum area. Uneven stones — carrier often better than stroller."},
-    {"id":"maggiore","name":"Santa Maria Maggiore","lat":41.8976,"lng":12.4984,"url":"https://www.basilicasantamariamaggiore.va/en/","summary":"Papal basilica with golden mosaics. Free entry."},
-    {"id":"lateran","name":"San Giovanni in Laterano","lat":41.8859,"lng":12.5057,"url":"https://www.basilicasangiovanni.va/en/info-e-orari.html","summary":"Cathedral of Rome. Huge nave and Apostle statues."},
-    {"id":"scala","name":"Scala Santa","lat":41.8869,"lng":12.5069,"url":"https://www.scala-santa.com/informazioni/","summary":"Holy Stairs (kneeling) / side stairs for walking. Brief look with toddlers."},
-    {"id":"croce","name":"Santa Croce in Gerusalemme","lat":41.8880,"lng":12.5166,"url":"https://www.santacroceroma.it/en/opening-hours.html","summary":"Optional short stop. Relic chapel may be closed for renovation — check first."},
-    {"id":"tiber","name":"Isola Tiberina / San Bartolomeo","lat":41.8908,"lng":12.4779,"url":"https://sanbartolomeo.org/visita-orari-celebrazioni/","summary":"Island stroll and brief church peek. Prefer taxi over long cobbles with a stroller."},
-    {"id":"glass","name":"Glass Hostaria","lat":41.8895,"lng":12.4686,"url":"https://www.glasshostaria.it/en/","summary":"Anniversary dinner pick. Vicolo del Cinque 58, Trastevere. Wed–Sun dinner. No table held yet."},
-    {"id":"arcangelo","name":"L’Arcangelo","lat":41.9090,"lng":12.4645,"url":"https://www.larcangelo.com/en/","summary":"Walkable Prati alternate for anniversary dinner. Confirm November hours by phone."},
-    {"id":"despar","name":"Despar Prati","lat":41.9089,"lng":12.4569,"url":"https://www.google.com/maps/search/?api=1&query=Despar%20Viale%20Giulio%20Cesare%20193%20Roma","summary":"Supermarket at Viale Giulio Cesare 193, near Ottaviano. Grocery stop for apartment breakfasts."},
-    {"id":"mercato-prati","name":"Mercato Rionale Prati","lat":41.9074,"lng":12.4616,"url":"https://www.google.com/maps/search/?api=1&query=Mercato%20Rionale%20Prati%20Piazza%20dell%27Unit%C3%A0%20Roma","summary":"Neighborhood market in Piazza dell’Unità, Prati. Fruit, veg, and deli counters for the apartment."},
-    {"id":"matriciano","name":"Il Matriciano","lat":41.9074,"lng":12.4603,"url":"https://www.ilmatriciano.it/en/","summary":"Classic Roman trattoria in Prati, Via dei Gracchi 55. Closed Wednesday; Sunday dinner closed."},
-    {"id":"gracchi","name":"Osteria dei Gracchi","lat":41.9082,"lng":12.4575,"url":"https://www.osteriadeigracchi.it/","summary":"Neighborhood osteria at Via dei Gracchi 19, Prati. Roman cooking near Ottaviano."},
-    {"id":"micci","name":"Trattoria Micci","lat":41.9094,"lng":12.4514,"url":"https://www.trattoriamicci.it/en/","summary":"Prati trattoria-pizzeria since 1936, Via Andrea Doria 55 a/b. Closed Monday."},
-    {"id":"campana","name":"La Campana","lat":41.9027,"lng":12.4746,"url":"https://www.ristorantelacampana.com/","summary":"Historic Roman restaurant (from 1518) on Vicolo della Campana, near the Pantheon. Closed Monday."},
-    {"id":"bruttone","name":"Dar Bruttone Rione Monti","lat":41.8965,"lng":12.4902,"url":"https://darbruttonerionemonti.com/","summary":"Roman cooking on Via dei Serpenti 113, Monti, near the Colosseum."},
-    {"id":"vicolo9","name":"Osteria Al Vicolo 9","lat":41.8981,"lng":12.4898,"url":"http://osteriavicolo9.it/","summary":"Monti osteria at Vicolo dei Serpenti 9. Closed Sunday."},
-    {"id":"faleria","name":"Osteria Faleria","lat":41.8825,"lng":12.5094,"url":"https://www.osteriafaleria.it/","summary":"Roman/Lazio osteria near San Giovanni, Via Faleria 47. Family-friendlier than a tiny tasting room for 9."},
-    {"id":"pepe-sg","name":"Pepe San Giovanni","lat":41.8805,"lng":12.5077,"url":"https://pepesangiovanni.it/","summary":"Family-scale restaurant/pizzeria at Via Gallia 103, near the Lateran."},
-    {"id":"pompiere","name":"Al Pompiere","lat":41.8930,"lng":12.4764,"url":"https://www.alpompiereroma.com/","summary":"Historic Roman trattoria in the Ghetto, Piazza delle Cinque Scole 28. Closed Tuesday; Sunday lunch."}
+    {
+      "id": "fco",
+      "name": "Rome Fiumicino Airport (FCO)",
+      "lat": 41.8003,
+      "lng": 12.2389,
+      "url": "https://www.adr.it/fiumicino",
+      "summary": "Arrival Mon Nov 16 ~7:00am · Departure Tue Nov 24 AZ 618 10:10am."
+    },
+    {
+      "id": "st-peters-square",
+      "name": "St Peter’s Square",
+      "lat": 41.9022,
+      "lng": 12.4572,
+      "url": "https://www.vatican.va/",
+      "summary": "Colonnade, obelisk, security queues. Meeting point for the audience."
+    },
+    {
+      "id": "st-peters",
+      "name": "St Peter’s Basilica",
+      "lat": 41.9022,
+      "lng": 12.4539,
+      "url": "https://www.basilicasanpietro.va/en/",
+      "summary": "Free entry. Pietà, baldachin, nave. Skip the dome with baby/toddler."
+    },
+    {
+      "id": "bronze-door",
+      "name": "Bronze Door (Portone di Bronzo)",
+      "lat": 41.9033,
+      "lng": 12.4569,
+      "url": "https://www.vatican.va/content/vatican/en/prenotazioni-udienze.html",
+      "summary": "Ticket pickup for the General Audience. Apostolic Palace, right colonnade of St Peter’s Square."
+    },
+    {
+      "id": "pantheon",
+      "name": "Pantheon",
+      "lat": 41.8986,
+      "lng": 12.4769,
+      "url": "https://direzionemuseiroma.cultura.gov.it/en/pantheon/",
+      "summary": "Vast round hall with an open oculus. Timed tickets; under-18 free but still need a ticket."
+    },
+    {
+      "id": "minerva",
+      "name": "Santa Maria sopra Minerva",
+      "lat": 41.8979,
+      "lng": 12.478,
+      "url": "https://www.santamariasopraminerva.it/",
+      "summary": "Gothic basilica; Michelangelo’s Christ; St Catherine’s tomb. Usually opens mid-morning."
+    },
+    {
+      "id": "san-luigi",
+      "name": "San Luigi dei Francesi",
+      "lat": 41.8997,
+      "lng": 12.4746,
+      "url": "https://saintlouis-rome.net/horaires-visite-opening-hours/",
+      "summary": "Caravaggio’s St Matthew cycle in the Contarelli Chapel. Free; midday closure."
+    },
+    {
+      "id": "trevi",
+      "name": "Trevi Fountain",
+      "lat": 41.9009,
+      "lng": 12.4833,
+      "url": "https://fontanaditrevi.roma.it/en/",
+      "summary": "Street view free. Inner basin has controlled entry. Quick photos — don’t linger."
+    },
+    {
+      "id": "spagna",
+      "name": "Spanish Steps",
+      "lat": 41.90599,
+      "lng": 12.48277,
+      "url": "https://www.turismoroma.it/en/places/piazza-di-spagna-and-trinita-dei-monti",
+      "summary": "Piazza di Spagna and the steps to Trinità dei Monti."
+    },
+    {
+      "id": "castel",
+      "name": "Castel Sant’Angelo",
+      "lat": 41.9031,
+      "lng": 12.4663,
+      "url": "https://castelsantangelo.cultura.gov.it/en/",
+      "summary": "Hadrian’s tomb turned fortress. Stairs; exterior + bridge is enough if the museum is too much."
+    },
+    {
+      "id": "colosseum",
+      "name": "Colosseum",
+      "lat": 41.8902,
+      "lng": 12.4922,
+      "url": "https://colosseo.it/en/opening-times-and-tickets/",
+      "summary": "Timed entry. Standard tiers — not arena/underground. Book all nine ~30 days out."
+    },
+    {
+      "id": "arch",
+      "name": "Arch of Constantine",
+      "lat": 41.8897,
+      "lng": 12.4906,
+      "url": "https://colosseo.it/en/area/arch-of-constantine-and-meta-sudans/",
+      "summary": "Free exterior stop next to the Colosseum."
+    },
+    {
+      "id": "forum",
+      "name": "Roman Forum",
+      "lat": 41.8925,
+      "lng": 12.4853,
+      "url": "https://colosseo.it/en/opening-times-and-tickets/",
+      "summary": "Combined ticket with Colosseum area. Uneven stones — carrier often better than stroller."
+    },
+    {
+      "id": "maggiore",
+      "name": "Santa Maria Maggiore",
+      "lat": 41.8976,
+      "lng": 12.4984,
+      "url": "https://www.basilicasantamariamaggiore.va/en/",
+      "summary": "Papal basilica with golden mosaics. Free entry."
+    },
+    {
+      "id": "lateran",
+      "name": "San Giovanni in Laterano",
+      "lat": 41.8859,
+      "lng": 12.5057,
+      "url": "https://www.basilicasangiovanni.va/en/info-e-orari.html",
+      "summary": "Cathedral of Rome. Huge nave and Apostle statues."
+    },
+    {
+      "id": "scala",
+      "name": "Scala Santa",
+      "lat": 41.8869,
+      "lng": 12.5069,
+      "url": "https://www.scala-santa.com/informazioni/",
+      "summary": "Holy Stairs (kneeling) / side stairs for walking. Brief look with toddlers."
+    },
+    {
+      "id": "croce",
+      "name": "Santa Croce in Gerusalemme",
+      "lat": 41.888,
+      "lng": 12.5166,
+      "url": "https://www.santacroceroma.it/en/opening-hours.html",
+      "summary": "Optional short stop. Relic chapel may be closed for renovation — check first."
+    },
+    {
+      "id": "tiber",
+      "name": "Isola Tiberina / San Bartolomeo",
+      "lat": 41.8908,
+      "lng": 12.4779,
+      "url": "https://sanbartolomeo.org/visita-orari-celebrazioni/",
+      "summary": "Island stroll and brief church peek. Prefer taxi over long cobbles with a stroller."
+    },
+    {
+      "id": "glass",
+      "name": "Glass Hostaria",
+      "lat": 41.8895,
+      "lng": 12.4686,
+      "url": "https://www.glasshostaria.it/en/",
+      "summary": "Anniversary dinner pick. Vicolo del Cinque 58, Trastevere. Wed–Sun dinner. No table held yet."
+    },
+    {
+      "id": "arcangelo",
+      "name": "L’Arcangelo",
+      "lat": 41.909,
+      "lng": 12.4645,
+      "url": "https://www.larcangelo.com/en/",
+      "summary": "Walkable Prati alternate for anniversary dinner. Confirm November hours by phone."
+    },
+    {
+      "id": "despar",
+      "name": "Despar Prati",
+      "lat": 41.9089,
+      "lng": 12.4569,
+      "url": "https://www.google.com/maps/search/?api=1&query=Despar%20Viale%20Giulio%20Cesare%20193%20Roma",
+      "summary": "Supermarket at Viale Giulio Cesare 193, near Ottaviano. Grocery stop for apartment breakfasts."
+    },
+    {
+      "id": "mercato-prati",
+      "name": "Mercato Rionale Prati",
+      "lat": 41.9074,
+      "lng": 12.4616,
+      "url": "https://www.google.com/maps/search/?api=1&query=Mercato%20Rionale%20Prati%20Piazza%20dell%27Unit%C3%A0%20Roma",
+      "summary": "Neighborhood market in Piazza dell’Unità, Prati. Fruit, veg, and deli counters for the apartment."
+    },
+    {
+      "id": "matriciano",
+      "name": "Il Matriciano",
+      "lat": 41.9074,
+      "lng": 12.4603,
+      "url": "https://www.ilmatriciano.it/en/",
+      "summary": "Classic Roman trattoria in Prati, Via dei Gracchi 55. Closed Wednesday; Sunday dinner closed."
+    },
+    {
+      "id": "gracchi",
+      "name": "Osteria dei Gracchi",
+      "lat": 41.9082,
+      "lng": 12.4575,
+      "url": "https://www.osteriadeigracchi.it/",
+      "summary": "Neighborhood osteria at Via dei Gracchi 19, Prati. Roman cooking near Ottaviano."
+    },
+    {
+      "id": "micci",
+      "name": "Trattoria Micci",
+      "lat": 41.9094,
+      "lng": 12.4514,
+      "url": "https://www.trattoriamicci.it/en/",
+      "summary": "Prati trattoria-pizzeria since 1936, Via Andrea Doria 55 a/b. Closed Monday."
+    },
+    {
+      "id": "campana",
+      "name": "La Campana",
+      "lat": 41.9027,
+      "lng": 12.4746,
+      "url": "https://www.ristorantelacampana.com/",
+      "summary": "Historic Roman restaurant (from 1518) on Vicolo della Campana, near the Pantheon. Closed Monday."
+    },
+    {
+      "id": "bruttone",
+      "name": "Dar Bruttone Rione Monti",
+      "lat": 41.8965,
+      "lng": 12.4902,
+      "url": "https://darbruttonerionemonti.com/",
+      "summary": "Roman cooking on Via dei Serpenti 113, Monti, near the Colosseum."
+    },
+    {
+      "id": "vicolo9",
+      "name": "Osteria Al Vicolo 9",
+      "lat": 41.8981,
+      "lng": 12.4898,
+      "url": "http://osteriavicolo9.it/",
+      "summary": "Monti osteria at Vicolo dei Serpenti 9. Closed Sunday."
+    },
+    {
+      "id": "faleria",
+      "name": "Osteria Faleria",
+      "lat": 41.8825,
+      "lng": 12.5094,
+      "url": "https://www.osteriafaleria.it/",
+      "summary": "Roman/Lazio osteria near San Giovanni, Via Faleria 47. Family-friendlier than a tiny tasting room for 9."
+    },
+    {
+      "id": "pepe-sg",
+      "name": "Pepe San Giovanni",
+      "lat": 41.8805,
+      "lng": 12.5077,
+      "url": "https://pepesangiovanni.it/",
+      "summary": "Family-scale restaurant/pizzeria at Via Gallia 103, near the Lateran."
+    },
+    {
+      "id": "pompiere",
+      "name": "Al Pompiere",
+      "lat": 41.893,
+      "lng": 12.4764,
+      "url": "https://www.alpompiereroma.com/",
+      "summary": "Historic Roman trattoria in the Ghetto, Piazza delle Cinque Scole 28. Closed Tuesday; Sunday lunch."
+    },
+    {
+      "id": "cantarini",
+      "name": "Cantina Cantarini",
+      "lat": 41.9079,
+      "lng": 12.4963,
+      "url": "https://www.ristorantecantinacantarini.it/",
+      "summary": "Roman and Marchigiana osteria at Piazza Sallustio 12 (Sallustiano, short taxi from Prati). Closed Sunday."
+    },
+    {
+      "id": "pratolina",
+      "name": "La Pratolina",
+      "lat": 41.9089,
+      "lng": 12.4638,
+      "url": "https://www.google.com/maps/search/?api=1&query=La%20Pratolina%20Via%20degli%20Scipioni%20248%20Roma",
+      "summary": "Neighborhood pizzeria in Prati, Via degli Scipioni 248/250. Roman-style pizza for a family table."
+    },
+    {
+      "id": "flavio",
+      "name": "Flavio al Velavevodetto",
+      "lat": 41.8756,
+      "lng": 12.4735,
+      "url": "https://www.ristorantevelavevodetto.it/ristoranti/roma-testaccio/",
+      "summary": "Classic Testaccio pasta osteria under Monte Testaccio, Via di Monte Testaccio 97. Large enough for a family."
+    },
+    {
+      "id": "cacio-pepe",
+      "name": "Cacio e Pepe",
+      "lat": 41.9133,
+      "lng": 12.4675,
+      "url": "https://www.google.com/maps/search/?api=1&query=Cacio%20e%20Pepe%20Via%20Giuseppe%20Avezzana%2011%20Roma",
+      "summary": "Roman pasta trattoria at Via Giuseppe Avezzana 11, Prati. Compact rooms — two tables likely. Closed Sunday."
+    },
+    {
+      "id": "toscano",
+      "name": "Dal Toscano",
+      "lat": 41.9078,
+      "lng": 12.458,
+      "url": "https://www.ristorantedaltoscano.it/en/",
+      "summary": "Tuscan trattoria in Prati, Via Germanico 58/60. Closed Monday. Dinner kitchen from 20:00."
+    },
+    {
+      "id": "pizzarium",
+      "name": "Pizzarium Bonci",
+      "lat": 41.9066,
+      "lng": 12.4465,
+      "url": "https://bonci.it/pages/dove-siamo",
+      "summary": "Gabriele Bonci’s pizza al taglio counter, Via della Meloria 43, Prati. Standing / queue; may split the group."
+    },
+    {
+      "id": "angelo",
+      "name": "Osteria dell’Angelo",
+      "lat": 41.9112,
+      "lng": 12.4538,
+      "url": "https://www.google.com/maps/search/?api=1&query=Osteria%20dell%27Angelo%20Via%20Giovanni%20Bettolo%2024%20Roma",
+      "summary": "Casual Roman osteria in Prati, Via Giovanni Bettolo 24–32. Closed Sunday. Dinner listings from 19:30."
+    },
+    {
+      "id": "tazza-oro",
+      "name": "Tazza d’Oro",
+      "lat": 41.8996,
+      "lng": 12.4768,
+      "url": "https://www.google.com/maps/search/?api=1&query=Tazza%20d%27Oro%20Via%20degli%20Orfani%2084%20Roma",
+      "summary": "Historic Roman coffee bar at Via degli Orfani 84, next to the Pantheon. Stand at the counter like locals."
+    },
+    {
+      "id": "giolitti",
+      "name": "Giolitti",
+      "lat": 41.9003,
+      "lng": 12.4794,
+      "url": "https://www.giolitti.it/",
+      "summary": "Historic gelateria at Via Uffici del Vicario 40, between the Pantheon and Trevi."
+    },
+    {
+      "id": "sciascia",
+      "name": "Sciascia Caffè 1919",
+      "lat": 41.9094,
+      "lng": 12.4628,
+      "url": "https://www.google.com/maps/search/?api=1&query=Sciascia%20Caff%C3%A8%201919%20Via%20Fabio%20Massimo%20Roma",
+      "summary": "Old-school Prati coffee at Via Fabio Massimo 1/A. Cornetto at the bar, not a tourist piazza."
+    },
+    {
+      "id": "gracchi-gelato",
+      "name": "Gelateria dei Gracchi",
+      "lat": 41.9068,
+      "lng": 12.4658,
+      "url": "https://gelateriadeigracchi.it/contatti/",
+      "summary": "Artisanal gelato at Via dei Gracchi 272, Prati. On the walk home from Castel Sant’Angelo."
+    },
+    {
+      "id": "fatamorgana-monti",
+      "name": "Fatamorgana Monti",
+      "lat": 41.8954,
+      "lng": 12.4905,
+      "url": "https://www.google.com/maps/search/?api=1&query=Fatamorgana%20Piazza%20degli%20Zingari%205%20Roma",
+      "summary": "Creative artisanal gelato at Piazza degli Zingari 5, Monti, near Via dei Serpenti."
+    },
+    {
+      "id": "trapizzino-testaccio",
+      "name": "Trapizzino Testaccio",
+      "lat": 41.8768,
+      "lng": 12.474,
+      "url": "https://www.trapizzino.it/trapizzino/trapizzino-roma-testaccio/",
+      "summary": "Original Trapizzino at Via Giovanni Branca 88, Testaccio. Supplì and stuffed pizza triangles."
+    },
+    {
+      "id": "regoli",
+      "name": "Pasticceria Regoli",
+      "lat": 41.896,
+      "lng": 12.5015,
+      "url": "https://www.google.com/maps/search/?api=1&query=Pasticceria%20Regoli%20Via%20dello%20Statuto%2060%20Roma",
+      "summary": "Esquilino pastry shop since 1916, Via dello Statuto 60. Famous for maritozzo con la panna. Closed Tuesday."
+    },
+    {
+      "id": "boccione",
+      "name": "Pasticceria Boccione",
+      "lat": 41.8925,
+      "lng": 12.4785,
+      "url": "https://www.google.com/maps/search/?api=1&query=Pasticceria%20Boccione%20Via%20del%20Portico%20d%27Ottavia%201%20Roma",
+      "summary": "No-sign kosher bakery at Via del Portico d’Ottavia 1. Pizza ebraica. Closed Saturday; Sunday until 17:30."
+    },
+    {
+      "id": "fiordiluna",
+      "name": "Fior di Luna",
+      "lat": 41.8894,
+      "lng": 12.4703,
+      "url": "https://fiordiluna.com/",
+      "summary": "Artisanal gelato and chocolate at Via della Lungaretta 96, Trastevere, near the Tiber Island path."
+    }
   ]
 }

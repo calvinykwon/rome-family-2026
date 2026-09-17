@@ -174,7 +174,7 @@ a:hover { color: var(--primary); }
 /* —— Hero cards —— */
 .hero-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-base);
   margin: var(--space-xl) auto var(--space-base);
 }
@@ -199,7 +199,8 @@ a:hover { color: var(--primary); }
 }
 
 .card.confirm h2::before,
-.card.open h2::before {
+.card.open h2::before,
+.card.eat h2::before {
   content: "";
   display: inline-block;
   width: 8px;
@@ -211,6 +212,14 @@ a:hover { color: var(--primary); }
 
 .card.confirm h2::before { background: var(--primary); }
 .card.open h2::before { background: var(--muted-soft); }
+.card.eat h2::before { background: #c13515; }
+
+.eat-intro {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--muted);
+}
 
 .card ul {
   margin: 0;
@@ -432,7 +441,9 @@ a:hover { color: var(--primary); }
 .kind.date,
 .kind.lunch,
 .kind.breakfast,
-.kind.snack {
+.kind.snack,
+.kind.gelato,
+.kind.coffee {
   background: var(--surface-strong);
   color: var(--ink);
 }
@@ -585,8 +596,11 @@ a:hover { color: var(--primary); }
   box-shadow: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 800px) {
   .top-inner {
     align-items: flex-start;
     flex-direction: column;
