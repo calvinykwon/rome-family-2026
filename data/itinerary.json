@@ -1,0 +1,770 @@
+{
+  "days": [
+    {
+      "title": "Sunday Nov 15 — Travel day",
+      "note": "Not in Rome. Dulles evening departure.",
+      "blocks": [
+        {
+          "time": "Afternoon",
+          "kind": "Travel",
+          "what": "Washington Dulles (IAD) · Be at the airport with margin for nine people and a stroller. Flight AZ 619 departs 4:30pm.",
+          "links": []
+        },
+        {
+          "time": "4:30pm–overnight",
+          "kind": "Flight",
+          "what": "Nonstop to Rome · ~8h 30m · lands next morning",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Monday Nov 16 — Arrive & first walk",
+      "note": "Goal: get the apartment, eat, then stay out for an easy Vatican-side evening. Arrival quiet time is only for check-in and jet lag—not a sightseeing nap cycle.",
+      "blocks": [
+        {
+          "time": "7:00am",
+          "kind": "Arrive",
+          "what": "Fiumicino (FCO) · Land on AZ 619. Immigration and bags for nine: plan 45–90 minutes.",
+          "links": []
+        },
+        {
+          "time": "8:00–9:15",
+          "kind": "Commute",
+          "what": "Pre-booked van or 2–3 taxis · FCO → Prati · ~35–60 min. Skip the train with this group today.",
+          "links": []
+        },
+        {
+          "time": "9:15–10:30",
+          "kind": "Home",
+          "what": "Prati apartment · Check in, unpack cribs, find bathrooms, start laundry, grocery/pharmacy run on Via Cola di Rienzo.",
+          "links": []
+        },
+        {
+          "time": "10:30–11:30",
+          "kind": "Settle",
+          "what": "Showers, change clothes, short quiet sit at the apartment while bags get sorted.",
+          "links": []
+        },
+        {
+          "time": "11:30–12:45",
+          "kind": "Lunch",
+          "what": "Lunch in Prati (apartment or nearby café).",
+          "links": []
+        },
+        {
+          "time": "12:45–1:15",
+          "kind": "Walk",
+          "what": "Apartment → St Peter’s Square · ~20–30 min family pace.",
+          "links": []
+        },
+        {
+          "time": "1:15–2:30",
+          "kind": "Visit",
+          "what": "St Peter’s Square · Colonnade, façade, obelisk. If energy is good, enter the basilica (daily 7:00am–8:00pm, last entry 7:15pm; free). Keep it short on day one. Summary: first look at the heart of the pilgrimage—stand in the Square, step inside if kids are willing, don’t climb the dome today.",
+          "links": [
+            "https://www.basilicasanpietro.va/en/"
+          ]
+        },
+        {
+          "time": "2:30–3:00",
+          "kind": "Sit",
+          "what": "Café sit near the Square / Borgo · snacks, bathroom, stroller reset.",
+          "links": []
+        },
+        {
+          "time": "3:00–4:15",
+          "kind": "Visit",
+          "what": "Slow walk along Via della Conciliazione and toward Castel Sant’Angelo bridge for photos. Optional exterior only of Castel Sant’Angelo—save the museum for later if anyone still wants it.",
+          "links": [
+            "https://www.coopculture.it/en/poi/castel-santangelo/"
+          ]
+        },
+        {
+          "time": "4:15–4:45",
+          "kind": "Walk",
+          "what": "Walk back to Prati · 20–30 min.",
+          "links": []
+        },
+        {
+          "time": "5:30–7:00",
+          "kind": "Dinner",
+          "what": "Early dinner in Prati.",
+          "links": []
+        },
+        {
+          "time": "7:00+",
+          "kind": "Home",
+          "what": "Kids to bed. Jet lag night.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Tuesday Nov 17 — Centro Storico",
+      "note": "Full day in the center: Pantheon → Minerva → San Luigi → lunch → Trevi → Spanish Steps. End the afternoon at the Vatican Bronze Door to pick up Wednesday’s audience tickets (open 3:00–7:00pm the day before). Timed Pantheon tickets when November inventory opens.",
+      "blocks": [
+        {
+          "time": "7:00–8:15",
+          "kind": "Breakfast",
+          "what": "Apartment breakfast. Pack snacks, water, diapers.",
+          "links": []
+        },
+        {
+          "time": "8:15–8:45",
+          "kind": "Commute",
+          "what": "Metro A Ottaviano → Spagna or Barberini, then walk · ~30–45 min door to door. Taxi if lifts fail.",
+          "links": []
+        },
+        {
+          "time": "8:45–9:00",
+          "kind": "Buffer",
+          "what": "Arrive Pantheon area · bathroom · ticket check.",
+          "links": []
+        },
+        {
+          "time": "9:00–9:45",
+          "kind": "Visit",
+          "what": "Pantheon (Santa Maria ad Martyres) · Open 9:00am–7:00pm (last entry 6:30pm). Timed tickets via Musei Italiani; under-18 free but still need a ticket. Summary: one vast round hall with an open roof—kids look up, adults get the wow, then you leave.",
+          "links": [
+            "https://direzionemuseiroma.cultura.gov.it/en/pantheon/"
+          ]
+        },
+        {
+          "time": "9:45–10:00",
+          "kind": "Walk",
+          "what": "Walk to Minerva · ~5–10 min.",
+          "links": []
+        },
+        {
+          "time": "10:00–11:00",
+          "kind": "Sit",
+          "what": "Gelato / sit in Piazza della Minerva. Bernini’s elephant-obelisk outside. Minerva typically opens at 11:00 (diocese: 11:00–1:00 & 2:30–7:00—reconfirm nearer the trip).",
+          "links": []
+        },
+        {
+          "time": "11:00–11:30",
+          "kind": "Visit",
+          "what": "Santa Maria sopra Minerva · Gothic basilica; Michelangelo’s Christ; St Catherine’s tomb. Calm 20–30 minutes. Free. Hours conflict across sources—verify that morning.",
+          "links": [
+            "https://www.santamariasopraminerva.it/"
+          ]
+        },
+        {
+          "time": "11:30–11:45",
+          "kind": "Walk",
+          "what": "Walk to San Luigi dei Francesi · ~5–10 min.",
+          "links": []
+        },
+        {
+          "time": "11:45–12:15",
+          "kind": "Visit",
+          "what": "San Luigi dei Francesi · Mon–Fri 9:30am–12:45pm & 2:30–6:15pm. Contarelli Chapel: Caravaggio’s three St Matthew paintings. Free. Be out before the midday close.",
+          "links": [
+            "https://saintlouis-rome.net/horaires-visite-opening-hours/"
+          ]
+        },
+        {
+          "time": "12:15–1:45",
+          "kind": "Lunch",
+          "what": "Sit-down lunch near Piazza Navona / Pantheon. Aim to be seated by 12:15.",
+          "links": []
+        },
+        {
+          "time": "1:45–2:15",
+          "kind": "Walk",
+          "what": "Walk toward Trevi · ~15–25 min.",
+          "links": []
+        },
+        {
+          "time": "2:15–2:45",
+          "kind": "Visit",
+          "what": "Trevi Fountain · Street view free anytime. Inner basin controlled entry (€2 non-residents under Feb 2026 rules; free under 6). Quick coin toss / photos. Crowded—don’t linger.",
+          "links": [
+            "https://fontanaditrevi.roma.it/en/"
+          ]
+        },
+        {
+          "time": "2:45–3:15",
+          "kind": "Walk",
+          "what": "Walk to Spanish Steps / Piazza di Spagna · ~15–25 min.",
+          "links": []
+        },
+        {
+          "time": "3:15–4:00",
+          "kind": "Visit",
+          "what": "Spanish Steps & Trinità dei Monti · Climb if older kids want; otherwise enjoy the piazza from below. Church at the top optional.",
+          "links": [
+            "https://www.turismoroma.it/en/places/piazza-di-spagna-and-trinita-dei-monti"
+          ]
+        },
+        {
+          "time": "4:00–4:30",
+          "kind": "Sit",
+          "what": "Café / gelato sit near Spagna. Bathroom break.",
+          "links": []
+        },
+        {
+          "time": "4:30–5:00",
+          "kind": "Commute",
+          "what": "Taxi or Metro toward St Peter’s / Prati side · ~25–40 min. Aim to reach the Bronze Door during the afternoon pickup window.",
+          "links": []
+        },
+        {
+          "time": "5:00–5:45",
+          "kind": "Pickup",
+          "what": "Bronze Door (Portone di Bronzo) · Apostolic Palace, Piazza San Pietro, right colonnade. Collect all 9 General Audience tickets. Reservation 1113_UG_18.11/2026. Day-before window: 3:00–7:00pm (also 8:30am–1:00pm). Bring the confirmation email / reservation number. If you miss this, pick up Wed from 7:30am.",
+          "links": []
+        },
+        {
+          "time": "5:45–6:15",
+          "kind": "Walk",
+          "what": "Short walk back to the Prati apartment · ~15–25 min.",
+          "links": []
+        },
+        {
+          "time": "6:15–7:30",
+          "kind": "Dinner",
+          "what": "Early dinner in Prati. Early bedtime—audience morning starts early.",
+          "links": []
+        },
+        {
+          "time": "7:30+",
+          "kind": "Home",
+          "what": "Bedtime. Put tickets and passports with tomorrow’s bag.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Wednesday Nov 18 — Vatican day · Papal audience",
+      "note": "Audience confirmed: General Audience 10:00am, Wed Nov 18, 2026 · 9 tickets · reservation 1113_UG_18.11/2026. Tickets should already be in hand from Tuesday’s Bronze Door pickup (backup: collect Wed from 7:30am). Walk from Prati. Afternoon stays on the Vatican/Borgo side.",
+      "blocks": [
+        {
+          "time": "6:30–7:15",
+          "kind": "Breakfast",
+          "what": "Early apartment breakfast. Modest dress for the audience. Bring reservation 1113_UG_18.11/2026 and all 9 tickets (or collect at the Bronze Door from 7:30am if not picked up Tuesday).",
+          "links": []
+        },
+        {
+          "time": "7:15–7:45",
+          "kind": "Walk",
+          "what": "Apartment → St Peter’s Square / Bronze Door · 20–30 min. Allow security and seating time; with nine people and a stroller, arrive early.",
+          "links": []
+        },
+        {
+          "time": "7:45–8:30",
+          "kind": "Pickup",
+          "what": "Bronze Door backup only · If tickets were not collected Tuesday: Portone di Bronzo, Apostolic Palace, right colonnade, from 7:30am. Reservation 1113_UG_18.11/2026, 9 tickets. Skip this block if tickets are already in hand—go straight into the Square.",
+          "links": []
+        },
+        {
+          "time": "8:30–10:00",
+          "kind": "Seat",
+          "what": "Enter security, find seats in St Peter’s Square or the hall as directed. Bathroom before it starts. Kids snacks OK while you wait.",
+          "links": []
+        },
+        {
+          "time": "10:00–11:15",
+          "kind": "Audience",
+          "what": "Papal General Audience · Confirmed 10:00am, Wed Nov 18, 2026 · free · reservation 1113_UG_18.11/2026 · 9 places. Readings and blessing; the Pope often greets the crowd. Summary: the pilgrimage highlight of the week—sit through the audience together, then exit calmly with the stroller.",
+          "links": [
+            "https://www.vatican.va/content/vatican/en/prenotazione-celebrazioni-udienze.html"
+          ]
+        },
+        {
+          "time": "11:15–11:45",
+          "kind": "Snack",
+          "what": "Snack / bathroom at the edge of the Square after the crowd thins a bit.",
+          "links": []
+        },
+        {
+          "time": "11:45–1:15",
+          "kind": "Visit",
+          "what": "St Peter’s Basilica · Free entry. Pietà, baldachin, nave; crypt if the group can. Skip the dome with the baby and toddler. Modest dress. Summary: the pilgrimage centerpiece—pray and look; don’t try to finish every corner.",
+          "links": [
+            "https://www.basilicasanpietro.va/en/"
+          ]
+        },
+        {
+          "time": "1:15–2:30",
+          "kind": "Lunch",
+          "what": "Lunch in Prati or Borgo (closer than crossing the city).",
+          "links": []
+        },
+        {
+          "time": "2:30–3:00",
+          "kind": "Sit",
+          "what": "Post-lunch sit. Optional: only the older kids + one adult do Vatican Museums / Sistine with a timed ticket from museivaticani.va (weekday only). Rest of the group skips.",
+          "links": [
+            "https://www.museivaticani.va/content/museivaticani/en/info/orari-musei-vaticani.html"
+          ]
+        },
+        {
+          "time": "3:00–4:30",
+          "kind": "Visit",
+          "what": "Castel Sant’Angelo · Tue–Sun 9:00am–7:30pm, closed Mon. Named tickets recommended. Castle ramps, courtyards, rooftop views. Lots of stairs—use judgment with the stroller; exterior + bridge is enough if the museum is too much. Summary: Hadrian’s tomb turned fortress—“castle day” for the 5–9s.",
+          "links": [
+            "https://www.coopculture.it/en/poi/castel-santangelo/"
+          ]
+        },
+        {
+          "time": "4:30–5:00",
+          "kind": "Walk",
+          "what": "Walk back to Prati along the river or Via Cola di Rienzo · 20–30 min.",
+          "links": []
+        },
+        {
+          "time": "5:30–7:00",
+          "kind": "Dinner",
+          "what": "Early dinner in Prati.",
+          "links": []
+        },
+        {
+          "time": "7:00+",
+          "kind": "Home",
+          "what": "Quiet evening.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Thursday Nov 19 — Light day · 10th anniversary",
+      "note": "Easy morning nearby. Afternoon free in Prati / river. Sister and brother-in-law have the kids for the evening. No table held yet.",
+      "blocks": [
+        {
+          "time": "7:30–8:30",
+          "kind": "Breakfast",
+          "what": "Apartment breakfast. Unhurried.",
+          "links": []
+        },
+        {
+          "time": "8:30–9:00",
+          "kind": "Walk",
+          "what": "Short walk in Prati to a nearby church or playground · 10–20 min.",
+          "links": []
+        },
+        {
+          "time": "9:00–10:30",
+          "kind": "Visit",
+          "what": "Neighborhood church / park time. Keep it local—no long metro.",
+          "links": []
+        },
+        {
+          "time": "10:30–12:00",
+          "kind": "Home",
+          "what": "Apartment free play, laundry, grocery top-up. Adults prep date-night clothes and babysitting plan.",
+          "links": []
+        },
+        {
+          "time": "12:00–1:30",
+          "kind": "Lunch",
+          "what": "Lunch at the apartment or nearby.",
+          "links": []
+        },
+        {
+          "time": "1:30–4:00",
+          "kind": "Afternoon",
+          "what": "Easy Prati afternoon: Via Cola di Rienzo shopping, playground, or river walk toward Ponte Sant’Angelo. Stay close to home so the evening handoff is simple.",
+          "links": []
+        },
+        {
+          "time": "4:00–5:30",
+          "kind": "Kids dinner",
+          "what": "Kids eat early with aunt and uncle. Parents get ready.",
+          "links": []
+        },
+        {
+          "time": "5:30–6:30",
+          "kind": "Handoff",
+          "what": "Babysitting handoff. Kids’ evening under aunt/uncle.",
+          "links": []
+        },
+        {
+          "time": "6:30–6:55",
+          "kind": "Taxi",
+          "what": "Taxi Prati → Trastevere · ~15–25 min.",
+          "links": []
+        },
+        {
+          "time": "7:00–9:30",
+          "kind": "Date night",
+          "what": "Glass Hostaria · Vicolo del Cinque 58, Trastevere. Dinner Wed–Sun 7:00–10:30pm. Modern Italian; tasting menu listed at €135/person before drinks. Quiet designed room—not a piazza tourist table. No reservation held.Alternate: L’Arcangelo · Via G. G. Belli 59, Prati · walkable. Confirm November hours by phone (+39 06 3210992).",
+          "links": [
+            "https://www.glasshostaria.it/en/",
+            "https://www.larcangelo.com/en/"
+          ]
+        },
+        {
+          "time": "9:30–10:00",
+          "kind": "Taxi",
+          "what": "Taxi back to Prati · 15–25 min.",
+          "links": []
+        },
+        {
+          "time": "10:00+",
+          "kind": "Home",
+          "what": "Relieve babysitters.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Friday Nov 20 — Colosseum & Forum",
+      "note": "Winter hours: Colosseum 8:30am; Forum–Palatine 9:00am; last entry 3:30pm; closes 4:30pm (25 Oct 2026–28 Feb 2027). Book all nine ~30 days ahead. Skip arena and underground. Afternoon continues nearby—no midday home break.",
+      "blocks": [
+        {
+          "time": "7:00–7:45",
+          "kind": "Breakfast",
+          "what": "Apartment breakfast. Water and snacks for the Forum.",
+          "links": []
+        },
+        {
+          "time": "7:45–8:30",
+          "kind": "Commute",
+          "what": "Metro A → Termini → Metro B Colosseo · ~35–50 min. Target an 8:30 or 9:00 Colosseum slot.",
+          "links": []
+        },
+        {
+          "time": "8:30–10:00",
+          "kind": "Visit",
+          "what": "Colosseum · Book at ticketing.colosseo.it. Standard tiers—not arena/underground. Under-18 free tickets must still be reserved; bring IDs. Summary: walk the amphitheatre, keep moving before legs quit.",
+          "links": [
+            "https://colosseo.it/en/opening-times-and-tickets/",
+            "https://ticketing.colosseo.it/en"
+          ]
+        },
+        {
+          "time": "10:00–10:15",
+          "kind": "Visit",
+          "what": "Arch of Constantine · Free exterior stop. Quick photos.",
+          "links": [
+            "https://colosseo.it/en/area/arch-of-constantine-and-meta-sudans/"
+          ]
+        },
+        {
+          "time": "10:15–10:30",
+          "kind": "Walk",
+          "what": "Walk to Forum gate · ~10–15 min.",
+          "links": []
+        },
+        {
+          "time": "10:30–12:15",
+          "kind": "Visit",
+          "what": "Roman Forum · Combined ticket area. Uneven stones—carrier often better than stroller. Main street and arches; skip deep Palatine unless older kids insist. Last entry 3:30pm.",
+          "links": [
+            "https://colosseo.it/en/opening-times-and-tickets/"
+          ]
+        },
+        {
+          "time": "12:15–1:45",
+          "kind": "Lunch",
+          "what": "Lunch near Colosseo / Via dei Fori. Long sit—rest feet.",
+          "links": []
+        },
+        {
+          "time": "1:45–2:15",
+          "kind": "Sit",
+          "what": "Café sit or gelato. Bathroom reset.",
+          "links": []
+        },
+        {
+          "time": "2:15–3:30",
+          "kind": "Visit",
+          "what": "Easy add-ons if energy remains: Circus Maximus viewpoint, or San Clemente (layered church—stairs; skip if toddler-weary). Otherwise slow walk through Celio park shade.",
+          "links": [
+            "https://www.turismoroma.it/en/places/basilica-san-clemente-al-laterano"
+          ]
+        },
+        {
+          "time": "3:30–4:15",
+          "kind": "Commute",
+          "what": "Metro back to Prati · 35–50 min.",
+          "links": []
+        },
+        {
+          "time": "5:30–7:00",
+          "kind": "Dinner",
+          "what": "Early dinner in Prati.",
+          "links": []
+        },
+        {
+          "time": "7:00+",
+          "kind": "Home",
+          "what": "Early bedtime after a stone-heavy day.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Saturday Nov 21 — Major basilicas",
+      "note": "Santa Maria Maggiore → San Giovanni → Scala Santa → Santa Croce if energy remains · afternoon continues on that side of town, then home for dinner.",
+      "blocks": [
+        {
+          "time": "7:00–8:00",
+          "kind": "Breakfast",
+          "what": "Apartment breakfast.",
+          "links": []
+        },
+        {
+          "time": "8:00–8:40",
+          "kind": "Commute",
+          "what": "Metro A to Termini + walk · ~25–40 min to Santa Maria Maggiore.",
+          "links": []
+        },
+        {
+          "time": "8:40–9:45",
+          "kind": "Visit",
+          "what": "Santa Maria Maggiore · ~7:00am–6:45pm. Golden mosaics, Marian heart of Rome. Pushchair-friendly per official tips. Free. Summary: stand in the nave, look up at the gold, light a candle.",
+          "links": [
+            "https://www.basilicasantamariamaggiore.va/en/"
+          ]
+        },
+        {
+          "time": "9:45–10:15",
+          "kind": "Commute",
+          "what": "Walk Via Merulana or short Metro · ~25–35 min toward San Giovanni.",
+          "links": []
+        },
+        {
+          "time": "10:15–11:15",
+          "kind": "Visit",
+          "what": "San Giovanni in Laterano · Cathedral of Rome · 7:00am–6:30pm. Huge nave, Apostle statues. Free.",
+          "links": [
+            "https://www.basilicasangiovanni.va/en/info-e-orari.html"
+          ]
+        },
+        {
+          "time": "11:15–11:30",
+          "kind": "Walk",
+          "what": "Cross to Scala Santa · a few minutes.",
+          "links": []
+        },
+        {
+          "time": "11:30–12:15",
+          "kind": "Visit",
+          "what": "Scala Santa · Holy Stairs (kneeling) / side stairs for walking. Nov–Mar sanctuary closes 6:30pm; afternoon climb to 6:00pm. With toddlers: brief look / side stairs.",
+          "links": [
+            "https://www.scala-santa.com/informazioni/"
+          ]
+        },
+        {
+          "time": "12:15–1:45",
+          "kind": "Lunch",
+          "what": "Lunch near San Giovanni.",
+          "links": []
+        },
+        {
+          "time": "1:45–2:45",
+          "kind": "Visit",
+          "what": "Santa Croce in Gerusalemme · Daily 7:30am–7:00pm. Relic chapel may be closed for renovation—check before going. Short stop.",
+          "links": [
+            "https://www.santacroceroma.it/en/opening-hours.html"
+          ]
+        },
+        {
+          "time": "2:45–3:15",
+          "kind": "Sit",
+          "what": "Café sit near the Lateran. Reset before the ride home.",
+          "links": []
+        },
+        {
+          "time": "3:15–4:00",
+          "kind": "Commute",
+          "what": "Metro back to Prati · ~30–45 min.",
+          "links": []
+        },
+        {
+          "time": "4:00–5:30",
+          "kind": "Home",
+          "what": "Apartment downtime, laundry, easy play.",
+          "links": []
+        },
+        {
+          "time": "5:30–7:00",
+          "kind": "Dinner",
+          "what": "Early dinner.",
+          "links": []
+        },
+        {
+          "time": "7:00+",
+          "kind": "Home",
+          "what": "Bedtime.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Sunday Nov 22 — Mass & Tiber Island",
+      "note": "Worship first, then a longer riverside / Trastevere edge afternoon. Vatican Museums closed today under the standing Sunday rule.",
+      "blocks": [
+        {
+          "time": "7:30–8:15",
+          "kind": "Breakfast",
+          "what": "Apartment breakfast.",
+          "links": []
+        },
+        {
+          "time": "8:15–8:45",
+          "kind": "Walk",
+          "what": "Walk to St Peter’s for Mass, or a Prati parish if easier with the baby · 20–30 min to the basilica.",
+          "links": []
+        },
+        {
+          "time": "9:00–10:30",
+          "kind": "Mass",
+          "what": "St Peter’s or local parish · Confirm week-of Mass times. Sit through Mass; light tour only if kids are still game.",
+          "links": [
+            "https://www.basilicasanpietro.va/en/"
+          ]
+        },
+        {
+          "time": "10:30–11:15",
+          "kind": "Snack",
+          "what": "Coffee / pastry near the church.",
+          "links": []
+        },
+        {
+          "time": "11:15–12:00",
+          "kind": "Taxi",
+          "what": "Taxi to Tiber Island / Trastevere edge · ~15–25 min. Prefer taxi over long cobbles.",
+          "links": []
+        },
+        {
+          "time": "12:00–1:30",
+          "kind": "Lunch",
+          "what": "Lunch on Tiber Island or Trastevere edge.",
+          "links": []
+        },
+        {
+          "time": "1:30–3:00",
+          "kind": "Visit",
+          "what": "Isola Tiberina & San Bartolomeo · Island stroll + brief church peek (usually morning and late-afternoon windows). Short edge of Trastevere only—cobbles are hard with a stroller.",
+          "links": [
+            "https://sanbartolomeo.org/visita-orari-celebrazioni/"
+          ]
+        },
+        {
+          "time": "3:00–3:30",
+          "kind": "Sit",
+          "what": "Gelato sit before heading back.",
+          "links": []
+        },
+        {
+          "time": "3:30–4:15",
+          "kind": "Taxi",
+          "what": "Taxi back to Prati.",
+          "links": []
+        },
+        {
+          "time": "4:15–5:30",
+          "kind": "Home",
+          "what": "Apartment free time.",
+          "links": []
+        },
+        {
+          "time": "5:30–7:00",
+          "kind": "Dinner",
+          "what": "Early dinner.",
+          "links": []
+        },
+        {
+          "time": "7:00+",
+          "kind": "Home",
+          "what": "Quiet Sunday night.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Monday Nov 23 — Spare day & pack",
+      "note": "Default: pack, one last outing if wanted. San Paolo or Appian catacombs only if older kids insist—and only half the group.",
+      "blocks": [
+        {
+          "time": "7:30–8:30",
+          "kind": "Breakfast",
+          "what": "Apartment breakfast.",
+          "links": []
+        },
+        {
+          "time": "8:30–10:30",
+          "kind": "Pack",
+          "what": "Pack bags, confirm tomorrow’s airport van, finish laundry.",
+          "links": []
+        },
+        {
+          "time": "10:30–12:30",
+          "kind": "Optional",
+          "what": "Option A (default): Prati playground / Via Cola di Rienzo.Option B (half group): San Paolo fuori le Mura or Appian catacombs if the 9- and 7-year-olds insist. Catacombs are a poor stroller fit—adults + older kids only.",
+          "links": []
+        },
+        {
+          "time": "12:30–2:00",
+          "kind": "Lunch",
+          "what": "Lunch at or near the apartment.",
+          "links": []
+        },
+        {
+          "time": "2:00–4:30",
+          "kind": "Afternoon",
+          "what": "Last easy Rome time: river walk, gelato, or leftover church from the friend’s list near Prati. Keep it close—early airport morning tomorrow.",
+          "links": []
+        },
+        {
+          "time": "4:30–5:30",
+          "kind": "Home",
+          "what": "Final pack, stage stroller and passports by the door.",
+          "links": []
+        },
+        {
+          "time": "5:30–7:00",
+          "kind": "Dinner",
+          "what": "Early dinner. Lights out early.",
+          "links": []
+        },
+        {
+          "time": "7:00–8:30",
+          "kind": "Home",
+          "what": "Kids asleep. Adults finish bags.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Tuesday Nov 24 — Fly home",
+      "note": "Airport only. AZ 618 departs FCO 10:10am. Leave Prati by ~6:00am in a pre-booked van.",
+      "blocks": [
+        {
+          "time": "5:00–5:30",
+          "kind": "Wake",
+          "what": "Wake household. Quick breakfast / bottles.",
+          "links": []
+        },
+        {
+          "time": "5:30–6:00",
+          "kind": "Load",
+          "what": "Load van. Passports, tickets, stroller.",
+          "links": []
+        },
+        {
+          "time": "6:00–7:15",
+          "kind": "Commute",
+          "what": "Prati → FCO · leave by 6:00 · 35–75 min morning traffic · arrive ~7:15–7:45.",
+          "links": []
+        },
+        {
+          "time": "7:15–10:10",
+          "kind": "Airport",
+          "what": "Fiumicino · Check-in / bags / security for nine. AZ 618 10:10am → IAD 2:30pm.",
+          "links": []
+        },
+        {
+          "time": "10:10am+",
+          "kind": "Flight",
+          "what": "Nonstop home · ~10h 20m. No morning sightseeing.",
+          "links": []
+        }
+      ]
+    }
+  ]
+}

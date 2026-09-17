@@ -1,0 +1,32 @@
+{
+  "home": {
+    "id": "prati",
+    "name": "Prati home base (near Ottaviano / Lepanto)",
+    "lat": 41.9095,
+    "lng": 12.4584,
+    "url": "https://www.turismoroma.it/en/places/prati",
+    "summary": "One Airbnb for the week — lift or ground floor, washer, kitchen, crib. Address TBD."
+  },
+  "places": [
+    {"id":"fco","name":"Rome Fiumicino Airport (FCO)","lat":41.8003,"lng":12.2389,"url":"https://www.adr.it/fiumicino","summary":"Arrival Mon Nov 16 ~7:00am · Departure Tue Nov 24 AZ 618 10:10am."},
+    {"id":"st-peters-square","name":"St Peter’s Square","lat":41.9022,"lng":12.4572,"url":"https://www.vatican.va/","summary":"Colonnade, obelisk, security queues. Meeting point for the audience."},
+    {"id":"st-peters","name":"St Peter’s Basilica","lat":41.9022,"lng":12.4539,"url":"https://www.basilicasanpietro.va/en/","summary":"Free entry. Pietà, baldachin, nave. Skip the dome with baby/toddler."},
+    {"id":"bronze-door","name":"Bronze Door (Portone di Bronzo)","lat":41.9033,"lng":12.4569,"url":"https://www.vatican.va/content/vatican/en/prenotazioni-udienze.html","summary":"Ticket pickup for the General Audience. Apostolic Palace, right colonnade of St Peter’s Square."},
+    {"id":"pantheon","name":"Pantheon","lat":41.8986,"lng":12.4769,"url":"https://direzionemuseiroma.cultura.gov.it/en/pantheon/","summary":"Vast round hall with an open oculus. Timed tickets; under-18 free but still need a ticket."},
+    {"id":"minerva","name":"Santa Maria sopra Minerva","lat":41.8979,"lng":12.4780,"url":"https://www.santamariasopraminerva.it/","summary":"Gothic basilica; Michelangelo’s Christ; St Catherine’s tomb. Usually opens mid-morning."},
+    {"id":"san-luigi","name":"San Luigi dei Francesi","lat":41.8997,"lng":12.4746,"url":"https://saintlouis-rome.net/horaires-visite-opening-hours/","summary":"Caravaggio’s St Matthew cycle in the Contarelli Chapel. Free; midday closure."},
+    {"id":"trevi","name":"Trevi Fountain","lat":41.9009,"lng":12.4833,"url":"https://fontanaditrevi.roma.it/en/","summary":"Street view free. Inner basin has controlled entry. Quick photos — don’t linger."},
+    {"id":"spagna","name":"Spanish Steps","lat":41.90599,"lng":12.48277,"url":"https://www.turismoroma.it/en/places/piazza-di-spagna-and-trinita-dei-monti","summary":"Piazza di Spagna and the steps to Trinità dei Monti."},
+    {"id":"castel","name":"Castel Sant’Angelo","lat":41.9031,"lng":12.4663,"url":"https://castelsantangelo.cultura.gov.it/en/","summary":"Hadrian’s tomb turned fortress. Stairs; exterior + bridge is enough if the museum is too much."},
+    {"id":"colosseum","name":"Colosseum","lat":41.8902,"lng":12.4922,"url":"https://colosseo.it/en/opening-times-and-tickets/","summary":"Timed entry. Standard tiers — not arena/underground. Book all nine ~30 days out."},
+    {"id":"arch","name":"Arch of Constantine","lat":41.8897,"lng":12.4906,"url":"https://colosseo.it/en/area/arch-of-constantine-and-meta-sudans/","summary":"Free exterior stop next to the Colosseum."},
+    {"id":"forum","name":"Roman Forum","lat":41.8925,"lng":12.4853,"url":"https://colosseo.it/en/opening-times-and-tickets/","summary":"Combined ticket with Colosseum area. Uneven stones — carrier often better than stroller."},
+    {"id":"maggiore","name":"Santa Maria Maggiore","lat":41.8976,"lng":12.4984,"url":"https://www.basilicasantamariamaggiore.va/en/","summary":"Papal basilica with golden mosaics. Free entry."},
+    {"id":"lateran","name":"San Giovanni in Laterano","lat":41.8859,"lng":12.5057,"url":"https://www.basilicasangiovanni.va/en/info-e-orari.html","summary":"Cathedral of Rome. Huge nave and Apostle statues."},
+    {"id":"scala","name":"Scala Santa","lat":41.8869,"lng":12.5069,"url":"https://www.scala-santa.com/informazioni/","summary":"Holy Stairs (kneeling) / side stairs for walking. Brief look with toddlers."},
+    {"id":"croce","name":"Santa Croce in Gerusalemme","lat":41.8880,"lng":12.5166,"url":"https://www.santacroceroma.it/en/opening-hours.html","summary":"Optional short stop. Relic chapel may be closed for renovation — check first."},
+    {"id":"tiber","name":"Isola Tiberina / San Bartolomeo","lat":41.8908,"lng":12.4779,"url":"https://sanbartolomeo.org/visita-orari-celebrazioni/","summary":"Island stroll and brief church peek. Prefer taxi over long cobbles with a stroller."},
+    {"id":"glass","name":"Glass Hostaria","lat":41.8895,"lng":12.4686,"url":"https://www.glasshostaria.it/en/","summary":"Anniversary dinner pick. Vicolo del Cinque 58, Trastevere. Wed–Sun dinner. No table held yet."},
+    {"id":"arcangelo","name":"L’Arcangelo","lat":41.9090,"lng":12.4645,"url":"https://www.larcangelo.com/en/","summary":"Walkable Prati alternate for anniversary dinner. Confirm November hours by phone."}
+  ]
+}

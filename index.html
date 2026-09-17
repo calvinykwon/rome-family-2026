@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kwon Family Rome · Nov 15–24, 2026</title>
+  <meta name="description" content="Shared family itinerary for Rome with maps, times, and visit notes." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div>
+        <p class="eyebrow">Family trip · draft for sharing</p>
+        <h1>Rome with the Kwons</h1>
+        <p class="hero-line">The Kwon family Rome trip · November 2026</p>
+        <p class="lede" id="lede">November 15–24, 2026</p>
+      </div>
+      <div class="top-actions">
+        <a class="btn ghost" href="#days">Day by day</a>
+        <a class="btn" href="#map">Map</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero-grid">
+      <article class="card confirm">
+        <h2>Confirmed</h2>
+        <ul id="confirmed-list"></ul>
+      </article>
+      <article class="card open">
+        <h2>Still open</h2>
+        <ul id="open-list"></ul>
+      </article>
+    </section>
+
+    <section class="wrap" id="map">
+      <div class="section-head">
+        <h2>Map</h2>
+        <p class="hint">Pins follow the selected day. Tap a pin for times and notes.</p>
+      </div>
+      <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Choose a day"></div>
+      <div id="leaflet-map" aria-label="Rome trip map"></div>
+      <p class="map-caption" id="map-caption"></p>
+    </section>
+
+    <section class="wrap" id="days">
+      <div class="section-head">
+        <h2>Day by day</h2>
+        <p class="hint">Times are on 15-minute marks and already include walking, metro, and kid pace. No midday return home for naps.</p>
+      </div>
+      <div id="day-panels"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Draft only · nothing booked except flights and the papal audience tickets · share with the travel group</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZsMNAfgNjQKhJc5OHBmowFm+ulk=" crossorigin=""></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
