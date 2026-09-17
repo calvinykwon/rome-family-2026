@@ -1,5 +1,5 @@
 const state = { trip: null, options: null, map: null, layer: null, selectedDayId: 'all', optionFilter: 'all' };
-const CACHE_BUST = '20260917g';
+const CACHE_BUST = '20260917h';
 
 const OPTION_LABELS = {
   'easy-add-on': 'Easy add-on',
@@ -39,6 +39,33 @@ function kindClass(kind) {
 function isStopKind(kind) {
   const k = (kind || '').toLowerCase();
   return STOP_KIND_KEYS.some((x) => k.includes(x));
+}
+
+// Photo cards for major stops only. Commutes, sits, apartment chores stay compact.
+const LANDMARK_PHOTO_KINDS = ['visit', 'pickup', 'audience', 'mass', 'arrive'];
+const FOOD_PHOTO_KINDS = ['dinner', 'date', 'meal', 'lunch', 'gelato', 'coffee', 'snack'];
+
+function shouldShowPhoto(block, place) {
+  if (!place || !place.image) return false;
+  const k = (block.kind || '').toLowerCase();
+  const role = place.imageRole || 'landmark';
+  const keys = role === 'food' ? FOOD_PHOTO_KINDS : LANDMARK_PHOTO_KINDS;
+  return keys.some((x) => k.includes(x));
+}
+
+async function loadPlacesOverlay() {
+  try {
+    const res = await fetch(`data/places.json?v=${CACHE_BUST}`);
+    if (!res.ok) return;
+    const places = await res.json();
+    if (!places) return;
+    state.trip.places = {
+      home: places.home || state.trip.places?.home,
+      places: Array.isArray(places.places) ? places.places : state.trip.places?.places
+    };
+  } catch (err) {
+    console.warn('Could not overlay places.json', err);
+  }
 }
 
 const LABEL_MAX = 56;
@@ -219,6 +246,7 @@ async function load() {
   const res = await fetch(`data/trip.json?v=${CACHE_BUST}`);
   if (!res.ok) throw new Error(`Could not fetch trip.json (${res.status})`);
   state.trip = await res.json();
+  await loadPlacesOverlay();
 
   const lede = document.getElementById('lede');
   if (lede) lede.textContent = `${state.trip.dates} · ${state.trip.party}`;
@@ -622,44 +650,77 @@ function renderMap(dayId) {
   setTimeout(() => state.map.invalidateSize(), 50);
 }
 
+function renderBlockRow(d, b, numbers) {
+  const place = placeById(b.placeId);
+  const { label, description } = splitBlockCopy(b, place);
+  const urls = [];
+  (b.links || []).forEach((u) => {
+    if (u && !urls.includes(u)) urls.push(u);
+  });
+  // Fall back to the mapped place URL only when the block has no links of its own.
+  if (!urls.length && place?.url) urls.push(place.url);
+  const actions = urls.map(
+    (url) =>
+      `<a class="place-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(linkLabel(url))}</a>`
+  );
+  if (place) {
+    actions.push(
+      `<button class="pin-link" data-focus="${escapeHtml(place.id)}" type="button">Show on map</button>`
+    );
+  }
+  const actionHtml = actions.length
+    ? `<div class="block-actions">${actions.join('')}</div>`
+    : '';
+  const detailHtml = description
+    ? `<p class="detail-text">${escapeHtml(description)}</p>`
+    : '';
+  const timeHtml = `<div class="time">${escapeHtml(b.time)}</div>`;
+  const kindHtml = `<div class="kind-cell"><span class="kind ${kindClass(b.kind)}">${escapeHtml(b.kind)}</span></div>`;
+  const labelHtml = `<div class="label">${escapeHtml(label)}</div>`;
+  const detailBlock = `<div class="detail">${detailHtml}${actionHtml}</div>`;
+
+  if (!shouldShowPhoto(b, place)) {
+    return `<li class="block">
+        ${timeHtml}
+        ${kindHtml}
+        ${labelHtml}
+        ${detailBlock}
+      </li>`;
+  }
+
+  const src = `${escapeHtml(place.image)}?v=${CACHE_BUST}`;
+  const alt = place.imageAlt || place.name || label;
+  const credit = place.imageCredit
+    ? `<p class="option-credit">${escapeHtml(place.imageCredit)}</p>`
+    : '';
+  const stopNum = numbers.get(place.id);
+  const badge = stopNum != null
+    ? `<div class="option-badges"><span class="option-badge stop-num">Stop ${stopNum}</span></div>`
+    : '';
+
+  return `<li class="block stop-card">
+      <div class="stop-photo-wrap option-photo-wrap">
+        <img class="stop-photo option-photo" src="${src}" alt="${escapeHtml(alt)}" loading="lazy">
+        ${badge}
+      </div>
+      <div class="stop-body">
+        <div class="stop-meta">
+          ${timeHtml}
+          ${kindHtml}
+        </div>
+        ${labelHtml}
+        <div class="detail">${detailHtml}${actionHtml}${credit}</div>
+      </div>
+    </li>`;
+}
+
 function renderDays() {
   const root = document.getElementById('day-panels');
   if (!root) return;
   root.innerHTML = state.trip.days
     .map((d) => {
-      const rows = d.blocks
-        .map((b) => {
-          const place = placeById(b.placeId);
-          const { label, description } = splitBlockCopy(b, place);
-          const urls = [];
-          (b.links || []).forEach((u) => {
-            if (u && !urls.includes(u)) urls.push(u);
-          });
-          // Fall back to the mapped place URL only when the block has no links of its own.
-          if (!urls.length && place?.url) urls.push(place.url);
-          const actions = urls.map(
-            (url) =>
-              `<a class="place-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(linkLabel(url))}</a>`
-          );
-          if (place) {
-            actions.push(
-              `<button class="pin-link" data-focus="${escapeHtml(place.id)}" type="button">Show on map</button>`
-            );
-          }
-          const actionHtml = actions.length
-            ? `<div class="block-actions">${actions.join('')}</div>`
-            : '';
-          const detailHtml = description
-            ? `<p class="detail-text">${escapeHtml(description)}</p>`
-            : '';
-          return `<li class="block">
-        <div class="time">${escapeHtml(b.time)}</div>
-        <div class="kind-cell"><span class="kind ${kindClass(b.kind)}">${escapeHtml(b.kind)}</span></div>
-        <div class="label">${escapeHtml(label)}</div>
-        <div class="detail">${detailHtml}${actionHtml}</div>
-      </li>`;
-        })
-        .join('');
+      const numbers = sequenceNumbers(d.id);
+      const rows = d.blocks.map((b) => renderBlockRow(d, b, numbers)).join('');
       return `<article class="day-panel" id="${escapeHtml(d.id)}" data-day="${escapeHtml(d.id)}">
       <h3>${escapeHtml(d.title)}</h3>
       ${d.note ? `<p class="day-note">${escapeHtml(d.note)}</p>` : ''}
@@ -683,6 +744,15 @@ function renderDays() {
           if (layer.placeId === id) layer.openPopup();
         });
       }, 250);
+    });
+  });
+
+  root.querySelectorAll('img.stop-photo').forEach((img) => {
+    img.addEventListener('error', () => {
+      const fallback = document.createElement('div');
+      fallback.className = 'option-photo-fallback';
+      fallback.textContent = 'No freely licensed photo on file yet — placeholder.';
+      img.replaceWith(fallback);
     });
   });
 }
