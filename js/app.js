@@ -479,7 +479,8 @@ function renderDays() {
           (b.links || []).forEach((u) => {
             if (u && !urls.includes(u)) urls.push(u);
           });
-          if (place?.url && !urls.includes(place.url)) urls.push(place.url);
+          // Fall back to the mapped place URL only when the block has no links of its own.
+          if (!urls.length && place?.url) urls.push(place.url);
           const actions = urls.map(
             (url) =>
               `<a class="place-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(linkLabel(url))}</a>`
