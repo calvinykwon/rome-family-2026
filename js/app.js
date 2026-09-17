@@ -1,5 +1,11 @@
 const state = { trip: null, map: null, layer: null, selectedDayId: 'all' };
-const CACHE_BUST = '20260917b';
+const CACHE_BUST = '20260917d';
+
+// Kinds that count as a real sequenced stop (sightseeing, pickup, meals at a named place).
+// Transit, apartment breakfast, sits, and home-base chores do not get a number of their own.
+const STOP_KIND_KEYS = [
+  'visit', 'pickup', 'audience', 'mass', 'dinner', 'date', 'meal', 'lunch', 'arrive'
+];
 
 function kindClass(kind) {
   const k = (kind || '').toLowerCase();
@@ -9,6 +15,11 @@ function kindClass(kind) {
     'home', 'pack', 'handoff', 'afternoon', 'optional', 'snack', 'seat', 'breakfast'
   ];
   return keys.find((x) => k.includes(x)) || 'other';
+}
+
+function isStopKind(kind) {
+  const k = (kind || '').toLowerCase();
+  return STOP_KIND_KEYS.some((x) => k.includes(x));
 }
 
 function placeById(id) {
@@ -173,19 +184,96 @@ function selectDay(dayId) {
   if (state.map) renderMap(dayId);
 }
 
-function placesForDay(dayId) {
+function pinIdsForDay(dayId) {
   if (dayId === 'all') {
-    const ids = new Set();
-    state.trip.days.forEach((d) => (d.mapPlaceIds || []).forEach((id) => ids.add(id)));
-    ids.add('prati');
-    return [...ids].map(placeById).filter(Boolean);
+    const ids = [];
+    const seen = new Set();
+    state.trip.days.forEach((d) => {
+      (d.mapPlaceIds || []).forEach((id) => {
+        if (seen.has(id)) return;
+        seen.add(id);
+        ids.push(id);
+      });
+    });
+    if (!seen.has('prati')) ids.push('prati');
+    return ids;
   }
   const day = state.trip.days.find((d) => d.id === dayId);
-  return (day?.mapPlaceIds || []).map(placeById).filter(Boolean);
+  return [...(day?.mapPlaceIds || [])];
+}
+
+function placesForDay(dayId) {
+  return pinIdsForDay(dayId).map(placeById).filter(Boolean);
+}
+
+function daysForView(dayId) {
+  return dayId === 'all' ? state.trip.days : state.trip.days.filter((d) => d.id === dayId);
+}
+
+/**
+ * Visit-order numbers for pins currently on the map.
+ *
+ * Day view: first appearance of each pinned place in that day's itinerary
+ * blocks, preferring visit/pickup/audience/meal kinds over transit or
+ * apartment blocks. One number per place per day.
+ *
+ * Overview ("All stops"): the same rule across the whole week, so a pin's
+ * number is the order of its first real visit on the trip. Prati is a home
+ * base reference, not a sightseeing stop, so it stays unnumbered.
+ */
+function sequenceNumbers(dayId) {
+  const pinIds = pinIdsForDay(dayId);
+  const pinSet = new Set(pinIds);
+  const days = daysForView(dayId);
+  const order = [];
+  const seen = new Set();
+
+  function consider(placeId) {
+    if (!placeId || placeId === 'prati') return;
+    if (!pinSet.has(placeId) || seen.has(placeId)) return;
+    if (!placeById(placeId)) return;
+    seen.add(placeId);
+    order.push(placeId);
+  }
+
+  days.forEach((d) => {
+    d.blocks.forEach((b) => {
+      if (isStopKind(b.kind)) consider(b.placeId);
+    });
+  });
+  days.forEach((d) => {
+    d.blocks.forEach((b) => consider(b.placeId));
+  });
+  pinIds.forEach((id) => consider(id));
+
+  const numbers = new Map();
+  order.forEach((id, i) => numbers.set(id, i + 1));
+  return numbers;
+}
+
+function markerIcon(place, number) {
+  if (place.id === 'prati' && number == null) {
+    return L.divIcon({
+      className: 'map-pin-wrap',
+      html: '<div class="map-pin map-pin-home" title="Home base">H</div>',
+      iconSize: [32, 32],
+      iconAnchor: [16, 16],
+      popupAnchor: [0, -18]
+    });
+  }
+  const n = number == null ? '•' : String(number);
+  const wide = n.length > 1;
+  return L.divIcon({
+    className: 'map-pin-wrap',
+    html: `<div class="map-pin${wide ? ' map-pin-wide' : ''}">${escapeHtml(n)}</div>`,
+    iconSize: wide ? [36, 32] : [32, 32],
+    iconAnchor: wide ? [18, 16] : [16, 16],
+    popupAnchor: [0, -18]
+  });
 }
 
 function blocksForPlace(dayId, placeId) {
-  const days = dayId === 'all' ? state.trip.days : state.trip.days.filter((d) => d.id === dayId);
+  const days = daysForView(dayId);
   const out = [];
   days.forEach((d) => {
     d.blocks.forEach((b) => {
@@ -199,23 +287,37 @@ function renderMap(dayId) {
   if (!state.map || !state.layer) return;
   state.layer.clearLayers();
   const places = placesForDay(dayId);
+  const numbers = sequenceNumbers(dayId);
   const bounds = [];
   places.forEach((p) => {
     if (typeof p.lat !== 'number' || typeof p.lng !== 'number') return;
+    const number = numbers.get(p.id);
     const blocks = blocksForPlace(dayId, p.id);
     const timeLine = blocks
       .slice(0, 4)
       .map((b) => `${b.day ? b.day + ' · ' : ''}${b.time} · ${b.kind}`)
       .join('<br>');
-    const marker = L.marker([p.lat, p.lng]);
+    const stopBadge =
+      number != null
+        ? `<div class="badge stop-badge">Stop ${number}</div>`
+        : p.id === 'prati'
+          ? '<div class="badge">Home base</div>'
+          : '';
+    const marker = L.marker([p.lat, p.lng], {
+      icon: markerIcon(p, number),
+      title: number != null ? `Stop ${number} · ${p.name}` : p.name,
+      zIndexOffset: number != null ? 200 - number : 0
+    });
+    marker.placeId = p.id;
     marker.bindPopup(`
       <div class="popup">
+        ${stopBadge}
         ${p.id === 'bronze-door' ? '<div class="badge">Ticket pickup</div>' : ''}
         ${blocks.some((b) => /audience/i.test(b.kind)) ? '<div class="badge">Confirmed audience</div>' : ''}
-        <h4>${p.name}</h4>
-        <p>${p.summary || ''}</p>
+        <h4>${escapeHtml(p.name)}</h4>
+        <p>${escapeHtml(p.summary || '')}</p>
         ${timeLine ? `<p><strong>When</strong><br>${timeLine}</p>` : ''}
-        ${p.url ? `<p><a href="${p.url}" target="_blank" rel="noopener">More info</a></p>` : ''}
+        ${p.url ? `<p><a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">More info</a></p>` : ''}
       </div>
     `);
     marker.addTo(state.layer);
@@ -225,10 +327,17 @@ function renderMap(dayId) {
   else state.map.setView([41.9, 12.48], 12);
   const caption = document.getElementById('map-caption');
   if (caption) {
-    if (dayId === 'all') caption.textContent = `${places.length} places across the week · Prati home base included`;
-    else {
+    const numbered = [...numbers.values()].length;
+    if (dayId === 'all') {
+      caption.textContent = `${places.length} places · numbered 1–${numbered} by first visit this week · Prati home base unmarked`;
+    } else {
       const day = state.trip.days.find((d) => d.id === dayId);
-      caption.textContent = day ? `${day.title} · ${places.length} map pin${places.length === 1 ? '' : 's'}` : '';
+      if (!day) caption.textContent = '';
+      else if (!places.length) caption.textContent = `${day.title} · no map pins this day`;
+      else {
+        const pinWord = places.length === 1 ? 'pin' : 'pins';
+        caption.textContent = `${day.title} · ${places.length} map ${pinWord} numbered in visit order`;
+      }
     }
   }
   setTimeout(() => state.map.invalidateSize(), 50);
@@ -244,9 +353,9 @@ function renderDays() {
           const place = placeById(b.placeId);
           const link = (b.links && b.links[0]) || place?.url;
           let what = escapeHtml(b.what);
-          if (link) what = `<a href="${link}" target="_blank" rel="noopener">${what}</a>`;
+          if (link) what = `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${what}</a>`;
           const pin = place
-            ? `<button class="pin-link" data-focus="${place.id}" type="button">Show on map</button>`
+            ? `<button class="pin-link" data-focus="${escapeHtml(place.id)}" type="button">Show on map</button>`
             : '';
           return `<li class="block">
         <div class="time">${escapeHtml(b.time)}</div>
@@ -255,7 +364,7 @@ function renderDays() {
       </li>`;
         })
         .join('');
-      return `<article class="day-panel" id="${d.id}" data-day="${d.id}">
+      return `<article class="day-panel" id="${escapeHtml(d.id)}" data-day="${escapeHtml(d.id)}">
       <h3>${escapeHtml(d.title)}</h3>
       ${d.note ? `<p class="day-note">${escapeHtml(d.note)}</p>` : ''}
       <ul class="timeline">${rows}</ul>
@@ -275,7 +384,7 @@ function renderDays() {
       setTimeout(() => {
         state.map.setView([p.lat, p.lng], 16);
         state.layer.eachLayer((layer) => {
-          if (layer.getLatLng && Math.abs(layer.getLatLng().lat - p.lat) < 0.0001) layer.openPopup();
+          if (layer.placeId === id) layer.openPopup();
         });
       }, 250);
     });
@@ -293,7 +402,7 @@ function escapeHtml(s) {
 function boot() {
   load().catch((err) => {
     console.error(err);
-    showFatal(`Failed to load trip data: ${err && err.message ? err.message : err}`);
+    showFatal(`Something failed while starting the page: ${err && err.message ? err.message : err}. Try a private window or Cmd-Shift-R.`);
   });
 }
 
